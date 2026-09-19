@@ -1,0 +1,883 @@
+{
+  "rates": [
+    {
+      "date": "2026-08-05",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4181,
+        "CAD": 1.4047,
+        "CHF": 0.80881,
+        "CNY": 6.75,
+        "EUR": 0.8655,
+        "GBP": 0.74191,
+        "JPY": 157.59,
+        "KRW": 1423.72
+      }
+    },
+    {
+      "date": "2026-08-06",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.42,
+        "CAD": 1.3998,
+        "CHF": 0.80974,
+        "CNY": 6.7491,
+        "EUR": 0.8664,
+        "GBP": 0.74255,
+        "JPY": 157.83,
+        "KRW": 1423.57
+      }
+    },
+    {
+      "date": "2026-08-07",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4204,
+        "CAD": 1.401,
+        "CHF": 0.81032,
+        "CNY": 6.7476,
+        "EUR": 0.86693,
+        "GBP": 0.74352,
+        "JPY": 158.34,
+        "KRW": 1415.95
+      }
+    },
+    {
+      "date": "2026-08-10",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4158,
+        "CAD": 1.394,
+        "CHF": 0.80831,
+        "CNY": 6.7444,
+        "EUR": 0.86543,
+        "GBP": 0.7405,
+        "JPY": 158.64,
+        "KRW": 1416.62
+      }
+    },
+    {
+      "date": "2026-08-11",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4156,
+        "CAD": 1.3938,
+        "CHF": 0.81031,
+        "CNY": 6.7453,
+        "EUR": 0.86655,
+        "GBP": 0.74075,
+        "JPY": 159.2,
+        "KRW": 1412.17
+      }
+    },
+    {
+      "date": "2026-08-12",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4142,
+        "CAD": 1.3926,
+        "CHF": 0.81126,
+        "CNY": 6.7432,
+        "EUR": 0.86618,
+        "GBP": 0.73935,
+        "JPY": 159.09,
+        "KRW": 1417.13
+      }
+    },
+    {
+      "date": "2026-08-13",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4181,
+        "CAD": 1.3949,
+        "CHF": 0.81264,
+        "CNY": 6.743,
+        "EUR": 0.867,
+        "GBP": 0.7412,
+        "JPY": 159.33,
+        "KRW": 1420.29
+      }
+    },
+    {
+      "date": "2026-08-14",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.412,
+        "CAD": 1.3875,
+        "CHF": 0.81179,
+        "CNY": 6.7413,
+        "EUR": 0.86453,
+        "GBP": 0.73874,
+        "JPY": 159.01,
+        "KRW": 1411.27
+      }
+    },
+    {
+      "date": "2026-08-17",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4035,
+        "CAD": 1.3859,
+        "CHF": 0.80989,
+        "CNY": 6.7394,
+        "EUR": 0.86259,
+        "GBP": 0.73751,
+        "JPY": 159.23,
+        "KRW": 1411.91
+      }
+    },
+    {
+      "date": "2026-08-18",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4062,
+        "CAD": 1.3874,
+        "CHF": 0.81254,
+        "CNY": 6.7423,
+        "EUR": 0.86386,
+        "GBP": 0.73933,
+        "JPY": 159.7,
+        "KRW": 1410.07
+      }
+    },
+    {
+      "date": "2026-08-19",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4133,
+        "CAD": 1.3872,
+        "CHF": 0.81017,
+        "CNY": 6.7382,
+        "EUR": 0.8617,
+        "GBP": 0.73768,
+        "JPY": 159.09,
+        "KRW": 1391.48
+      }
+    },
+    {
+      "date": "2026-08-20",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4072,
+        "CAD": 1.377,
+        "CHF": 0.79899,
+        "CNY": 6.7236,
+        "EUR": 0.85609,
+        "GBP": 0.73388,
+        "JPY": 158.76,
+        "KRW": 1396.35
+      }
+    },
+    {
+      "date": "2026-08-21",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3951,
+        "CAD": 1.374,
+        "CHF": 0.79947,
+        "CNY": 6.7206,
+        "EUR": 0.85477,
+        "GBP": 0.73228,
+        "JPY": 158.7,
+        "KRW": 1384.23
+      }
+    },
+    {
+      "date": "2026-08-24",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3963,
+        "CAD": 1.3849,
+        "CHF": 0.80264,
+        "CNY": 6.7227,
+        "EUR": 0.85734,
+        "GBP": 0.73345,
+        "JPY": 159.12,
+        "KRW": 1384.26
+      }
+    },
+    {
+      "date": "2026-08-25",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.398,
+        "CAD": 1.386,
+        "CHF": 0.80269,
+        "CNY": 6.7198,
+        "EUR": 0.85749,
+        "GBP": 0.73358,
+        "JPY": 159.24,
+        "KRW": 1383.07
+      }
+    },
+    {
+      "date": "2026-08-26",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3918,
+        "CAD": 1.3862,
+        "CHF": 0.80384,
+        "CNY": 6.7205,
+        "EUR": 0.85697,
+        "GBP": 0.73368,
+        "JPY": 159.07,
+        "KRW": 1383.49
+      }
+    },
+    {
+      "date": "2026-08-27",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3908,
+        "CAD": 1.3869,
+        "CHF": 0.80515,
+        "CNY": 6.7203,
+        "EUR": 0.85874,
+        "GBP": 0.73628,
+        "JPY": 159.39,
+        "KRW": 1380.38
+      }
+    },
+    {
+      "date": "2026-08-28",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3899,
+        "CAD": 1.3854,
+        "CHF": 0.80426,
+        "CNY": 6.7209,
+        "EUR": 0.85889,
+        "GBP": 0.73624,
+        "JPY": 159.68,
+        "KRW": 1374.55
+      }
+    },
+    {
+      "date": "2026-08-31",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3963,
+        "CAD": 1.3886,
+        "CHF": 0.80855,
+        "CNY": 6.7197,
+        "EUR": 0.86237,
+        "GBP": 0.7386,
+        "JPY": 159.73,
+        "KRW": 1368.03
+      }
+    },
+    {
+      "date": "2026-09-01",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4003,
+        "CAD": 1.3888,
+        "CHF": 0.81053,
+        "CNY": 6.7223,
+        "EUR": 0.86281,
+        "GBP": 0.73904,
+        "JPY": 160.16,
+        "KRW": 1374.61
+      }
+    },
+    {
+      "date": "2026-09-02",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3991,
+        "CAD": 1.3925,
+        "CHF": 0.81396,
+        "CNY": 6.7215,
+        "EUR": 0.86371,
+        "GBP": 0.74167,
+        "JPY": 159.6,
+        "KRW": 1362.56
+      }
+    },
+    {
+      "date": "2026-09-03",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3902,
+        "CAD": 1.3792,
+        "CHF": 0.80844,
+        "CNY": 6.7191,
+        "EUR": 0.86096,
+        "GBP": 0.7409,
+        "JPY": 156.01,
+        "KRW": 1357.29
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3882,
+        "CAD": 1.38,
+        "CHF": 0.80924,
+        "CNY": 6.7109,
+        "EUR": 0.86044,
+        "GBP": 0.7391,
+        "JPY": 156.25,
+        "KRW": 1350.35
+      }
+    },
+    {
+      "date": "2026-09-07",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3861,
+        "CAD": 1.382,
+        "CHF": 0.80924,
+        "CNY": 6.711,
+        "EUR": 0.86044,
+        "GBP": 0.73906,
+        "JPY": 154.75,
+        "KRW": 1347.93
+      }
+    },
+    {
+      "date": "2026-09-08",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3861,
+        "CAD": 1.3805,
+        "CHF": 0.81152,
+        "CNY": 6.7105,
+        "EUR": 0.86103,
+        "GBP": 0.73825,
+        "JPY": 154.3,
+        "KRW": 1341.67
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3841,
+        "CAD": 1.3768,
+        "CHF": 0.80707,
+        "CNY": 6.7078,
+        "EUR": 0.85822,
+        "GBP": 0.7372,
+        "JPY": 153.27,
+        "KRW": 1336.2
+      }
+    },
+    {
+      "date": "2026-09-10",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3918,
+        "CAD": 1.3816,
+        "CHF": 0.81198,
+        "CNY": 6.7063,
+        "EUR": 0.86088,
+        "GBP": 0.73963,
+        "JPY": 154.18,
+        "KRW": 1343.8
+      }
+    },
+    {
+      "date": "2026-09-11",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.3942,
+        "CAD": 1.3858,
+        "CHF": 0.8153,
+        "CNY": 6.7082,
+        "EUR": 0.86266,
+        "GBP": 0.7403,
+        "JPY": 154.04,
+        "KRW": 1342.79
+      }
+    },
+    {
+      "date": "2026-09-14",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4026,
+        "CAD": 1.3887,
+        "CHF": 0.81647,
+        "CNY": 6.7084,
+        "EUR": 0.86573,
+        "GBP": 0.74104,
+        "JPY": 154.55,
+        "KRW": 1346.24
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4034,
+        "CAD": 1.392,
+        "CHF": 0.81818,
+        "CNY": 6.7115,
+        "EUR": 0.86663,
+        "GBP": 0.74166,
+        "JPY": 155.0,
+        "KRW": 1359.15
+      }
+    },
+    {
+      "date": "2026-09-16",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4021,
+        "CAD": 1.3939,
+        "CHF": 0.81902,
+        "CNY": 6.7071,
+        "EUR": 0.86678,
+        "GBP": 0.74317,
+        "JPY": 155.05,
+        "KRW": 1367.8
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4057,
+        "CAD": 1.3995,
+        "CHF": 0.82449,
+        "CNY": 6.7075,
+        "EUR": 0.871,
+        "GBP": 0.74758,
+        "JPY": 155.69,
+        "KRW": 1382.55
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "base": "USD",
+      "rates": {
+        "AUD": 1.4045,
+        "CAD": 1.401,
+        "CHF": 0.82565,
+        "CNY": 6.6976,
+        "EUR": 0.8726,
+        "GBP": 0.74939,
+        "JPY": 157.89,
+        "KRW": 1388.1
+      }
+    }
+  ],
+  "articles": [
+    {
+      "title": "Dollar rises, euro slips after ECB rate increase - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiywFBVV95cUxOYU50UmRVNmIyeFBOSmd6azlDeDMxNlh1S0cycHpnYjU4NERYWjhoN2diSmthTngzdWZScmFTdldrTGtUcTh3SDFKbVIySmU2TUx3cnMtOEdKMnFkV3J1d3pYRmdvZDVWb2VPSXNjcG52cEVPTGtLNF9UT1BFSnJ3WlUzOXNuU1FwZmNSdGVTdV9Na1h6M3dPVGVtU0ttYlBlRWc0S1Q0Rl9HSmVCNlZaZXhjMVc0OUduMk1mOGRqVkxjY0d2SGhRbWJsUQ?oc=5\" target=\"_blank\">Dollar rises, euro slips after ECB rate increase</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOYU50UmRVNmIyeFBOSmd6azlDeDMxNlh1S0cycHpnYjU4NERYWjhoN2diSmthTngzdWZScmFTdldrTGtUcTh3SDFKbVIySmU2TUx3cnMtOEdKMnFkV3J1d3pYRmdvZDVWb2VPSXNjcG52cEVPTGtLNF9UT1BFSnJ3WlUzOXNuU1FwZmNSdGVTdV9Na1h6M3dPVGVtU0ttYlBlRWc0S1Q0Rl9HSmVCNlZaZXhjMVc0OUduMk1mOGRqVkxjY0d2SGhRbWJsUQ?oc=5",
+      "published": "Thu, 10 Sep 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Won Leads G20 Currency Appreciation in Third Quarter - 조선일보",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMijgFBVV95cUxQMmpCUWJUaE4xYmdBenhaQ2IzdE9uYnVzOHJ0VUFXMVZ2TzhKY3pNOGlabXRnVG1Ga0VVamtXX2Q1ZjNwZFlUamJqTmc1NFJ3VktELWFaUDJ5WFl0NlBUYWdrMlJ2Z2JXNHd3aU9Cc2xSaVc3MGxsVUNmQ1A3RFk0SzBMc0tOb05UWXlab253?oc=5\" target=\"_blank\">Won Leads G20 Currency Appreciation in Third Quarter</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">조선일보</font>",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMmpCUWJUaE4xYmdBenhaQ2IzdE9uYnVzOHJ0VUFXMVZ2TzhKY3pNOGlabXRnVG1Ga0VVamtXX2Q1ZjNwZFlUamJqTmc1NFJ3VktELWFaUDJ5WFl0NlBUYWdrMlJ2Z2JXNHd3aU9Cc2xSaVc3MGxsVUNmQ1A3RFk0SzBMc0tOb05UWXlab253?oc=5",
+      "published": "Sun, 13 Sep 2026 01:57:45 GMT"
+    },
+    {
+      "title": "Yen drops to 160 per dollar as oil spike, rising yields revive inflation fears - staradvertiser.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizwFBVV95cUxPSUhVczh4NkRqdkJDcm90Y0JQLXY0ajBUMVZVWGw5T0w3aEtRYWxsY3BRWW52VjREd2xjVDNiY0lXYWtaWXVUOU9DVG9mT3pYbGVSY0g3MkxyWHRqUWh4R1pwcUhHamhLVFZQNjZmdjdwdkhjTVhfQnlWTzNpMmUzdDJEQnlNNzJ6b0ZWWkxPUTgtay0tVXVNbDdFZ1UyelhYMDVYcGNlbXFScmg5bnFyY2NhWUVHZHd1emxjbHlJNUdhdGpUc2NIZy04VnZ6dmM?oc=5\" target=\"_blank\">Yen drops to 160 per dollar as oil spike, rising yields revive inflation fears</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">staradvertiser.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSUhVczh4NkRqdkJDcm90Y0JQLXY0ajBUMVZVWGw5T0w3aEtRYWxsY3BRWW52VjREd2xjVDNiY0lXYWtaWXVUOU9DVG9mT3pYbGVSY0g3MkxyWHRqUWh4R1pwcUhHamhLVFZQNjZmdjdwdkhjTVhfQnlWTzNpMmUzdDJEQnlNNzJ6b0ZWWkxPUTgtay0tVXVNbDdFZ1UyelhYMDVYcGNlbXFScmg5bnFyY2NhWUVHZHd1emxjbHlJNUdhdGpUc2NIZy04VnZ6dmM?oc=5",
+      "published": "Tue, 01 Sep 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Exchange rates and interest rates - European Commission",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxNTEw2bU5GZThSbVdVMjNmTFZ4Vi1hRm9GdXdnSjhQeGlyWjBHTjVldU96ckViVnRQYXVNSW8wdklESThUY2E0TGlEUnI5SXMyVkpnclNLTkluWmluWHZILUw1cm1JZVFYRVdIOS1QUHNpR0wxMC01LWEwVFlqTU9TYTNTR0R5MTU3YXljQlBPd3Z6N21NLV81MTFBTVZDVkFNamc?oc=5\" target=\"_blank\">Exchange rates and interest rates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">European Commission</font>",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNTEw2bU5GZThSbVdVMjNmTFZ4Vi1hRm9GdXdnSjhQeGlyWjBHTjVldU96ckViVnRQYXVNSW8wdklESThUY2E0TGlEUnI5SXMyVkpnclNLTkluWmluWHZILUw1cm1JZVFYRVdIOS1QUHNpR0wxMC01LWEwVFlqTU9TYTNTR0R5MTU3YXljQlBPd3Z6N21NLV81MTFBTVZDVkFNamc?oc=5",
+      "published": "Thu, 01 Jan 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Dollar steady as traders await key US inflation data - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxPTzhZVWVFX0IxZHRHRTExeHVkajFlQ3U3X3RhbjdFbW5uNnFHR0lLNmd5ZVZRT0tqd1h2X090Snd4bk5VLWhKd0UwaTlDUTNkbnpsLWRIdXFJWE1wdDlUbVd0SXJjb1JYaVlKTVVxUllYQ2lRZjNZcFA1LWVEY2xZRTVHdkNEd3cyNGRNNDhHUDRYem15Szg5dFFadXRCNnFYNHQ1Yg?oc=5\" target=\"_blank\">Dollar steady as traders await key US inflation data</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTzhZVWVFX0IxZHRHRTExeHVkajFlQ3U3X3RhbjdFbW5uNnFHR0lLNmd5ZVZRT0tqd1h2X090Snd4bk5VLWhKd0UwaTlDUTNkbnpsLWRIdXFJWE1wdDlUbVd0SXJjb1JYaVlKTVVxUllYQ2lRZjNZcFA1LWVEY2xZRTVHdkNEd3cyNGRNNDhHUDRYem15Szg5dFFadXRCNnFYNHQ1Yg?oc=5",
+      "published": "Tue, 11 Aug 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Dollar edges lower against yen in week packed with data releases and central bank decisions - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisAFBVV95cUxQSzBFU2MxV0dzcmFhcHR5N0hzV182ZGpoZFdzcmZaMklaRTYyRWxueU1yTmRfMFc0WjhFOWRrdVJHekw3Slh2R0swNENDb2FxaGo0LTdkT2ZpM0ZySDdFbDNYUEw1TTE3SnNJS2dXd0NFeDFZeDl3eF9HYTdwYlMzbzhrTUZSajUzanBhUjBKYU44cHJMNVBuZUxQRTU0X2NKTU12Sk4wZDl5VW0yT0ZQa9IBtgFBVV95cUxPajlvcWhrMFRqY09pb0Eta2U4RnVnS3diZTY5MlJLdFB0clhUUkoxajhvOUtqWUFjMmQ4Vi1xUEhNSzBPTEN0SEF6c2hzeVMyVDZGRUJFbUd2TExGRkE2bzJuQnc0QS1KaTNJejYyanhCbVpmeVBxYnE1NzVuaFN5V01sNWYzOWxUbG85eVJUUHZvWHdzMjdKOGdYLVVKNWxzdE5IaVowNThLYXVreXhaQzJmV05JUQ?oc=5\" target=\"_blank\">Dollar edges lower against yen in week packed with data releases and central bank decisions</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSzBFU2MxV0dzcmFhcHR5N0hzV182ZGpoZFdzcmZaMklaRTYyRWxueU1yTmRfMFc0WjhFOWRrdVJHekw3Slh2R0swNENDb2FxaGo0LTdkT2ZpM0ZySDdFbDNYUEw1TTE3SnNJS2dXd0NFeDFZeDl3eF9HYTdwYlMzbzhrTUZSajUzanBhUjBKYU44cHJMNVBuZUxQRTU0X2NKTU12Sk4wZDl5VW0yT0ZQa9IBtgFBVV95cUxPajlvcWhrMFRqY09pb0Eta2U4RnVnS3diZTY5MlJLdFB0clhUUkoxajhvOUtqWUFjMmQ4Vi1xUEhNSzBPTEN0SEF6c2hzeVMyVDZGRUJFbUd2TExGRkE2bzJuQnc0QS1KaTNJejYyanhCbVpmeVBxYnE1NzVuaFN5V01sNWYzOWxUbG85eVJUUHZvWHdzMjdKOGdYLVVKNWxzdE5IaVowNThLYXVreXhaQzJmV05JUQ?oc=5",
+      "published": "Sun, 14 Dec 2025 08:00:00 GMT"
+    },
+    {
+      "title": "Japanese Yen's Sharp Rally Lifts Asian Currencies; Taiwan Dollar Posts Fourth Straight Gain to Three-Month High - finance.biggo.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMidkFVX3lxTE1PWHZDdWstTzZDM1Q0NTRIU0RoeklSUi01WFB5TV9HMnRER0p1NWo0ZFBsaUNTTXhpTkl2cGctRUxhMUlFNTZxc0VJeXNLNGZEa3ZmeXJaMFN6Z1N5c05xSFhqYXZsbHVCYURfdVlESl9sUktfQUE?oc=5\" target=\"_blank\">Japanese Yen's Sharp Rally Lifts Asian Currencies; Taiwan Dollar Posts Fourth Straight Gain to Three-Month High</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">finance.biggo.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1PWHZDdWstTzZDM1Q0NTRIU0RoeklSUi01WFB5TV9HMnRER0p1NWo0ZFBsaUNTTXhpTkl2cGctRUxhMUlFNTZxc0VJeXNLNGZEa3ZmeXJaMFN6Z1N5c05xSFhqYXZsbHVCYURfdVlESl9sUktfQUE?oc=5",
+      "published": "Thu, 10 Sep 2026 02:05:00 GMT"
+    },
+    {
+      "title": "What is the Best Currency to Save In? A 55-Year Test Shows Three Options - BeInCrypto",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMie0FVX3lxTE1xUWJ1Z3hrYjdFYUFLR3h0MGhUY0dFNll1bGh5V1V6clBiQk1DVG4zTjNmS2hxd2lxcjVNSi1XUXotT1lTQ1h4Y1ppc3loNFlmVmFsNVdHUUVMZWxNd2x5SlRicjJ1dXVKX1dnN2gwVlF4eDRNS3lEUjhWOA?oc=5\" target=\"_blank\">What is the Best Currency to Save In? A 55-Year Test Shows Three Options</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">BeInCrypto</font>",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1xUWJ1Z3hrYjdFYUFLR3h0MGhUY0dFNll1bGh5V1V6clBiQk1DVG4zTjNmS2hxd2lxcjVNSi1XUXotT1lTQ1h4Y1ppc3loNFlmVmFsNVdHUUVMZWxNd2x5SlRicjJ1dXVKX1dnN2gwVlF4eDRNS3lEUjhWOA?oc=5",
+      "published": "Tue, 14 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Top 10 Most Traded Currencies - FOREX.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifkFVX3lxTE9nbXdPQkYtZGdaNFJmenIzVURtZmdHTDB6V2hNZ0Z3aHVTeEdpM1RXVjdDZVlWODhuZWdXeXM1aHVNRDRHNFBjM2xIdWJBamFNWXM1MDcxdEVEdllqUkFVNzc5Si1kSFU5TjVLNzlhcDhMaG5RX1Jadm5YQWkzQQ?oc=5\" target=\"_blank\">Top 10 Most Traded Currencies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">FOREX.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9nbXdPQkYtZGdaNFJmenIzVURtZmdHTDB6V2hNZ0Z3aHVTeEdpM1RXVjdDZVlWODhuZWdXeXM1aHVNRDRHNFBjM2xIdWJBamFNWXM1MDcxdEVEdllqUkFVNzc5Si1kSFU5TjVLNzlhcDhMaG5RX1Jadm5YQWkzQQ?oc=5",
+      "published": "Mon, 11 May 2026 18:56:34 GMT"
+    },
+    {
+      "title": "Yen heads for fourth straight day of losses ahead of Japan’s elections - 朝日新聞",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiVkFVX3lxTE5fdVhFZ1FyYzlPWjYtNGJJQ2l6VlFmWDNhYjNybC1UX3lENllYZm9GZllyMnktVlJNYXR0a3RnY3RyY25RWXFUaERKWk1Gb1JuemY5d013?oc=5\" target=\"_blank\">Yen heads for fourth straight day of losses ahead of Japan’s elections</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">朝日新聞</font>",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5fdVhFZ1FyYzlPWjYtNGJJQ2l6VlFmWDNhYjNybC1UX3lENllYZm9GZllyMnktVlJNYXR0a3RnY3RyY25RWXFUaERKWk1Gb1JuemY5d013?oc=5",
+      "published": "Thu, 05 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Dollar vs 55 different currencies 2025 - Statista",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxQLUx0SVRxcUVqdWp0XzNxdU9XU0hKSXY1elBPeXY2Qng2ekROS0VZcFo3RE1RRHZ6VGZ2eGdKMFo3TXkzNmtxLXMtUThyX29yVkx5bU1MbzB0OFZDTWwySF8zajNOTXBsTjRoZENpSEduQU9Sb2Jnbnd5d195QWpZMDdnYkhuU3JkZ0tyMV9rWnpkOHByLUtJVUxaTTFOUDFFMzJJYkNR?oc=5\" target=\"_blank\">Dollar vs 55 different currencies 2025</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Statista</font>",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQLUx0SVRxcUVqdWp0XzNxdU9XU0hKSXY1elBPeXY2Qng2ekROS0VZcFo3RE1RRHZ6VGZ2eGdKMFo3TXkzNmtxLXMtUThyX29yVkx5bU1MbzB0OFZDTWwySF8zajNOTXBsTjRoZENpSEduQU9Sb2Jnbnd5d195QWpZMDdnYkhuU3JkZ0tyMV9rWnpkOHByLUtJVUxaTTFOUDFFMzJJYkNR?oc=5",
+      "published": "Mon, 10 Nov 2025 08:00:00 GMT"
+    },
+    {
+      "title": "Japanese Yen Plummets As BoJ’s Ueda Issues Dire Stagflation Warning - Binance",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE85VVctYTFQcHc2NEhlVk9CalhPQUw0ZVNUMWlDZktzeFZfWGFrY01xQlhtMnNOYVduM3ZDYjI1b2RCZ3RDTm0tZWNnTmFmcFNXRWlFSDZHWnlFZ1hKTTlKdTJJSTQ?oc=5\" target=\"_blank\">Japanese Yen Plummets As BoJ’s Ueda Issues Dire Stagflation Warning</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Binance</font>",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE85VVctYTFQcHc2NEhlVk9CalhPQUw0ZVNUMWlDZktzeFZfWGFrY01xQlhtMnNOYVduM3ZDYjI1b2RCZ3RDTm0tZWNnTmFmcFNXRWlFSDZHWnlFZ1hKTTlKdTJJSTQ?oc=5",
+      "published": "Fri, 17 Apr 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Yen weaker in thin trading as traders eye intervention risk - staradvertiser.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMitwFBVV95cUxQUHY4M3l2dGFaYVBIM0NnbjFiSk84MjBNTFVWWjVEYmt0ZE5UZnRYeEo0YlhTRk1fdXhDQ1NzWWlpMzZuU0t3WUJ5TkNqeDJxd25KMmwzMk84NE9tSEdZLTRvZ0NIUjc4NHZGSkxobV9EWWE1UDdMSTRWZ0N5MzJobTVodG1XSjFwN2FONTBuOFVQZl9nOXRMSlRNaV9HT2ZLdndXcEE1bzRzcGpsd2ZlUjN0MVJuWVU?oc=5\" target=\"_blank\">Yen weaker in thin trading as traders eye intervention risk</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">staradvertiser.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQUHY4M3l2dGFaYVBIM0NnbjFiSk84MjBNTFVWWjVEYmt0ZE5UZnRYeEo0YlhTRk1fdXhDQ1NzWWlpMzZuU0t3WUJ5TkNqeDJxd25KMmwzMk84NE9tSEdZLTRvZ0NIUjc4NHZGSkxobV9EWWE1UDdMSTRWZ0N5MzJobTVodG1XSjFwN2FONTBuOFVQZl9nOXRMSlRNaV9HT2ZLdndXcEE1bzRzcGpsd2ZlUjN0MVJuWVU?oc=5",
+      "published": "Fri, 26 Dec 2025 08:00:00 GMT"
+    },
+    {
+      "title": "How Low Can the US Dollar Go? - Morningstar",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMieEFVX3lxTE9taWwtbWh5bTNqNWhuQXYyVjU0c3ZGblRvSGdOemxpQXR2UGlqNWkzT3hEQnh4T3c1TzRGNkdUbUM3aHNySmpNaGQ4YW1HTXRDZHJHLUhBUUttaWRITnNCVHpXempFYUlOT1QtYnhGRVcyYml1TUVpOA?oc=5\" target=\"_blank\">How Low Can the US Dollar Go?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Morningstar</font>",
+      "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9taWwtbWh5bTNqNWhuQXYyVjU0c3ZGblRvSGdOemxpQXR2UGlqNWkzT3hEQnh4T3c1TzRGNkdUbUM3aHNySmpNaGQ4YW1HTXRDZHJHLUhBUUttaWRITnNCVHpXempFYUlOT1QtYnhGRVcyYml1TUVpOA?oc=5",
+      "published": "Thu, 10 Jul 2025 07:00:00 GMT"
+    },
+    {
+      "title": "Government borrowing costs rise anew, adding to pressure on global policymakers - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirwFBVV95cUxOSl9GcExBdk5lb3U4c1NTalROY2NUNHE4SXdlbE5yemw4WkwteWNMdTZVTFdrcHhPUVF5Q181eTlxZ2xoUkV6Q3F4a19ldHJBdGFnaG9URjY3bXNTMDE0aV9mVDU1MUtxMTRXRl9pR2p2THVmc2JiWGlSb1prUElXTWtaNzBsb3Z5U2tCNXZlTlMtM3pHU3Y0dkVNWUhHWmVWUmJxbnZmVVFlNmVlMDR3?oc=5\" target=\"_blank\">Government borrowing costs rise anew, adding to pressure on global policymakers</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSl9GcExBdk5lb3U4c1NTalROY2NUNHE4SXdlbE5yemw4WkwteWNMdTZVTFdrcHhPUVF5Q181eTlxZ2xoUkV6Q3F4a19ldHJBdGFnaG9URjY3bXNTMDE0aV9mVDU1MUtxMTRXRl9pR2p2THVmc2JiWGlSb1prUElXTWtaNzBsb3Z5U2tCNXZlTlMtM3pHU3Y0dkVNWUhHWmVWUmJxbnZmVVFlNmVlMDR3?oc=5",
+      "published": "Tue, 01 Sep 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Euro and yen strengthens, dollar eases as central banks hold rates - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimAFBVV95cUxQcllOVEhiVjFPN29pRUMyckdtNnAxTHdhaE9kOE5VN01waHkyTUlWVkVWVlhIWTBma2c1b2E5bkJmWWdwX01wTUdpejFvSVhrLVRSUWhaSlNTTFJpeGVPclp6ZWpjUGNxTWdHX3pjVXpIRzhjMlMwYlowQmY3SzlPcUduaEZ2T1ZoUXdfNFBvRGtiU0pUUTFhV9IBngFBVV95cUxNNFZvV3UxT1ZkdWRSUUtxelk5dXRwWC1XUFlnTTlGSk1PaDJsOUx3WjBpSWZhSk5BY1RSTGxmRkZXZWdoRGRsT2Y4RGNDMXZmTjMwTGF4cGNWYlV1QmJvWVcweDhYV1JvX1gteEZ2S05JT1hPYkk1bXJ4SmJ2OUZUYmp1NGJ1aHpXcEZxNEpCN0c4bXpPZ2ltcnIzQ0VwQQ?oc=5\" target=\"_blank\">Euro and yen strengthens, dollar eases as central banks hold rates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+      "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcllOVEhiVjFPN29pRUMyckdtNnAxTHdhaE9kOE5VN01waHkyTUlWVkVWVlhIWTBma2c1b2E5bkJmWWdwX01wTUdpejFvSVhrLVRSUWhaSlNTTFJpeGVPclp6ZWpjUGNxTWdHX3pjVXpIRzhjMlMwYlowQmY3SzlPcUduaEZ2T1ZoUXdfNFBvRGtiU0pUUTFhV9IBngFBVV95cUxNNFZvV3UxT1ZkdWRSUUtxelk5dXRwWC1XUFlnTTlGSk1PaDJsOUx3WjBpSWZhSk5BY1RSTGxmRkZXZWdoRGRsT2Y4RGNDMXZmTjMwTGF4cGNWYlV1QmJvWVcweDhYV1JvX1gteEZ2S05JT1hPYkk1bXJ4SmJ2OUZUYmp1NGJ1aHpXcEZxNEpCN0c4bXpPZ2ltcnIzQ0VwQQ?oc=5",
+      "published": "Wed, 18 Mar 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Global bonds stagger toward steep monthly losses as war's economic toll mounts - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMizAFBVV95cUxQSWRMdGlxdk45V24tQ3BiUjVYbHpBT1FBdmV5eU9BUlN0VDdDZHJPa2o4RTNWMFh5cUVESW5OdkJtcVo2Q0VaekZTalFSb2hpeEcyLTdQZ295WEl1ci1PTkdGU0dpMi1UeXJkU0NjN0xyU1hfbDBQemJuemR1dVN0T09lb2djeVllYl9Kd0JaVFZhY0diWXNTLWJZc016dlpULXZWX2ItS3duUFBQSHhrX0tkczdVbmJ3ZzBnUjZ3eWkyQlNxVHVoMTd3SlM?oc=5\" target=\"_blank\">Global bonds stagger toward steep monthly losses as war's economic toll mounts</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSWRMdGlxdk45V24tQ3BiUjVYbHpBT1FBdmV5eU9BUlN0VDdDZHJPa2o4RTNWMFh5cUVESW5OdkJtcVo2Q0VaekZTalFSb2hpeEcyLTdQZ295WEl1ci1PTkdGU0dpMi1UeXJkU0NjN0xyU1hfbDBQemJuemR1dVN0T09lb2djeVllYl9Kd0JaVFZhY0diWXNTLWJZc016dlpULXZWX2ItS3duUFBQSHhrX0tkczdVbmJ3ZzBnUjZ3eWkyQlNxVHVoMTd3SlM?oc=5",
+      "published": "Mon, 30 Mar 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Sterling slips as UK inflation holds steady, dollar lower versus yen - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxPbjl0N1FHTE83ZThBa2tVY3RkeGJVREtmVmZyLWowcDJZMThYUFJ6R1FJOVByeXd2LWRsWktOMm9GTTRtX09mV3h0NU82NGdWMFVSSjFfbFZIdDZOWXdiWHhwQWV0QmdzTWstdm5xc3pBZjRJWFBseTIxeTRhaHVUamZlQU5zX25yWm5NR3JFWkR2LUZDZFc5aGRQUGdPM1VfM1BPSG5sSQ?oc=5\" target=\"_blank\">Sterling slips as UK inflation holds steady, dollar lower versus yen</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbjl0N1FHTE83ZThBa2tVY3RkeGJVREtmVmZyLWowcDJZMThYUFJ6R1FJOVByeXd2LWRsWktOMm9GTTRtX09mV3h0NU82NGdWMFVSSjFfbFZIdDZOWXdiWHhwQWV0QmdzTWstdm5xc3pBZjRJWFBseTIxeTRhaHVUamZlQU5zX25yWm5NR3JFWkR2LUZDZFc5aGRQUGdPM1VfM1BPSG5sSQ?oc=5",
+      "published": "Tue, 21 Oct 2025 07:00:00 GMT"
+    },
+    {
+      "title": "Yen strengthens after Bank of Japan signals data-driven rate hikes - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirgFBVV95cUxPRWhGQ0hWMGp1YWYyOVJ5b2paa3NDTTNyMmtPRldrM3p1REJsNDV3UFBxM2VpaDZ2M0lWUzA2b2d4eldEQzFYT08zNFNKQVp0b21kcFp6MTVicElhT0txVDRVMzNfeDBsOHd6b25TdDdXRHh3a2xMSjAtQXI2bXptMVpobDF0WmVDbVU0MmROaF84T1BVRTdoOXVyaGR2dzFuMG96LXpoN0FCYmVVLXc?oc=5\" target=\"_blank\">Yen strengthens after Bank of Japan signals data-driven rate hikes</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRWhGQ0hWMGp1YWYyOVJ5b2paa3NDTTNyMmtPRldrM3p1REJsNDV3UFBxM2VpaDZ2M0lWUzA2b2d4eldEQzFYT08zNFNKQVp0b21kcFp6MTVicElhT0txVDRVMzNfeDBsOHd6b25TdDdXRHh3a2xMSjAtQXI2bXptMVpobDF0WmVDbVU0MmROaF84T1BVRTdoOXVyaGR2dzFuMG96LXpoN0FCYmVVLXc?oc=5",
+      "published": "Thu, 26 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Dollar firms, yen under pressure ahead of Japan's elections - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxNX3BIMlZPWHNIbWFadEZQU0xkYmd0c3p3dWtOWFh6cml5d0xRQmh3Q1hOd3g0YkJzd3lVSmNjdG54SzlKM013ZGtSWFAweDV6Z0V0MlFOUWI3YnNlVlFDUkxrS1hPRlRDVy1PWmhVcm1IdHFNZDZJVlp5d2Vjajdvdi0wc1c0TW4zU2kxTDV0OEhreG1kZzRzeDI1Zw?oc=5\" target=\"_blank\">Dollar firms, yen under pressure ahead of Japan's elections</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNX3BIMlZPWHNIbWFadEZQU0xkYmd0c3p3dWtOWFh6cml5d0xRQmh3Q1hOd3g0YkJzd3lVSmNjdG54SzlKM013ZGtSWFAweDV6Z0V0MlFOUWI3YnNlVlFDUkxrS1hPRlRDVy1PWmhVcm1IdHFNZDZJVlp5d2Vjajdvdi0wc1c0TW4zU2kxTDV0OEhreG1kZzRzeDI1Zw?oc=5",
+      "published": "Wed, 04 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Reassessing the dollar’s global status - gisreportsonline.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8yeUpOb3RpVndsZ2ozemVSeXl5MXN5ZFhub2hsMmZzWnZNVXQ0eWxyRkxSX1dGZE5Xd1hlRktDbUJIYnhpVVdWZlU2Z0J4SzE4aEJhYThUeHEtNnZKQVgtN09xSkpITzg?oc=5\" target=\"_blank\">Reassessing the dollar’s global status</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">gisreportsonline.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8yeUpOb3RpVndsZ2ozemVSeXl5MXN5ZFhub2hsMmZzWnZNVXQ0eWxyRkxSX1dGZE5Xd1hlRktDbUJIYnhpVVdWZlU2Z0J4SzE4aEJhYThUeHEtNnZKQVgtN09xSkpITzg?oc=5",
+      "published": "Fri, 28 Jul 2023 07:00:00 GMT"
+    },
+    {
+      "title": "The Difficult Realities of the BRICS’ Dedollarization Efforts—and the Renminbi’s Role - Carnegie Endowment for International Peace",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMXZ6ZVpzRzRoZHdsN1hFM2hFZVRIOHc5NjJMdFJ3WUdFNEV2N2h6VGVkYUdLOW9ZbEdtdS1fUkdCVjJZbFZ2N2Z6bE5pVGdGak1NWWN6TnBUN1JHcDJoQjVpQnI4ZDFFbzNBbklXeEVBNFlZbXpxZ1NzVlJJSEoxT0hVQlFFWGdHQ3pWTEExbTE0OEhIdjJkOUpZMXNxUUFJamdfbWp0QVZfVF9HNDlpNGRJYUNJZm80OTNPQTZHSklDMWJJc01iNw?oc=5\" target=\"_blank\">The Difficult Realities of the BRICS’ Dedollarization Efforts—and the Renminbi’s Role</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Carnegie Endowment for International Peace</font>",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMXZ6ZVpzRzRoZHdsN1hFM2hFZVRIOHc5NjJMdFJ3WUdFNEV2N2h6VGVkYUdLOW9ZbEdtdS1fUkdCVjJZbFZ2N2Z6bE5pVGdGak1NWWN6TnBUN1JHcDJoQjVpQnI4ZDFFbzNBbklXeEVBNFlZbXpxZ1NzVlJJSEoxT0hVQlFFWGdHQ3pWTEExbTE0OEhIdjJkOUpZMXNxUUFJamdfbWp0QVZfVF9HNDlpNGRJYUNJZm80OTNPQTZHSklDMWJJc01iNw?oc=5",
+      "published": "Tue, 05 Dec 2023 08:00:00 GMT"
+    },
+    {
+      "title": "FX Outlook 2026 - More dollar weakness ahead - ABN AMRO",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilgFBVV95cUxObUhMTnhZblJ4RmY1aGczWnh0ZnEzWHRWRGxjRjBTc1ZCTjhDREY0cTk2M3NOdEd4T0Z2NzQteGdVWWt1ZjdPMFVHYUIxZ2s4U2FEbFZJczRYekE5MHZfcTBOMWZNa2hIYV9tMnZYS01ZajEzNm9TRXFhMFY4QWMwOXBrNHRzMjhqWlBQaEpBUDcyQnh2SEE?oc=5\" target=\"_blank\">FX Outlook 2026 - More dollar weakness ahead</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">ABN AMRO</font>",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxObUhMTnhZblJ4RmY1aGczWnh0ZnEzWHRWRGxjRjBTc1ZCTjhDREY0cTk2M3NOdEd4T0Z2NzQteGdVWWt1ZjdPMFVHYUIxZ2s4U2FEbFZJczRYekE5MHZfcTBOMWZNa2hIYV9tMnZYS01ZajEzNm9TRXFhMFY4QWMwOXBrNHRzMjhqWlBQaEpBUDcyQnh2SEE?oc=5",
+      "published": "Wed, 12 Nov 2025 08:00:00 GMT"
+    },
+    {
+      "title": "COMMENTARY: Upside down world of 'reverse currency wars' is real - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMinwFBVV95cUxPZEtiNlZka2pjOVZMVlhvSlVtWkEyWWVkZWgwQWV3eGs0Wi1DZzZETy05bXQ1ekpvdDBVUFBWUUVwbnlkV0dPdm42X1JHRE9obUlhVkRGNUY4NGtOOWpPMXVtTlBKV1hoRHdSWVU0NDNkWW9qN0w5X2R5eUhoVXpiQzRudUJsTUFIWVVwWlpMRGZ3NU5OOGRrUG0xMTNpbms?oc=5\" target=\"_blank\">COMMENTARY: Upside down world of 'reverse currency wars' is real</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZEtiNlZka2pjOVZMVlhvSlVtWkEyWWVkZWgwQWV3eGs0Wi1DZzZETy05bXQ1ekpvdDBVUFBWUUVwbnlkV0dPdm42X1JHRE9obUlhVkRGNUY4NGtOOWpPMXVtTlBKV1hoRHdSWVU0NDNkWW9qN0w5X2R5eUhoVXpiQzRudUJsTUFIWVVwWlpMRGZ3NU5OOGRrUG0xMTNpbms?oc=5",
+      "published": "Tue, 21 Jun 2022 07:00:00 GMT"
+    },
+    {
+      "title": "Dollar falls versus yen after smaller-than-expected rise in US inflation, euro eases - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivwFBVV95cUxNOWd6MjZJS0pYVVhYYjN1eWtEWXNtaThnSGJxNmpXemtJOEJnekl3bkZ5ejZvTWdGN3l4ZGlfRXhBbHBZZ1pNU3JpVUhnb2JyNXhteDZEUWM5RllPOGRnTm5ENFpIZTVGcFU1NDlyRlFacl80di1VOWhwbVg3dmt4V1pjYUI0SGNfcEgyUy1QazJtNUtpVHNmNXk0c09IdlV1WUxINDBwNmY5emlSQXdad1RjdHNfeFJJN3d2dE9WZw?oc=5\" target=\"_blank\">Dollar falls versus yen after smaller-than-expected rise in US inflation, euro eases</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNOWd6MjZJS0pYVVhYYjN1eWtEWXNtaThnSGJxNmpXemtJOEJnekl3bkZ5ejZvTWdGN3l4ZGlfRXhBbHBZZ1pNU3JpVUhnb2JyNXhteDZEUWM5RllPOGRnTm5ENFpIZTVGcFU1NDlyRlFacl80di1VOWhwbVg3dmt4V1pjYUI0SGNfcEgyUy1QazJtNUtpVHNmNXk0c09IdlV1WUxINDBwNmY5emlSQXdad1RjdHNfeFJJN3d2dE9WZw?oc=5",
+      "published": "Wed, 17 Dec 2025 08:00:00 GMT"
+    },
+    {
+      "title": "Why is the euro falling and could it hit $1? - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMikwFBVV95cUxQTVpVUUZ2bWdQR2VlZUhwZzdEZVlhTGpDZjVFMEJlWE4xNmptbmd4UGxaZ2RzandNNnFKZmtURGg1TnotVzdKbWRGaWFmLS1SazVvdHd3cExKZEM0SUROQWt5TGdzYUphdFFHNUVyQXlWZXQtZ0NwWW45YThvSVN1RzZGRXRVRkplNGpINXRjaXp4YjQ?oc=5\" target=\"_blank\">Why is the euro falling and could it hit $1?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQTVpVUUZ2bWdQR2VlZUhwZzdEZVlhTGpDZjVFMEJlWE4xNmptbmd4UGxaZ2RzandNNnFKZmtURGg1TnotVzdKbWRGaWFmLS1SazVvdHd3cExKZEM0SUROQWt5TGdzYUphdFFHNUVyQXlWZXQtZ0NwWW45YThvSVN1RzZGRXRVRkplNGpINXRjaXp4YjQ?oc=5",
+      "published": "Thu, 14 Nov 2024 08:00:00 GMT"
+    },
+    {
+      "title": "The reign of king dollar will continue amid a global flight to safety - RSM US LLP",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNODNLYTVEYTVRa2VmUks2UmlGckREclZscFluRTUxNHY4ZzE0clk2Qm5EZUM3VnYyOWlISXpoTHF3Z1VJVk85WjRXVUI3R1BVX1phQXY0X0gyeFZKSFl1SnN6cjV3aEpQc1JORjlwZzRyd1Yxc2xnWjVUYUtoT3Q2SlZ4UUpvb1k?oc=5\" target=\"_blank\">The reign of king dollar will continue amid a global flight to safety</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">RSM US LLP</font>",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNODNLYTVEYTVRa2VmUks2UmlGckREclZscFluRTUxNHY4ZzE0clk2Qm5EZUM3VnYyOWlISXpoTHF3Z1VJVk85WjRXVUI3R1BVX1phQXY0X0gyeFZKSFl1SnN6cjV3aEpQc1JORjlwZzRyd1Yxc2xnWjVUYUtoT3Q2SlZ4UUpvb1k?oc=5",
+      "published": "Tue, 04 Oct 2022 07:00:00 GMT"
+    },
+    {
+      "title": "US shakes up currency markets with unusual yen-buying via selling euros - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiyAFBVV95cUxOYWhwczdTVFV2eTBMeUpacllrZ0VhMWhPa1FrX0p0VFN4N1pNeU9QN3BiWVNJdVR1MDZybUYxUjh2aDB2Rmw4NDdJcXFPM3M3cXU2TnJ1OEh1S2oyTF9QLURJc1NPM3g0Z09MczFneVBYWUwxWnNPRGF2U1YzM3BLeEdFRDAyN3lHNU5zY2wzdWl3TFF6Ump1RXI3V2x0aXB2M2RpM0luaHBWN1pVSXJ3VmRaS3NEWkhWUkFqSHhYWXJOemNicnBjcg?oc=5\" target=\"_blank\">US shakes up currency markets with unusual yen-buying via selling euros</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOYWhwczdTVFV2eTBMeUpacllrZ0VhMWhPa1FrX0p0VFN4N1pNeU9QN3BiWVNJdVR1MDZybUYxUjh2aDB2Rmw4NDdJcXFPM3M3cXU2TnJ1OEh1S2oyTF9QLURJc1NPM3g0Z09MczFneVBYWUwxWnNPRGF2U1YzM3BLeEdFRDAyN3lHNU5zY2wzdWl3TFF6Ump1RXI3V2x0aXB2M2RpM0luaHBWN1pVSXJ3VmRaS3NEWkhWUkFqSHhYWXJOemNicnBjcg?oc=5",
+      "published": "Mon, 03 Aug 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Why is the dollar winning against the euro? - EL PAÍS English",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqgFBVV95cUxOckdxcnN3WjhGdFRzVWhhamVhT3FOUG1fMFlWRzhhM3pMdlUxS3M4cFFDNFF6cnZRVTNDaUZ3TjdabktCcjhnQnU0X2tUQXNuSnpwaFE2cHFzejFDSEhsWVpXWThzZXY4REFNclcwaVZ6T0FSdzBBRy1VblJ2UU5teUtRVThqUjNnODNzWklCWnNLcnFkYWd4clZROTg2ZzE0cGw0eWFoSVJwUdIBvgFBVV95cUxQdnhsNktTcVF0LWhRN3FpaC1nY3NfNFMwRlUtTXltUkVabUVPanc5WkczenlqSTBOM3JnbnZnZVFVWmVwdVZDbHR2Z2Z1QVFYNzRLdmtRZ2R2MnhWMGJmOGt1RG5SUGM4NTMxdGN6ZGk4RTlGUU1UX09SVXdTal8tbU81X0pNMzl2aDVJYUtPQ3ZJbnlGOGpzME9BRXFSYWMtTUcxZXkwSm8zQ2FPMU5WYVVwQktKSDFIWWlGV21n?oc=5\" target=\"_blank\">Why is the dollar winning against the euro?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">EL PAÍS English</font>",
+      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOckdxcnN3WjhGdFRzVWhhamVhT3FOUG1fMFlWRzhhM3pMdlUxS3M4cFFDNFF6cnZRVTNDaUZ3TjdabktCcjhnQnU0X2tUQXNuSnpwaFE2cHFzejFDSEhsWVpXWThzZXY4REFNclcwaVZ6T0FSdzBBRy1VblJ2UU5teUtRVThqUjNnODNzWklCWnNLcnFkYWd4clZROTg2ZzE0cGw0eWFoSVJwUdIBvgFBVV95cUxQdnhsNktTcVF0LWhRN3FpaC1nY3NfNFMwRlUtTXltUkVabUVPanc5WkczenlqSTBOM3JnbnZnZVFVWmVwdVZDbHR2Z2Z1QVFYNzRLdmtRZ2R2MnhWMGJmOGt1RG5SUGM4NTMxdGN6ZGk4RTlGUU1UX09SVXdTal8tbU81X0pNMzl2aDVJYUtPQ3ZJbnlGOGpzME9BRXFSYWMtTUcxZXkwSm8zQ2FPMU5WYVVwQktKSDFIWWlGV21n?oc=5",
+      "published": "Tue, 12 Sep 2023 07:00:00 GMT"
+    },
+    {
+      "title": "Dollar gains on euro after inflation data, sterling falls - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipwFBVV95cUxOYWZ1ZkFDWENiNFZTaUlzNzBzWjMzRW9uQXVKXzhtS1RSQWprc0VPVWRMNGNzeGltUEdpLU9lMTNjV2hiRkZlMlBvb3BmX2xrS1YxY0FjdndHSmVaY04xdGxMZTZ3SXBwLUN2c1lGelB3S3FVVnBIMFZOX19xOF9uX0VVVVVVUnZGbDBLb05JaG8yQmxOeF91WDF4TXg1UktNTngwLS1JY9IBrAFBVV95cUxNYm41cWNfYVVkbXpzZE9GSGFiWU8zSEZIMTlrVldoeXBPOVJ2YWpOU2FYb2s0TmRVWHpNazR5dEcyMUw5Y0ZVQnprcnBqS0FrTC04MVJzV3ZJLWR2MHM3RnAxT3ZzblF6RUpBLVVYLW1rRWZoa1FsREptS2R1dWJEbHdHZGtsS2JZcTF4SjBEUWs4VTR4UG5vYkxYNVl3NEpPQlF4TTNjanBxaVh6?oc=5\" target=\"_blank\">Dollar gains on euro after inflation data, sterling falls</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOYWZ1ZkFDWENiNFZTaUlzNzBzWjMzRW9uQXVKXzhtS1RSQWprc0VPVWRMNGNzeGltUEdpLU9lMTNjV2hiRkZlMlBvb3BmX2xrS1YxY0FjdndHSmVaY04xdGxMZTZ3SXBwLUN2c1lGelB3S3FVVnBIMFZOX19xOF9uX0VVVVVVUnZGbDBLb05JaG8yQmxOeF91WDF4TXg1UktNTngwLS1JY9IBrAFBVV95cUxNYm41cWNfYVVkbXpzZE9GSGFiWU8zSEZIMTlrVldoeXBPOVJ2YWpOU2FYb2s0TmRVWHpNazR5dEcyMUw5Y0ZVQnprcnBqS0FrTC04MVJzV3ZJLWR2MHM3RnAxT3ZzblF6RUpBLVVYLW1rRWZoa1FsREptS2R1dWJEbHdHZGtsS2JZcTF4SjBEUWs4VTR4UG5vYkxYNVl3NEpPQlF4TTNjanBxaVh6?oc=5",
+      "published": "Thu, 29 Sep 2022 07:00:00 GMT"
+    },
+    {
+      "title": "Dollar holds losses to euro after ECB comments, economic data - nippon.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiYkFVX3lxTE9fcDRzdUdYRGpab25rQ0hFSDBUbHFOOVJCTTl6YUtwWHpsUEt3dkc2amJoX2xpNVNtMkhMd0YtVnEzYVNGSVBrcmkxdkdYc1dMVWQxa0kyV3NWTmdQbmdieXZ3?oc=5\" target=\"_blank\">Dollar holds losses to euro after ECB comments, economic data</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">nippon.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9fcDRzdUdYRGpab25rQ0hFSDBUbHFOOVJCTTl6YUtwWHpsUEt3dkc2amJoX2xpNVNtMkhMd0YtVnEzYVNGSVBrcmkxdkdYc1dMVWQxa0kyV3NWTmdQbmdieXZ3?oc=5",
+      "published": "Fri, 29 Oct 2021 07:00:00 GMT"
+    },
+    {
+      "title": "U.S. dollar down, still set for best year since 2015 - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMixAFBVV95cUxQLUJicDdoNlVTcHZYZG1oRDVQZ1BxM1J2VkZyUmQwTEI1X2w3MEVhd1dKM3lkbTZ5NGFzc1FVbTZ5RmgyZFhSTmNBVno5TC1UYVc4SHNuc0JNZHVLdnU5NHRxNnU2VE1ya3hzOTFJT2xDaFVJWEVLektvRFAyVHdsNFk1TF9sVXlOb0dRaGtRdjUxQnoycFR1a2VqU0t3WGFudnRuVmhqVm5BZUpCb3VJNnZUTmdQN09HM2dYdFg3U3o4LWg1?oc=5\" target=\"_blank\">U.S. dollar down, still set for best year since 2015</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQLUJicDdoNlVTcHZYZG1oRDVQZ1BxM1J2VkZyUmQwTEI1X2w3MEVhd1dKM3lkbTZ5NGFzc1FVbTZ5RmgyZFhSTmNBVno5TC1UYVc4SHNuc0JNZHVLdnU5NHRxNnU2VE1ya3hzOTFJT2xDaFVJWEVLektvRFAyVHdsNFk1TF9sVXlOb0dRaGtRdjUxQnoycFR1a2VqU0t3WGFudnRuVmhqVm5BZUpCb3VJNnZUTmdQN09HM2dYdFg3U3o4LWg1?oc=5",
+      "published": "Fri, 30 Dec 2022 08:00:00 GMT"
+    },
+    {
+      "title": "Dollar softens amid bets other central banks to outpace Fed tightening - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxPYzAwT3pTcUp2ZDRtSjVmVjlaWGlLVDFXOUduTkQtWWYwbGxPZEZhOG1pRnIzMGRRbTB3TTFUSllmUFdxdTAzRVZvRnFNNzI2Vm5QNWw4amxGYlRJYWY2NFBncDdITTNDeEtxeDMxWWFTWktFVHluWkhOS2VqQ2JzajZqaGZZT0JndlJCM3pleVNhU2Y4VnhMMVZnTlZvZ0hhdDhGdkFRMDNvaEtyZjJzcy1n?oc=5\" target=\"_blank\">Dollar softens amid bets other central banks to outpace Fed tightening</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYzAwT3pTcUp2ZDRtSjVmVjlaWGlLVDFXOUduTkQtWWYwbGxPZEZhOG1pRnIzMGRRbTB3TTFUSllmUFdxdTAzRVZvRnFNNzI2Vm5QNWw4amxGYlRJYWY2NFBncDdITTNDeEtxeDMxWWFTWktFVHluWkhOS2VqQ2JzajZqaGZZT0JndlJCM3pleVNhU2Y4VnhMMVZnTlZvZ0hhdDhGdkFRMDNvaEtyZjJzcy1n?oc=5",
+      "published": "Mon, 18 Oct 2021 07:00:00 GMT"
+    },
+    {
+      "title": "How Low Can the Dollar Go? - Morningstar",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiaEFVX3lxTFBxeTF0Nm9pQ0VSemhFVTlCVEUyOFV0dU1fN0owUi02QVZqbVpHQ0Z5LWtuTDBpRmNsQmp2Y2NhOHJYLWVBNlZiU2dNb3htbHNFNmVPUXJFaWQyMFhiXzR6c25Lb2FVQ2Ru?oc=5\" target=\"_blank\">How Low Can the Dollar Go?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Morningstar</font>",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBxeTF0Nm9pQ0VSemhFVTlCVEUyOFV0dU1fN0owUi02QVZqbVpHQ0Z5LWtuTDBpRmNsQmp2Y2NhOHJYLWVBNlZiU2dNb3htbHNFNmVPUXJFaWQyMFhiXzR6c25Lb2FVQ2Ru?oc=5",
+      "published": "Fri, 11 Jul 2025 07:00:00 GMT"
+    },
+    {
+      "title": "Dollar edges lower as Greenland concerns ease; Aussie jumps after jobs data - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiswFBVV95cUxQYUZxOGgxOGJhc1BxMEpBY2oweEdmZVZlSnZFOGgtTjlkVmVMaE03RWQ1V0dsVTJFNmZyMjE2ci1EQVRsMURjdFdKdGlocU5YZUw1UzBEODkzUVR0ZHA0N1Q1dk1xUmRIcHRoa3JuN1U4UFMtbWFhNVY5WkpJaGlBenduTkdfeVdpTEpjVzkxYlQ2aGVGbG5qLWJPYW1vMVg1QjJMOWNONENIQ1VRZUlTT3k0VdIBuAFBVV95cUxOdVRSZWVWLVJ1ajV0YXU1UHFiNks2dTdmeG1mS0ZhN3RhSlAwWW54RjdSZk95MHlKN3VaaHFidE04ckNVejJsNlB0SDl3U1pjMHZObGh6OE5mWmdvZzJNNUR4cmpFM3UwU3NHZUlfNmpSbDBtb1QzOWZndWUybXNqSEVaX3NLdGhYdENJdEtxTm4wSUVzVkdLdkNSYVNqSERENU1fdlNEZ214NF9oVHVrUTAtMDJxYmhl?oc=5\" target=\"_blank\">Dollar edges lower as Greenland concerns ease; Aussie jumps after jobs data</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQYUZxOGgxOGJhc1BxMEpBY2oweEdmZVZlSnZFOGgtTjlkVmVMaE03RWQ1V0dsVTJFNmZyMjE2ci1EQVRsMURjdFdKdGlocU5YZUw1UzBEODkzUVR0ZHA0N1Q1dk1xUmRIcHRoa3JuN1U4UFMtbWFhNVY5WkpJaGlBenduTkdfeVdpTEpjVzkxYlQ2aGVGbG5qLWJPYW1vMVg1QjJMOWNONENIQ1VRZUlTT3k0VdIBuAFBVV95cUxOdVRSZWVWLVJ1ajV0YXU1UHFiNks2dTdmeG1mS0ZhN3RhSlAwWW54RjdSZk95MHlKN3VaaHFidE04ckNVejJsNlB0SDl3U1pjMHZObGh6OE5mWmdvZzJNNUR4cmpFM3UwU3NHZUlfNmpSbDBtb1QzOWZndWUybXNqSEVaX3NLdGhYdENJdEtxTm4wSUVzVkdLdkNSYVNqSERENU1fdlNEZ214NF9oVHVrUTAtMDJxYmhl?oc=5",
+      "published": "Wed, 21 Jan 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Age of crisis leaves world's big currencies out of sync - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipgFBVV95cUxNc1VZUFk0aEwwZkd2WWNnZWtDOE16YnozTzc2NzZ1NzE2SGpqaXZROGRETjhpdDdKN0t2eWhORmpIMDJJeGpwX0JVWFhMbXFiOUFjMElkYklqWDRYVTRzY3pkU2lhRGNDNWxuSExyODNqME13MGxxTGxyVEZpNnFibHF4RzRwUk5sSE5YVEp5Rm9IMXcyS2hXTDRtTVFRVm5NMjRVSmN3?oc=5\" target=\"_blank\">Age of crisis leaves world's big currencies out of sync</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNc1VZUFk0aEwwZkd2WWNnZWtDOE16YnozTzc2NzZ1NzE2SGpqaXZROGRETjhpdDdKN0t2eWhORmpIMDJJeGpwX0JVWFhMbXFiOUFjMElkYklqWDRYVTRzY3pkU2lhRGNDNWxuSExyODNqME13MGxxTGxyVEZpNnFibHF4RzRwUk5sSE5YVEp5Rm9IMXcyS2hXTDRtTVFRVm5NMjRVSmN3?oc=5",
+      "published": "Wed, 28 Jun 2023 07:00:00 GMT"
+    },
+    {
+      "title": "Why is the U.S. dollar so strong? - The Washington Post",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxNbEtvdzRaVHlKekVhY2wtZF9IX3hOaDdxQTh4RG5zTDhFT1VCdWJObVlaOGFpQTMxZmN6S00tNm5qS0NoTldzMEo2dC1jNkhaUVkyQTIySFppZlU3MENaTVVTbGJkQTBrZXIwbDFPaTlXSUpTNEY1WG11SHVlYUREeFVfLWFrQQ?oc=5\" target=\"_blank\">Why is the U.S. dollar so strong?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Washington Post</font>",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbEtvdzRaVHlKekVhY2wtZF9IX3hOaDdxQTh4RG5zTDhFT1VCdWJObVlaOGFpQTMxZmN6S00tNm5qS0NoTldzMEo2dC1jNkhaUVkyQTIySFppZlU3MENaTVVTbGJkQTBrZXIwbDFPaTlXSUpTNEY1WG11SHVlYUREeFVfLWFrQQ?oc=5",
+      "published": "Fri, 30 Sep 2022 07:00:00 GMT"
+    },
+    {
+      "title": "Five ways that the super-strong US dollar could hurt the world economy - The Conversation",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUGg5d3FLUnVraGFiSTJqR1JMbEgzU05sVjUxaF9qUTIwUUZMS1Y4NFU0YTlZbHVhNzdRZTIxaVpURmtKcS13bFFoeXdXVGVIZHB4MGlFVHpHUHhqZGpMVkN3Smc3OGtGanJ4U3BvWXlJT2UxTFJDSXA1OVdIbDIySW1JZFpTUHhqYVdGUVNENGZWdDlGSW5QQ2RBaUNPRzE3OFNSSU9yeEQ?oc=5\" target=\"_blank\">Five ways that the super-strong US dollar could hurt the world economy</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The Conversation</font>",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOUGg5d3FLUnVraGFiSTJqR1JMbEgzU05sVjUxaF9qUTIwUUZMS1Y4NFU0YTlZbHVhNzdRZTIxaVpURmtKcS13bFFoeXdXVGVIZHB4MGlFVHpHUHhqZGpMVkN3Smc3OGtGanJ4U3BvWXlJT2UxTFJDSXA1OVdIbDIySW1JZFpTUHhqYVdGUVNENGZWdDlGSW5QQ2RBaUNPRzE3OFNSSU9yeEQ?oc=5",
+      "published": "Fri, 08 Jul 2022 07:00:00 GMT"
+    },
+    {
+      "title": "Why the dollar remains the world's reserve currency - RSM US LLP",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMilwFBVV95cUxPOF8yZGpwd21pakxOaHVsUktOSnVSNEJCR0FUbThsMjBfbEs0UVNfSTBfcmt3MFRFUWVveEhNM19fT1dyWEw0c3FoSHFtY2dsM0EzZWNPWU9lR3dxc0J0aVVqSHE1TlRWTnAtMndPLTQ1YUZtUzBsQzNFVzg2Z2U3SXNjN1UyNlRDRUdSQUFtcTNMVVpPRUhB?oc=5\" target=\"_blank\">Why the dollar remains the world's reserve currency</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">RSM US LLP</font>",
+      "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOF8yZGpwd21pakxOaHVsUktOSnVSNEJCR0FUbThsMjBfbEs0UVNfSTBfcmt3MFRFUWVveEhNM19fT1dyWEw0c3FoSHFtY2dsM0EzZWNPWU9lR3dxc0J0aVVqSHE1TlRWTnAtMndPLTQ1YUZtUzBsQzNFVzg2Z2U3SXNjN1UyNlRDRUdSQUFtcTNMVVpPRUhB?oc=5",
+      "published": "Mon, 01 May 2023 07:00:00 GMT"
+    },
+    {
+      "title": "Dollar gains as Fed, Middle East in focus - CNBC",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxPLUFuQWkzcmhHWE50Qk54VVdtU0lvMHFXV3Nhdzh0MFpBTWdTc2RxT0xZX08xM1k1aW5jd1B1dGhKcUJucEw3Y0pzSENDNEVpTEZDMGE3Q01ZdnpWaEViMlpEbTJoYzF5NW14MmhDcmpfVk9uOVlUZlNTTU9ET3NxNnBzZTlXcFJfVjNKaVpEZkt4SGFYOXlGUXU1ZFgwaUtz0gGmAUFVX3lxTE5HRy0xQlF2b05LY0NSNldXTmlVbV9BbHpjLWphdXloTmhHVzd0ZkJhZWs4T08wRmJhdHZPNlI4bVhMb1NiNkVHMGNLVFFVWWx1akhBNHNEU0ROQXZUZzdPbGh3Y0RfcFROSEladlYxWEVtcl9oTTFFakF5cWdfNGdfWmhBYXl1bFJJLUFGVW1idDl0Q0RETlJ2RWkzYU55ZnZtblZIdWc?oc=5\" target=\"_blank\">Dollar gains as Fed, Middle East in focus</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CNBC</font>",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPLUFuQWkzcmhHWE50Qk54VVdtU0lvMHFXV3Nhdzh0MFpBTWdTc2RxT0xZX08xM1k1aW5jd1B1dGhKcUJucEw3Y0pzSENDNEVpTEZDMGE3Q01ZdnpWaEViMlpEbTJoYzF5NW14MmhDcmpfVk9uOVlUZlNTTU9ET3NxNnBzZTlXcFJfVjNKaVpEZkt4SGFYOXlGUXU1ZFgwaUtz0gGmAUFVX3lxTE5HRy0xQlF2b05LY0NSNldXTmlVbV9BbHpjLWphdXloTmhHVzd0ZkJhZWs4T08wRmJhdHZPNlI4bVhMb1NiNkVHMGNLVFFVWWx1akhBNHNEU0ROQXZUZzdPbGh3Y0RfcFROSEladlYxWEVtcl9oTTFFakF5cWdfNGdfWmhBYXl1bFJJLUFGVW1idDl0Q0RETlJ2RWkzYU55ZnZtblZIdWc?oc=5",
+      "published": "Tue, 17 Oct 2023 07:00:00 GMT"
+    },
+    {
+      "title": "Is the US Dollar’s Role as the World’s Reserve Currency Under Threat? - International Banker",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdnRPQWprQTVyZElMMVoyeWx1eWwtZ28xd01LQzhoYzlOY1JXREgxWWkzZ2tQdW4tQnNsaHM5YVpfTFNCcmF0dnJkcXVmbWt0Mk1ZQ3VJSVo3TG5JRy1KN3Z3b1NDTUxHb0xUanhwVjFqUGlfSDdUSWNOMkxCNzFNWUJ2ZDZaalljWFJUTlRNaEktN1lGWk5iY2cxME1WSWllNVZXczlhZVVYQ0U?oc=5\" target=\"_blank\">Is the US Dollar’s Role as the World’s Reserve Currency Under Threat?</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">International Banker</font>",
+      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdnRPQWprQTVyZElMMVoyeWx1eWwtZ28xd01LQzhoYzlOY1JXREgxWWkzZ2tQdW4tQnNsaHM5YVpfTFNCcmF0dnJkcXVmbWt0Mk1ZQ3VJSVo3TG5JRy1KN3Z3b1NDTUxHb0xUanhwVjFqUGlfSDdUSWNOMkxCNzFNWUJ2ZDZaalljWFJUTlRNaEktN1lGWk5iY2cxME1WSWllNVZXczlhZVVYQ0U?oc=5",
+      "published": "Wed, 30 Sep 2020 07:00:00 GMT"
+    },
+    {
+      "title": "COMMENTARY: Central bank independence feels the heat - for unlikely reasons - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMirAFBVV95cUxOVy1mMW1Eb0V0YW55bC1Na3l1VU9tdklJNTkxUlJ6eDIxdm5mV3lFWVBIWHV0TkE4bGEwaURxUVUxVjI1eUtJcUpYTXJ0N09YcDlSSDFQbFlIMDg0MWtSVmpFR1RHYjJsSU5MZWlMU1lfMEV3dGNGcFNEcVgwR1pqa1dJcHduQS1VanJxdHo3aWE3UWZMSXBBaHdJRFVYRE5wSEZaU2RkZmZiSF9C?oc=5\" target=\"_blank\">COMMENTARY: Central bank independence feels the heat - for unlikely reasons</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVy1mMW1Eb0V0YW55bC1Na3l1VU9tdklJNTkxUlJ6eDIxdm5mV3lFWVBIWHV0TkE4bGEwaURxUVUxVjI1eUtJcUpYTXJ0N09YcDlSSDFQbFlIMDg0MWtSVmpFR1RHYjJsSU5MZWlMU1lfMEV3dGNGcFNEcVgwR1pqa1dJcHduQS1VanJxdHo3aWE3UWZMSXBBaHdJRFVYRE5wSEZaU2RkZmZiSF9C?oc=5",
+      "published": "Tue, 17 May 2022 07:00:00 GMT"
+    },
+    {
+      "title": "5 Factors That Influence Exchange Rates - Investopedia",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTE82V05OeWFFcDlMWk5rMGM2X2RnWk9IRUpMTFk0YUkyVHZ1U24yc0czMzBZSGthRTE0cXhLZ2NPS0pGQm9pZmN1YkNGRl9MRmtXZlh5enZTY1RKajh1amExVHVBSGxBZHhFaXFLaEg5ekgzbV9pOUxvU3Nn?oc=5\" target=\"_blank\">5 Factors That Influence Exchange Rates</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investopedia</font>",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE82V05OeWFFcDlMWk5rMGM2X2RnWk9IRUpMTFk0YUkyVHZ1U24yc0czMzBZSGthRTE0cXhLZ2NPS0pGQm9pZmN1YkNGRl9MRmtXZlh5enZTY1RKajh1amExVHVBSGxBZHhFaXFLaEg5ekgzbV9pOUxvU3Nn?oc=5",
+      "published": "Tue, 04 Sep 2018 15:38:58 GMT"
+    },
+    {
+      "title": "Morning Bid: The weak currency gang - Reuters",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMicEFVX3lxTE9JUUpSOWtlQ3RfekZ0bEVZU21RQVhBOVpJQWNEY00wQVV0ekZWbTB6NEt0V1ZaRnNVbUdienVTWWNoNDVpWDlXREduVGV3V203VWRzVGtrZUc5VnI4VXRtQmt1U0tybVBlenZDQkRJRE4?oc=5\" target=\"_blank\">Morning Bid: The weak currency gang</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Reuters</font>",
+      "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9JUUpSOWtlQ3RfekZ0bEVZU21RQVhBOVpJQWNEY00wQVV0ekZWbTB6NEt0V1ZaRnNVbUdienVTWWNoNDVpWDlXREduVGV3V203VWRzVGtrZUc5VnI4VXRtQmt1U0tybVBlenZDQkRJRE4?oc=5",
+      "published": "Thu, 28 Apr 2022 07:00:00 GMT"
+    },
+    {
+      "title": "Strong Dollar's Impact on Grain Exports - CME Group",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiogFBVV95cUxPU2tpdXdpdm1IT0JBV3NTejFLaUxnY2NWdEhZZlZRclNMbmdGbm9yeTROOGE4VHdOMUx1N1BNczZocTBEenVDMGsybTQ3MkFhZl9GbFl0TlpZY1RVWTRPZWZ3c0lhTWx6ZnItRjExMDZDV0cwQnRrZmViUl9hd1BUaUNCVGQ4bkNYUnppbzdGc19iQ3JSV2FZYXBKMGpWSkJKUVE?oc=5\" target=\"_blank\">Strong Dollar's Impact on Grain Exports</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">CME Group</font>",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPU2tpdXdpdm1IT0JBV3NTejFLaUxnY2NWdEhZZlZRclNMbmdGbm9yeTROOGE4VHdOMUx1N1BNczZocTBEenVDMGsybTQ3MkFhZl9GbFl0TlpZY1RVWTRPZWZ3c0lhTWx6ZnItRjExMDZDV0cwQnRrZmViUl9hd1BUaUNCVGQ4bkNYUnppbzdGc19iQ3JSV2FZYXBKMGpWSkJKUVE?oc=5",
+      "published": "Tue, 29 Mar 2022 07:00:00 GMT"
+    },
+    {
+      "title": "Dollar Strengthens Amid Geopolitical Tensions, Fed Hike Bets Trimmed - Global Banking & Finance Review",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiowFBVV95cUxQOTdFOFlXOXZ4czVfU3AwZXo1RXdGc3g2VHVkbmhMYVl0RUVxTzc3WW1NVVhXQ1c3aUJhZWxZX2pnT0dqNHZ0R0NiQUtTWHlwY2RMQmduRWlUX0s0bldMNW15aDlPZk9WZ29NZnhCN1FVUTZQcnNLMmtNSzhuUGdfaW5zN1NtWlp1WFRzejRLdEpVTjdOcmFEaThWZm1PNkVMUkVz?oc=5\" target=\"_blank\">Dollar Strengthens Amid Geopolitical Tensions, Fed Hike Bets Trimmed</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Global Banking & Finance Review</font>",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQOTdFOFlXOXZ4czVfU3AwZXo1RXdGc3g2VHVkbmhMYVl0RUVxTzc3WW1NVVhXQ1c3aUJhZWxZX2pnT0dqNHZ0R0NiQUtTWHlwY2RMQmduRWlUX0s0bldMNW15aDlPZk9WZ29NZnhCN1FVUTZQcnNLMmtNSzhuUGdfaW5zN1NtWlp1WFRzejRLdEpVTjdOcmFEaThWZm1PNkVMUkVz?oc=5",
+      "published": "Thu, 26 Mar 2026 07:00:00 GMT"
+    },
+    {
+      "title": "The Top 10 Most Traded Currencies - FOREX.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTFAtQWM5ZmVDa19GaU5qVXhyUmhJRzlVeXZHOGVkWnlnWjE2UF9lQ0U4WDJIT3VPRHhvVG5Ua0JXbnNkeEprcjJ4NWFmaktodFNnSVRORWZQQzRpTlBDNEpZbmNvQ2tRVFlPY2FaaGsxd0hZcmJVcGVpaTc5dklaSmc?oc=5\" target=\"_blank\">The Top 10 Most Traded Currencies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">FOREX.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAtQWM5ZmVDa19GaU5qVXhyUmhJRzlVeXZHOGVkWnlnWjE2UF9lQ0U4WDJIT3VPRHhvVG5Ua0JXbnNkeEprcjJ4NWFmaktodFNnSVRORWZQQzRpTlBDNEpZbmNvQ2tRVFlPY2FaaGsxd0hZcmJVcGVpaTc5dklaSmc?oc=5",
+      "published": "Fri, 16 May 2025 07:02:43 GMT"
+    },
+    {
+      "title": "Why China Buys U.S. Debt With Treasury Bonds - Investopedia",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMioAFBVV95cUxOSXhPXy1ULTNUZ0xDbngyeC1TaUFHc3puWjVaM0FYd3ZWbVdiMW95RTh3X3ZQQ0x0T014Vy1VNHVUTDhvZlBMOTMyWlh2OW4xdkl0Z2hPUVJyekJnNkhFb0dzSU8zd280dlNqV1hYV1JqVEI4QU5QaVNJdFBoUVpHTmRQcGUzOXRSajh3Zy0wUlQ5ZHNoeDFMWWZtUnBKZ25Y?oc=5\" target=\"_blank\">Why China Buys U.S. Debt With Treasury Bonds</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investopedia</font>",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOSXhPXy1ULTNUZ0xDbngyeC1TaUFHc3puWjVaM0FYd3ZWbVdiMW95RTh3X3ZQQ0x0T014Vy1VNHVUTDhvZlBMOTMyWlh2OW4xdkl0Z2hPUVJyekJnNkhFb0dzSU8zd280dlNqV1hYV1JqVEI4QU5QaVNJdFBoUVpHTmRQcGUzOXRSajh3Zy0wUlQ5ZHNoeDFMWWZtUnBKZ25Y?oc=5",
+      "published": "Fri, 06 Feb 2026 08:00:00 GMT"
+    },
+    {
+      "title": "Global bond sell-off deepens over US-Iran war and inflation concerns - trtworld.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiWEFVX3lxTE5ORXp3S055dlNXeFVYQzhmQUl3S3NaV09TN2M5ZFpLWU01RXkySE94MDFxTVdlT0djbm9FMzNlRXNpUDg3MnhPcXJEbkdLRTJLR0N0ZHNvVFQ?oc=5\" target=\"_blank\">Global bond sell-off deepens over US-Iran war and inflation concerns</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">trtworld.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5ORXp3S055dlNXeFVYQzhmQUl3S3NaV09TN2M5ZFpLWU01RXkySE94MDFxTVdlT0djbm9FMzNlRXNpUDg3MnhPcXJEbkdLRTJLR0N0ZHNvVFQ?oc=5",
+      "published": "Tue, 01 Sep 2026 19:55:35 GMT"
+    },
+    {
+      "title": "Argentina to pay the IMF with Chinese money - MercoPress",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihwFBVV95cUxNN0NIXzBES0RIek83YktvVkFiVEFJMmVlQWVFcDEwZmxCOXVKRFhyUW9kVnlwU3dkb3ZSU2xOVGVyWFRsRWx2ZG1CRE9BdDN6MDFWVjQ4YkFWU1NaYW81S3FsQUEtQUZyT3VTUFE4NG9wbFlRNWRWUHRtLUhLalFyUlFOX0JRcEk?oc=5\" target=\"_blank\">Argentina to pay the IMF with Chinese money</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">MercoPress</font>",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNN0NIXzBES0RIek83YktvVkFiVEFJMmVlQWVFcDEwZmxCOXVKRFhyUW9kVnlwU3dkb3ZSU2xOVGVyWFRsRWx2ZG1CRE9BdDN6MDFWVjQ4YkFWU1NaYW81S3FsQUEtQUZyT3VTUFE4NG9wbFlRNWRWUHRtLUhLalFyUlFOX0JRcEk?oc=5",
+      "published": "Fri, 30 Jun 2023 07:00:00 GMT"
+    },
+    {
+      "title": "Status of US Dollar as Global Reserve Currency and USD Exchange Rates: Long, Slow, Uneven Decline Continues - Wolf Street",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMi1gFBVV95cUxQNGw0N0VSZ3ViTDh1YzJsSGNVczRfRXRSSmwwUUk2MFhPVmhQUTU0MDhXN3RRU25NMkt3ZjVxOTl4dmF1VzQ3QkVCNTAxTkY5SllxSWtyRDJPX3ZFdEpzUUs3R2F5WXVONFFiendLb1NxSVNUZE95QkJib0tBSm5XQlYwZGE1RVpoQVJxZkZESS1tS2hUZ1NNbFJlM0IzV2RYRDFzQkt6cExIM2Q4eklyVUhUa29YNmEwbWJKLXpFamxZb2ZaSzNiYzhWRlFOZGxxN01CLTR3?oc=5\" target=\"_blank\">Status of US Dollar as Global Reserve Currency and USD Exchange Rates: Long, Slow, Uneven Decline Continues</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Wolf Street</font>",
+      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQNGw0N0VSZ3ViTDh1YzJsSGNVczRfRXRSSmwwUUk2MFhPVmhQUTU0MDhXN3RRU25NMkt3ZjVxOTl4dmF1VzQ3QkVCNTAxTkY5SllxSWtyRDJPX3ZFdEpzUUs3R2F5WXVONFFiendLb1NxSVNUZE95QkJib0tBSm5XQlYwZGE1RVpoQVJxZkZESS1tS2hUZ1NNbFJlM0IzV2RYRDFzQkt6cExIM2Q4eklyVUhUa29YNmEwbWJKLXpFamxZb2ZaSzNiYzhWRlFOZGxxN01CLTR3?oc=5",
+      "published": "Mon, 01 Jan 2024 08:00:00 GMT"
+    },
+    {
+      "title": "The Top 8 Most Tradable Currencies - Investopedia",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTFBfTUZRMzkzUzF4WklueWpGclFIcWhNZGxEYjBHaDhsLTkySFlzQWJweGJkUExja3pmQk56ZkxleDg2VmYtQVo1bHZ6N2JRN2p4YU91YUVqc0ZDNWtDcXBZN0JaUVdLZGxqR1c4Zy1NWQ?oc=5\" target=\"_blank\">The Top 8 Most Tradable Currencies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investopedia</font>",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBfTUZRMzkzUzF4WklueWpGclFIcWhNZGxEYjBHaDhsLTkySFlzQWJweGJkUExja3pmQk56ZkxleDg2VmYtQVo1bHZ6N2JRN2p4YU91YUVqc0ZDNWtDcXBZN0JaUVdLZGxqR1c4Zy1NWQ?oc=5",
+      "published": "Mon, 30 Jul 2018 19:39:13 GMT"
+    },
+    {
+      "title": "Update on US Dollar as Global Reserve Currency and the Impact of USD Exchange Rates & Inflation - Wolf Street",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxNd3N4ZWVnYm52MUlfOXhaVDJ0R3NhMEZlRDJBS2dZcXgxRTkzbFozbGFRYS1sc3Bwcm15U0dHQzMzY1M2V2JNcUE0a0VoWTJ4Q1lWQ1FwQktnbUdpNVllbEs1eE1kV0p3T3UyME5GN0pjdUlaX3FTa2JjN25YZUxiVTZUdTVtYzVIUG1yUmpOT09CZlhYSlNZN3NpcVlFVmpJb0RCRl9mVHpHQURPS0pueDhlVVJRUktpTGc?oc=5\" target=\"_blank\">Update on US Dollar as Global Reserve Currency and the Impact of USD Exchange Rates & Inflation</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Wolf Street</font>",
+      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNd3N4ZWVnYm52MUlfOXhaVDJ0R3NhMEZlRDJBS2dZcXgxRTkzbFozbGFRYS1sc3Bwcm15U0dHQzMzY1M2V2JNcUE0a0VoWTJ4Q1lWQ1FwQktnbUdpNVllbEs1eE1kV0p3T3UyME5GN0pjdUlaX3FTa2JjN25YZUxiVTZUdTVtYzVIUG1yUmpOT09CZlhYSlNZN3NpcVlFVmpJb0RCRl9mVHpHQURPS0pueDhlVVJRUktpTGc?oc=5",
+      "published": "Sat, 02 Apr 2022 07:00:00 GMT"
+    },
+    {
+      "title": "Most traded currencies 2025: US dollar leads as yuan climbs - capital.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE1oQ0RJbGpON1o2MV9rdWs2VXRwLVdCME5KcG9hSWdXRll2Q3ZBY01sUVlOOVJtQU5teHBOUWFxaEduNVhpTDVtM09WR3RtVlYtUWlnZXdrMzRvQm5lWmkzTWQ0SUo?oc=5\" target=\"_blank\">Most traded currencies 2025: US dollar leads as yuan climbs</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">capital.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1oQ0RJbGpON1o2MV9rdWs2VXRwLVdCME5KcG9hSWdXRll2Q3ZBY01sUVlOOVJtQU5teHBOUWFxaEduNVhpTDVtM09WR3RtVlYtUWlnZXdrMzRvQm5lWmkzTWQ0SUo?oc=5",
+      "published": "Tue, 13 May 2025 15:11:28 GMT"
+    },
+    {
+      "title": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs - capital.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZkFVX3lxTE40a1U1Ymg5Q05PeXJWa21XVTlDakNYdEp2N1NfNkh0WmZqMWdIZ0MtQU1nRkV2Y2p6V29TSGlxaGZfWC1XUHJJZFpmdEN3bndLVFV6b1hGUVphaEZDVTA4ZmJ5X2tWZw?oc=5\" target=\"_blank\">Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">capital.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE40a1U1Ymg5Q05PeXJWa21XVTlDakNYdEp2N1NfNkh0WmZqMWdIZ0MtQU1nRkV2Y2p6V29TSGlxaGZfWC1XUHJJZFpmdEN3bndLVFV6b1hGUVphaEZDVTA4ZmJ5X2tWZw?oc=5",
+      "published": "Tue, 13 May 2025 14:38:37 GMT"
+    },
+    {
+      "title": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs - capital.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xVTRnQU43emlTSFQ3MFR2UUpDbEExSXJ2OGtCTnlmODcyQ0RSTVRBZ0VyejVTWGx0YTVOTlJ1T2pzSmNNVDFrTHNEb3RYcWtIUHlSbk9IdFpJaVJ1dVpWak1nVEo?oc=5\" target=\"_blank\">Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">capital.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xVTRnQU43emlTSFQ3MFR2UUpDbEExSXJ2OGtCTnlmODcyQ0RSTVRBZ0VyejVTWGx0YTVOTlJ1T2pzSmNNVDFrTHNEb3RYcWtIUHlSbk9IdFpJaVJ1dVpWak1nVEo?oc=5",
+      "published": "Tue, 13 May 2025 15:05:47 GMT"
+    },
+    {
+      "title": "Most traded currencies - FOREX.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMigwFBVV95cUxPdGxYZkthZGRyMVBZZ0N3MFF0NjRTWlNUOHZteFBJZzRWcTd1TVRFa0djRVdIamk0M0RlRVpPWndvejl1ZFNTd2J3SlRFYzZjTXlsQnlXNlU5TmppTU9KSWZ5VVFPOW1qZk5tWFFyNUhlTTIyWE5RVXRkODVmMVowQ0tYNA?oc=5\" target=\"_blank\">Most traded currencies</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">FOREX.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPdGxYZkthZGRyMVBZZ0N3MFF0NjRTWlNUOHZteFBJZzRWcTd1TVRFa0djRVdIamk0M0RlRVpPWndvejl1ZFNTd2J3SlRFYzZjTXlsQnlXNlU5TmppTU9KSWZ5VVFPOW1qZk5tWFFyNUhlTTIyWE5RVXRkODVmMVowQ0tYNA?oc=5",
+      "published": "Tue, 17 Jun 2025 07:48:54 GMT"
+    },
+    {
+      "title": "How to Calculate an Exchange Rate - Investopedia",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiigFBVV95cUxPM3NrM2VYcWJEWkNMa3k0UVh3dWJQaV94ZVJxQ0U1ZGMtMGQ0SkpZbFo3ZUg4SHhsSVlyZ3N5YzVvOWpEbG1rT1RzLVdQMVJTWV9BSVdyMGpmWW5ncmM1dFVqaEowZHNqUWZFb0VKdi1ZVEYycUlsTnUyT2t2bXNXYVQ5RjJQdjhlNlE?oc=5\" target=\"_blank\">How to Calculate an Exchange Rate</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investopedia</font>",
+      "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPM3NrM2VYcWJEWkNMa3k0UVh3dWJQaV94ZVJxQ0U1ZGMtMGQ0SkpZbFo3ZUg4SHhsSVlyZ3N5YzVvOWpEbG1rT1RzLVdQMVJTWV9BSVdyMGpmWW5ncmM1dFVqaEowZHNqUWZFb0VKdi1ZVEYycUlsTnUyT2t2bXNXYVQ5RjJQdjhlNlE?oc=5",
+      "published": "Sat, 25 Mar 2017 07:57:36 GMT"
+    },
+    {
+      "title": "Understanding Currency Depreciation: Causes and Effects - Investopedia",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMib0FVX3lxTE0tRlBOMHVYNUR1R2FEVGZVRUFTbC1hT3Z3T1ZmTnhXQ0tTLUNvX2ZXV2dEQ214WGhmTlhXeDNvbGdlTmJnSXliaVFxRjBxSXcxU3NybnNUYThDZ0VlUjVjWXBLV2t1aldKWno3eUExZw?oc=5\" target=\"_blank\">Understanding Currency Depreciation: Causes and Effects</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Investopedia</font>",
+      "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0tRlBOMHVYNUR1R2FEVGZVRUFTbC1hT3Z3T1ZmTnhXQ0tTLUNvX2ZXV2dEQ214WGhmTlhXeDNvbGdlTmJnSXliaVFxRjBxSXcxU3NybnNUYThDZ0VlUjVjWXBLV2t1aldKWno3eUExZw?oc=5",
+      "published": "Sat, 25 Mar 2017 20:29:18 GMT"
+    },
+    {
+      "title": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs - capital.com",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiZEFVX3lxTFBEUkowX0JueE54RkhlRlgyR3RGQmNJQl9ueFk4cW4xR2F2T2Y0Rm96M0E3Q09obWFEUlJzZzBSekZaT2JDclYzM3o3aUJ1YjVKQjlVTVRTY1d3M3BQRTJrTTg0SEM?oc=5\" target=\"_blank\">Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">capital.com</font>",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBEUkowX0JueE54RkhlRlgyR3RGQmNJQl9ueFk4cW4xR2F2T2Y0Rm96M0E3Q09obWFEUlJzZzBSekZaT2JDclYzM3o3aUJ1YjVKQjlVTVRTY1d3M3BQRTJrTTg0SEM?oc=5",
+      "published": "Tue, 13 May 2025 14:41:42 GMT"
+    },
+    {
+      "title": "Inflation, debt and de-globalisation: How a surging US dollar could hurt the world economy - SmartCompany",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMihgFBVV95cUxQRV9vUk1fOE9VMFUxbEVhWWZRSVB6S3I5aDBzdnpRVWp4THhfYk00ZVlYdkJqWkt6MVRncUhZTnlENkpPNkxkX0NTWEdsRXBQSVUtUmdiYW55amw5eGZLa29iRzhDY0REbDA4LW9aVldXdGtSTDRDVGNWYVBWUmVJYjkxSjBtUQ?oc=5\" target=\"_blank\">Inflation, debt and de-globalisation: How a surging US dollar could hurt the world economy</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">SmartCompany</font>",
+      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRV9vUk1fOE9VMFUxbEVhWWZRSVB6S3I5aDBzdnpRVWp4THhfYk00ZVlYdkJqWkt6MVRncUhZTnlENkpPNkxkX0NTWEdsRXBQSVUtUmdiYW55amw5eGZLa29iRzhDY0REbDA4LW9aVldXdGtSTDRDVGNWYVBWUmVJYjkxSjBtUQ?oc=5",
+      "published": "Mon, 11 Jul 2022 07:00:00 GMT"
+    },
+    {
+      "title": "Chinese Yuan At Strongest Level Against US Dollar Since Mid-2018 - Exchange Rates UK",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMivgFBVV95cUxOTFZMaHBhek5Yc2tkM0pxRHM4blU5eXdDSVM2enN6akZrbUR3WUxsZkJRYndkQUI2T1hwelMxZ2hBb1VQUmp0SmZHaDBuOWRvejV5V1R2ekVzeTNNV3M2QzN4NFlaR3dmNW5hdzhLbUQtMEN0RXF5YXktZDl1Zk40a2NvaHBTNTJmTVpCRF9aVmlPWEJ4X0xicHdaRnRUWVc5VHRubmpwdjYwRHYyTHlLWXdxcXJac05Qbmk3MjZB?oc=5\" target=\"_blank\">Chinese Yuan At Strongest Level Against US Dollar Since Mid-2018</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Exchange Rates UK</font>",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTFZMaHBhek5Yc2tkM0pxRHM4blU5eXdDSVM2enN6akZrbUR3WUxsZkJRYndkQUI2T1hwelMxZ2hBb1VQUmp0SmZHaDBuOWRvejV5V1R2ekVzeTNNV3M2QzN4NFlaR3dmNW5hdzhLbUQtMEN0RXF5YXktZDl1Zk40a2NvaHBTNTJmTVpCRF9aVmlPWEJ4X0xicHdaRnRUWVc5VHRubmpwdjYwRHYyTHlLWXdxcXJac05Qbmk3MjZB?oc=5",
+      "published": "Tue, 05 Jan 2021 08:00:00 GMT"
+    },
+    {
+      "title": "Why the US dollar is so strong - Stuff",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiiwFBVV95cUxQR1NMNjFtWGYzN0tIT1ltMGFmR1MzNTJYTndkQ2RFSHNJZnoyeFo3ZFAzSkZRWEpGbXk1cmxMRlVyeTQ0UE13dktUdGhvZTdNTm1RLTFBaTFhWXZDZWp3OUpNMlpEMHJhYnBFN3Jic2x2Q1Z5VGJtWVlOWWpxLVlkcHZsOTVGM1Nyakhr?oc=5\" target=\"_blank\">Why the US dollar is so strong</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Stuff</font>",
+      "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQR1NMNjFtWGYzN0tIT1ltMGFmR1MzNTJYTndkQ2RFSHNJZnoyeFo3ZFAzSkZRWEpGbXk1cmxMRlVyeTQ0UE13dktUdGhvZTdNTm1RLTFBaTFhWXZDZWp3OUpNMlpEMHJhYnBFN3Jic2x2Q1Z5VGJtWVlOWWpxLVlkcHZsOTVGM1Nyakhr?oc=5",
+      "published": "Thu, 21 Jul 2022 07:00:00 GMT"
+    },
+    {
+      "title": "Why Economists Think Another ECB Rate Hike Is Coming - Exchange Rates UK",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMisgFBVV95cUxOMFlFbGRRYmhNYmx6M0hsN25UMWJrTXlwVmtNM2JZenA1aGRBaTIzQXlvQUhvVUgxa1BELVIwazY4YXVLazh1NU1tSmhXRUpWNENreG52RkNWbGVaMHlaRFRjbWlXVHBjMHduUVFURlp6NXRaMmhFUzRJN3pHQXFNaUh5T1RCVXdyTG45U0lpRVZJczJEeno2Rld0RjJiSGMtVmpnMUxLMFdDQWVidV9qek9R?oc=5\" target=\"_blank\">Why Economists Think Another ECB Rate Hike Is Coming</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Exchange Rates UK</font>",
+      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMFlFbGRRYmhNYmx6M0hsN25UMWJrTXlwVmtNM2JZenA1aGRBaTIzQXlvQUhvVUgxa1BELVIwazY4YXVLazh1NU1tSmhXRUpWNENreG52RkNWbGVaMHlaRFRjbWlXVHBjMHduUVFURlp6NXRaMmhFUzRJN3pHQXFNaUh5T1RCVXdyTG45U0lpRVZJczJEeno2Rld0RjJiSGMtVmpnMUxLMFdDQWVidV9qek9R?oc=5",
+      "published": "Mon, 27 Jul 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Why the rupee keeps faltering - The News International",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiekFVX3lxTFAtcXQxUnpVMVZJNkk4S0xLajIwLXlSLUNjbWl2bnVoTDZQdV9BM2owQnFjVEowaTJnb3VoSGFlcWlxU0F1ZVpxdkVFSXpYM0lCeEN6TUV3bDR1TjMwaUZWRkFxcG5iWDdWLTA0TmZIX3NnOU1MaUhTbzFB0gF3QVVfeXFMTnBxY0pKTElxNFQwRFVIQktjTVNwWHpuOVRXS24zV3VJclU1ck1oUjJVV1ZDR1hELXJPODhaSFhhMkt3NzV3R0txZF9VS2U3NHVzaVpyZF9xWUxiN3pVRkgzOUpNeFF3dm1QR3lRQ1BKM1RSaERMWm8?oc=5\" target=\"_blank\">Why the rupee keeps faltering</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">The News International</font>",
+      "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAtcXQxUnpVMVZJNkk4S0xLajIwLXlSLUNjbWl2bnVoTDZQdV9BM2owQnFjVEowaTJnb3VoSGFlcWlxU0F1ZVpxdkVFSXpYM0lCeEN6TUV3bDR1TjMwaUZWRkFxcG5iWDdWLTA0TmZIX3NnOU1MaUhTbzFB0gF3QVVfeXFMTnBxY0pKTElxNFQwRFVIQktjTVNwWHpuOVRXS24zV3VJclU1ck1oUjJVV1ZDR1hELXJPODhaSFhhMkt3NzV3R0txZF9VS2U3NHVzaVpyZF9xWUxiN3pVRkgzOUpNeFF3dm1QR3lRQ1BKM1RSaERMWm8?oc=5",
+      "published": "Wed, 16 Jul 2025 07:00:00 GMT"
+    },
+    {
+      "title": "Dollar calm as investors eye US jobs report, election - KLSE Screener",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMipAFBVV95cUxNRFdIM0xMdS1NN0l5S1pDbk1OcnZqUExyaEFjNS1jdTJodVFsZTBhNXNGYlZ1RVlWUVpHb1JSOGZqaXp4Vm1JRlBBU1g2bm9BWk8wRFhMMW5sNmstMkVFdHN1NHdhbXFwSjVaWi15TmlqeUNvMDdCb3FJT3QyTk16WVUteW9OaWxlY3BzUTZOZ3lzNTFDdGduWXVFanNHSFBTM21pUg?oc=5\" target=\"_blank\">Dollar calm as investors eye US jobs report, election</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">KLSE Screener</font>",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRFdIM0xMdS1NN0l5S1pDbk1OcnZqUExyaEFjNS1jdTJodVFsZTBhNXNGYlZ1RVlWUVpHb1JSOGZqaXp4Vm1JRlBBU1g2bm9BWk8wRFhMMW5sNmstMkVFdHN1NHdhbXFwSjVaWi15TmlqeUNvMDdCb3FJT3QyTk16WVUteW9OaWxlY3BzUTZOZ3lzNTFDdGduWXVFanNHSFBTM21pUg?oc=5",
+      "published": "Fri, 01 Nov 2024 07:00:00 GMT"
+    },
+    {
+      "title": "Pound To Euro Week-Ahead Forecast: UK Jobs Data Risks GBP Setback - Exchange Rates UK",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMiwgFBVV95cUxONFFIbUVfWF9qZTlqUnd0NVhjelc4MHVLTkdzUTRoaWtOdjdzQm42TFhwQ3VMUjZWQVFsX1RYODVvUjhvVVlwVzZIVVNTR204R1V4c3ZLMDZuME9sT2lSaDEwb0h5QTI1V3B3S2pveTV6LWQ4dUJ1QmJOOWpjMHcwbkV3MEhaUTh5YUFnMnVXSVY4amtmcnpwekJJazd0UHRNa2lraFpTNEJGYWZzV3FqM19nc3N2dThxSFg5T2MwRnpLQQ?oc=5\" target=\"_blank\">Pound To Euro Week-Ahead Forecast: UK Jobs Data Risks GBP Setback</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Exchange Rates UK</font>",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONFFIbUVfWF9qZTlqUnd0NVhjelc4MHVLTkdzUTRoaWtOdjdzQm42TFhwQ3VMUjZWQVFsX1RYODVvUjhvVVlwVzZIVVNTR204R1V4c3ZLMDZuME9sT2lSaDEwb0h5QTI1V3B3S2pveTV6LWQ4dUJ1QmJOOWpjMHcwbkV3MEhaUTh5YUFnMnVXSVY4amtmcnpwekJJazd0UHRNa2lraFpTNEJGYWZzV3FqM19nc3N2dThxSFg5T2MwRnpLQQ?oc=5",
+      "published": "Mon, 14 Sep 2026 06:30:00 GMT"
+    },
+    {
+      "title": "Gold Revaluation and Big Reset: Central Banks Signal Change - Discovery Alert",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMifEFVX3lxTFBXZTJnTkdDM2lJQ2JRejlleDYwVTd4aGh2VmZxX1l3WVVwVTVZNkxwV1NUTHhYUHFsVTRtRHh0QXlLQ0dGVXR1NzFkQTZrMWRsME1HTFA3U0huWkdKNU5yOGZSa1l4azhoaGVQdVo2dThIdG8yYkwtNXMtZG8?oc=5\" target=\"_blank\">Gold Revaluation and Big Reset: Central Banks Signal Change</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Discovery Alert</font>",
+      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBXZTJnTkdDM2lJQ2JRejlleDYwVTd4aGh2VmZxX1l3WVVwVTVZNkxwV1NUTHhYUHFsVTRtRHh0QXlLQ0dGVXR1NzFkQTZrMWRsME1HTFA3U0huWkdKNU5yOGZSa1l4azhoaGVQdVo2dThIdG8yYkwtNXMtZG8?oc=5",
+      "published": "Wed, 17 Dec 2025 08:00:00 GMT"
+    },
+    {
+      "title": "Why dollar is battering euro, Japanese yen and Chinese yuan - Nairametrics",
+      "description": "<a href=\"https://news.google.com/rss/articles/CBMimwFBVV95cUxQdjQyWVVIa3hpcmR6MlVPNVlLazdvS2xHc21lX1I0MkxRVmtIcDh6MEVYMGhZekllTnlJR1F3Mnp6d1hLM1lOaVh6QVJBUDZOalNYcW1YUzkxRGNqblYyLVJ3WERpUXdjMVZhaG5TU0IxaE9mRzNUNEkwRXhOQkY0ZlJYZlNVWDVOR21KOGpjZUpoek4wbUV3MmlXOA?oc=5\" target=\"_blank\">Why dollar is battering euro, Japanese yen and Chinese yuan</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Nairametrics</font>",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdjQyWVVIa3hpcmR6MlVPNVlLazdvS2xHc21lX1I0MkxRVmtIcDh6MEVYMGhZekllTnlJR1F3Mnp6d1hLM1lOaVh6QVJBUDZOalNYcW1YUzkxRGNqblYyLVJ3WERpUXdjMVZhaG5TU0IxaE9mRzNUNEkwRXhOQkY0ZlJYZlNVWDVOR21KOGpjZUpoek4wbUV3MmlXOA?oc=5",
+      "published": "Tue, 23 Apr 2024 07:00:00 GMT"
+    }
+  ],
+  "collected_at": "2026-09-19"
+}
