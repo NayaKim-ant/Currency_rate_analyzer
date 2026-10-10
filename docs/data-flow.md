@@ -68,6 +68,9 @@ sequenceDiagram
 
 - 환율: Frankfurter API의 USD 기준 주요 통화 시계열
 - 뉴스: Google News RSS의 환율·통화·금리 관련 검색 결과
+- 기사 본문: RSS의 각 링크를 따라가 HTML 텍스트를 추출하고, 요청 실패 시 RSS 설명 사용
+
+현재 HTML 파서는 script/style/nav 등 일부 요소를 제외하지만, 구현 조건상 `<article>`·`<main>` 밖의 텍스트도 포함할 수 있다. 본문 영역만 엄격히 추출하는 파서로 보장되는 것은 아니다.
 
 수집 결과는 우선 `market_data_raw.json`에 원본 형태로 저장된다.
 
@@ -79,7 +82,7 @@ sequenceDiagram
 - 통화: `dollar`, `euro`, `pound`, `yen`, `yuan`, `won`
 - 거시 요인: `central bank`, `inflation`, `interest`
 
-관련 키워드가 2개 이상 발견된 기사만 관련 기사로 분류한다. 결과는 `market_analysis_input.json`에 저장된다.
+RSS 제목뿐 아니라 수집된 기사 본문까지 합쳐 관련 키워드를 검색한다. 관련 키워드가 2개 이상 발견된 기사만 관련 기사로 분류한다. 결과는 `market_analysis_input.json`에 저장된다.
 
 ### 4. Python에서 Node로 전달
 

@@ -6,6 +6,12 @@ from typing import Any
 
 
 class IpcHandler:
+    """Python 메인 스레드와 Node 프로세스 사이의 TCP/JSON 어댑터.
+
+    소켓 I/O는 전용 스레드가 맡고, 호출자는 thread-safe Queue로 메시지를
+    송수신해 메인 스레드가 네트워크 읽기에서 막히지 않도록 한다.
+    """
+
     def __init__(self, host: str = "127.0.0.1") -> None:
         self.host = host
         self.port = 0
@@ -23,6 +29,7 @@ class IpcHandler:
         return self._inbox
 
     def start(self) -> None:
+        """서버 소켓을 열고 임시 포트 준비가 끝날 때까지 기다린다."""
         self._thread.start()
         self._ready.wait()
 
@@ -60,6 +67,8 @@ class IpcHandler:
                 client_socket.settimeout(0.2)
                 buffer = b""
                 while not self._stopped.is_set():
+                    # 발신 큐를 비운 뒤 수신한다. recv timeout은 stop 플래그를
+                    # 주기적으로 확인할 기회를 제공하며 polling loop와는 다르다.
                     self._send_pending(client_socket)
                     try:
                         chunk = client_socket.recv(4096)
@@ -71,6 +80,7 @@ class IpcHandler:
                     buffer = self._receive_messages(buffer)
 
     def _send_pending(self, client_socket: socket.socket) -> None:
+        """큐의 각 dict를 JSON 한 줄로 직렬화해 TCP 소켓에 쓴다."""
         while True:
             try:
                 message = self._outbox.get_nowait()
@@ -81,6 +91,7 @@ class IpcHandler:
             self._outbox.task_done()
 
     def _receive_messages(self, buffer: bytes) -> bytes:
+        """TCP 청크 경계를 넘어온 데이터를 newline 단위 메시지로 복원한다."""
         while b"\n" in buffer:
             raw_message, buffer = buffer.split(b"\n", 1)
             if raw_message:

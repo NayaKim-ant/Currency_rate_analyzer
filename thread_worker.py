@@ -1,8 +1,11 @@
 import json
 import logging
 import queue
+from concurrent.futures import ThreadPoolExecutor
 from datetime import date, timedelta
 from enum import Enum, auto
+from html import unescape
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 from urllib.parse import quote
@@ -14,6 +17,7 @@ from thread_messages import Message, MessageType
 logger = logging.getLogger(__name__)
 
 
+# 각 워커의 상태 enum을 분리해 수행 중인 역할이 로그에 드러나게 한다.
 class CrawlerState(Enum):
     IDLE = auto()
     FETCHING_RATES = auto()
@@ -47,18 +51,63 @@ MAJOR_CURRENCIES = {
 
 
 def fetch_json(url: str) -> Any:
+    """JSON API를 제한 시간과 식별 가능한 User-Agent로 요청한다."""
     request = Request(url, headers={"User-Agent": "market-insight-example/1.0"})
-    with urlopen(request, timeout=15) as response:
+    with urlopen(request, timeout=5) as response:
         return json.load(response)
 
 
 def fetch_xml(url: str) -> ElementTree.Element:
+    """RSS XML을 가져와 ElementTree로 파싱한다."""
     request = Request(url, headers={"User-Agent": "market-insight-example/1.0"})
-    with urlopen(request, timeout=15) as response:
+    with urlopen(request, timeout=5) as response:
         return ElementTree.fromstring(response.read())
 
 
+class ArticleTextParser(HTMLParser):
+    """HTML에서 스크립트·레이아웃 요소를 제외하고 텍스트를 모은다."""
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.in_content = False
+        self.skip_depth = 0
+        self.text_parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in {"script", "style", "nav", "header", "footer", "aside", "form"}:
+            self.skip_depth += 1
+            return
+        if tag in {"article", "main"}:
+            self.in_content = True
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag in {"script", "style", "nav", "header", "footer", "aside", "form"} and self.skip_depth:
+            self.skip_depth -= 1
+        elif tag in {"article", "main"}:
+            self.in_content = False
+
+    def handle_data(self, data: str) -> None:
+        if not self.skip_depth and (self.in_content or data.strip()):
+            text = " ".join(unescape(data).split())
+            if text:
+                self.text_parts.append(text)
+
+    def text(self) -> str:
+        return " ".join(self.text_parts)
+
+
+def fetch_article_body(url: str) -> str:
+    """RSS 링크를 따라가 본문 후보 텍스트를 최대 5,000자로 수집한다."""
+    request = Request(url, headers={"User-Agent": "market-insight-example/1.0"})
+    with urlopen(request, timeout=5) as response:
+        parser = ArticleTextParser()
+        parser.feed(response.read().decode("utf-8", errors="ignore"))
+        return parser.text()[:5000]
+
+
 class CrawlerWorker:
+    """환율 시계열과 뉴스 RSS/기사 페이지를 수집하는 Python 워커."""
+
     def __init__(self, inbox: queue.Queue[Message], analyzer_inbox: queue.Queue[Message], raw_output_path: Path) -> None:
         self.inbox = inbox
         self.analyzer_inbox = analyzer_inbox
@@ -71,6 +120,7 @@ class CrawlerWorker:
         logger.info("시장 크롤러 상태 전이: %s -> %s | 원인 이벤트: %s%s", old_state.name, new_state.name, event.name, f" | {detail}" if detail else "")
 
     def run(self) -> None:
+        """큐에서 명령을 소비한다. 비어 있는 Queue.get은 블로킹 대기한다."""
         while self.state is not CrawlerState.STOPPED:
             message = self.inbox.get()
             try:
@@ -84,7 +134,7 @@ class CrawlerWorker:
         elif message.message_type is MessageType.STATUS_REQUEST:
             self.analyzer_inbox.put(Message.status_response(1, {"worker": "market-crawler", "state": self.state.name}))
         elif message.message_type is MessageType.DATA_PROCESSED:
-            self.transition_to(CrawlerState.WAITING, MessageType.DATA_PROCESSED, "Node 인사이트 저장 완료")
+            self.transition_to(CrawlerState.WAITING, MessageType.DATA_PROCESSED, "Python 분석 입력 파일 생성 완료")
         elif message.message_type is MessageType.STOP:
             self.transition_to(CrawlerState.STOPPED, MessageType.STOP)
         elif message.message_type is MessageType.ERROR:
@@ -105,6 +155,7 @@ class CrawlerWorker:
             logger.exception("시장 데이터 수집 실패")
 
     def fetch_rates(self) -> list[dict[str, Any]]:
+        """최근 45일의 USD 기준 주요 통화 환율을 날짜순으로 반환한다."""
         self.transition_to(CrawlerState.FETCHING_RATES, MessageType.START, "주요 통화 환율 수집")
         end = date.today()
         start = end - timedelta(days=45)
@@ -118,14 +169,37 @@ class CrawlerWorker:
         url = f"https://news.google.com/rss/search?q={quote(terms)}&hl=en-US&gl=US&ceid=US:en"
         root = fetch_xml(url)
         articles = []
+        rss_articles = []
         for item in root.findall("./channel/item"):
             title = item.findtext("title", default="").strip()
+            link = item.findtext("link", default="").strip()
             if title:
-                articles.append({"title": title, "description": item.findtext("description", default="").strip(), "link": item.findtext("link", default="").strip(), "published": item.findtext("pubDate", default="").strip()})
+                rss_articles.append({
+                    "title": title,
+                    "description": item.findtext("description", default="").strip(),
+                    "link": link,
+                    "published": item.findtext("pubDate", default="").strip(),
+                })
+
+        def enrich_article(article: dict[str, str]) -> dict[str, str]:
+            try:
+                article_body = fetch_article_body(article["link"])
+                if article_body:
+                    article["description"] = article_body
+            except Exception as error:
+                logger.warning("기사 본문 수집 실패: %s | %s", article["title"], error)
+            return article
+
+        # 네트워크 I/O는 대기 시간이 길어 여러 기사 페이지를 동시에 요청한다.
+        # RSS 항목 순서는 executor.map이 유지하고, 개별 실패는 RSS 설명으로 fallback한다.
+        with ThreadPoolExecutor(max_workers=12, thread_name_prefix="article-fetch") as executor:
+            articles = list(executor.map(enrich_article, rss_articles[:100]))
         return articles[:100]
 
 
 class AnalyzerWorker:
+    """수집 기사에서 관련 항목을 골라 Node 분석 입력 JSON을 만드는 워커."""
+
     def __init__(self, inbox: queue.Queue[Message], crawler_inbox: queue.Queue[Message], input_path: Path) -> None:
         self.inbox = inbox
         self.crawler_inbox = crawler_inbox
@@ -159,6 +233,7 @@ class AnalyzerWorker:
             self.transition_to(AnalyzerState.ERROR, MessageType.ERROR, str(message.payload))
 
     def save_input(self, payload: dict[str, Any]) -> None:
+        # 제목과 실제 본문을 함께 검색하되, 2개 이상 키워드가 맞는 기사만 넘긴다.
         keywords = set("exchange rate dollar euro pound yen yuan won central bank inflation interest currency".split())
         relevant_articles = []
         for article in payload["articles"]:

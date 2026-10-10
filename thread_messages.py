@@ -3,7 +3,12 @@ from enum import Enum, auto
 from typing import Any
 
 
+"""Python 프로세스 내부 워커 간 메시지 프로토콜."""
+
+
 class MessageType(Enum):
+    """큐로 전달되는 명령과 이벤트의 종류."""
+
     START = auto()
     FETCH = auto()
     DATA = auto()
@@ -16,6 +21,8 @@ class MessageType(Enum):
 
 @dataclass(frozen=True, slots=True)
 class Message:
+    """불변 메시지 봉투; payload에 실제 데이터를 담는다."""
+
     message_type: MessageType
     sender: int | None = None
     payload: Any = None

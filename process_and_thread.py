@@ -16,6 +16,7 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 
+# 모든 출력 파일을 실행 스크립트 위치에 두어 현재 작업 디렉터리에 좌우되지 않게 한다.
 base_path = Path(__file__).parent
 crawler_inbox: queue.Queue[Message] = queue.Queue()
 analyzer_inbox: queue.Queue[Message] = queue.Queue()
@@ -25,6 +26,7 @@ insights_path = base_path / "market_insights.json"
 
 ipc = IpcHandler()
 ipc.start()
+# Node 경로가 PATH에 없더라도 이전 사용자 영역 설치를 찾도록 fallback을 둔다.
 node_executable = shutil.which("node") or str(Path(os.environ["LOCALAPPDATA"]) / "nodejs" / "node.exe")
 try:
     node_process = subprocess.Popen(
@@ -45,9 +47,11 @@ threads = [
 for thread in threads:
     thread.start()
 
+# 분석기가 먼저 준비되어야 크롤러가 보낸 DATA를 놓치지 않는다.
 analyzer_inbox.put(Message.start(0))
 crawler_inbox.put(Message.start(0))
 
+# Queue.join은 스레드 종료가 아니라 put된 항목마다 task_done이 호출될 때까지 기다린다.
 crawler_inbox.join()
 analyzer_inbox.join()
 
@@ -60,6 +64,7 @@ if not analysis_input_path.exists():
     node_process.terminate()
     raise RuntimeError("환율·뉴스 수집 또는 기사 분석에 실패해 Node 입력 파일이 생성되지 않았습니다.")
 
+# 큰 환율·기사 payload는 이미 파일에 있으므로 IPC에는 경로만 보낸다.
 ipc.send({
     "type": "PROCESS_COMPLETE",
     "analysisInputPath": str(analysis_input_path),
@@ -74,6 +79,7 @@ while True:
     if message.get("type") == "NODE_ERROR":
         raise RuntimeError(message.get("error"))
 
+# 저장 확인 뒤 Python 워커와 Node 프로세스를 명시적으로 종료한다.
 crawler_inbox.put(Message.status_request(2))
 analyzer_inbox.put(Message.status_request(1))
 crawler_inbox.join()

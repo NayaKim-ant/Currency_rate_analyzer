@@ -1,88 +1,88 @@
 {
-  "generated_at": "2026-09-19T10:11:14.034Z",
+  "generated_at": "2026-10-05T10:34:03.685Z",
   "source_period": {
-    "start": "2026-08-05",
-    "end": "2026-09-18"
+    "start": "2026-08-21",
+    "end": "2026-10-02"
   },
   "methodology": "5일 단순 이동평균과 최신 환율을 비교해 일시적 등락보다 추이를 판단",
   "currencies": {
     "EUR": {
       "name": "유로",
-      "latest_rate": 0.8726,
-      "latest_date": "2026-09-18",
-      "five_day_moving_average": 0.868548,
-      "change_from_previous_day_percent": 0.184,
-      "gap_from_moving_average_percent": 0.467,
+      "latest_rate": 0.89087,
+      "latest_date": "2026-10-02",
+      "five_day_moving_average": 0.883242,
+      "change_from_previous_day_percent": 0.651,
+      "gap_from_moving_average_percent": 0.864,
       "trend": "상승 추이"
     },
     "GBP": {
       "name": "영국 파운드",
-      "latest_rate": 0.74939,
-      "latest_date": "2026-09-18",
-      "five_day_moving_average": 0.744568,
-      "change_from_previous_day_percent": 0.242,
-      "gap_from_moving_average_percent": 0.648,
+      "latest_rate": 0.75753,
+      "latest_date": "2026-10-02",
+      "five_day_moving_average": 0.754936,
+      "change_from_previous_day_percent": 0.249,
+      "gap_from_moving_average_percent": 0.344,
       "trend": "상승 추이"
     },
     "JPY": {
       "name": "일본 엔",
-      "latest_rate": 157.89,
-      "latest_date": "2026-09-18",
-      "five_day_moving_average": 155.636,
-      "change_from_previous_day_percent": 1.413,
-      "gap_from_moving_average_percent": 1.448,
+      "latest_rate": 157.67,
+      "latest_date": "2026-10-02",
+      "five_day_moving_average": 157.33,
+      "change_from_previous_day_percent": -0.196,
+      "gap_from_moving_average_percent": 0.216,
       "trend": "상승 추이"
     },
     "KRW": {
       "name": "한국 원",
-      "latest_rate": 1388.1,
-      "latest_date": "2026-09-18",
-      "five_day_moving_average": 1368.768,
-      "change_from_previous_day_percent": 0.401,
-      "gap_from_moving_average_percent": 1.412,
-      "trend": "상승 추이"
+      "latest_rate": 1348.28,
+      "latest_date": "2026-10-02",
+      "five_day_moving_average": 1355.248,
+      "change_from_previous_day_percent": -0.954,
+      "gap_from_moving_average_percent": -0.514,
+      "trend": "하락 추이"
     },
     "CNY": {
       "name": "중국 위안",
-      "latest_rate": 6.6976,
-      "latest_date": "2026-09-18",
-      "five_day_moving_average": 6.70642,
-      "change_from_previous_day_percent": -0.148,
-      "gap_from_moving_average_percent": -0.132,
+      "latest_rate": 6.7046,
+      "latest_date": "2026-10-02",
+      "five_day_moving_average": 6.7055,
+      "change_from_previous_day_percent": 0.001,
+      "gap_from_moving_average_percent": -0.013,
       "trend": "이동평균 부근의 보합 추이"
     },
     "AUD": {
       "name": "호주 달러",
-      "latest_rate": 1.4045,
-      "latest_date": "2026-09-18",
-      "five_day_moving_average": 1.40366,
-      "change_from_previous_day_percent": -0.085,
-      "gap_from_moving_average_percent": 0.06,
-      "trend": "이동평균 부근의 보합 추이"
+      "latest_rate": 1.4411,
+      "latest_date": "2026-10-02",
+      "five_day_moving_average": 1.4333,
+      "change_from_previous_day_percent": 0.16,
+      "gap_from_moving_average_percent": 0.544,
+      "trend": "상승 추이"
     },
     "CAD": {
       "name": "캐나다 달러",
-      "latest_rate": 1.401,
-      "latest_date": "2026-09-18",
-      "five_day_moving_average": 1.39502,
-      "change_from_previous_day_percent": 0.107,
-      "gap_from_moving_average_percent": 0.429,
+      "latest_rate": 1.424,
+      "latest_date": "2026-10-02",
+      "five_day_moving_average": 1.4203,
+      "change_from_previous_day_percent": -0.042,
+      "gap_from_moving_average_percent": 0.261,
       "trend": "상승 추이"
     },
     "CHF": {
       "name": "스위스 프랑",
-      "latest_rate": 0.82565,
-      "latest_date": "2026-09-18",
-      "five_day_moving_average": 0.820762,
-      "change_from_previous_day_percent": 0.141,
-      "gap_from_moving_average_percent": 0.596,
-      "trend": "상승 추이"
+      "latest_rate": 0.82664,
+      "latest_date": "2026-10-02",
+      "five_day_moving_average": 0.83232,
+      "change_from_previous_day_percent": -1.034,
+      "gap_from_moving_average_percent": -0.682,
+      "trend": "하락 추이"
     }
   },
   "relevant_articles": [
     {
       "headline": "Dollar rises, euro slips after ECB rate increase - Reuters",
-      "relevant_content": "Dollar rises, euro slips after ECB rate increase&nbsp;&nbsp;Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Thu, 10 Sep 2026 07:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOYU50UmRVNmIyeFBOSmd6azlDeDMxNlh1S0cycHpnYjU4NERYWjhoN2diSmthTngzdWZScmFTdldrTGtUcTh3SDFKbVIySmU2TUx3cnMtOEdKMnFkV3J1d3pYRmdvZDVWb2VPSXNjcG52cEVPTGtLNF9UT1BFSnJ3WlUzOXNuU1FwZmNSdGVTdV9Na1h6M3dPVGVtU0ttYlBlRWc0S1Q0Rl9HSmVCNlZaZXhjMVc0OUduMk1mOGRqVkxjY0d2SGhRbWJsUQ?oc=5",
       "matched_reasons": [
@@ -97,38 +97,22 @@
       ]
     },
     {
-      "headline": "Won Leads G20 Currency Appreciation in Third Quarter - 조선일보",
-      "relevant_content": "Won Leads G20 Currency Appreciation in Third Quarter&nbsp;&nbsp;조선일보",
-      "published": "Sun, 13 Sep 2026 01:57:45 GMT",
-      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMmpCUWJUaE4xYmdBenhaQ2IzdE9uYnVzOHJ0VUFXMVZ2TzhKY3pNOGlabXRnVG1Ga0VVamtXX2Q1ZjNwZFlUamJqTmc1NFJ3VktELWFaUDJ5WFl0NlBUYWdrMlJ2Z2JXNHd3aU9Cc2xSaVc3MGxsVUNmQ1A3RFk0SzBMc0tOb05UWXlab253?oc=5",
-      "matched_reasons": [
-        "won",
-        "currency"
-      ],
-      "matched_keywords": [
-        "currency",
-        "won"
-      ]
-    },
-    {
-      "headline": "Yen drops to 160 per dollar as oil spike, rising yields revive inflation fears - staradvertiser.com",
-      "relevant_content": "Yen drops to 160 per dollar as oil spike, rising yields revive inflation fears&nbsp;&nbsp;staradvertiser.com",
-      "published": "Tue, 01 Sep 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSUhVczh4NkRqdkJDcm90Y0JQLXY0ajBUMVZVWGw5T0w3aEtRYWxsY3BRWW52VjREd2xjVDNiY0lXYWtaWXVUOU9DVG9mT3pYbGVSY0g3MkxyWHRqUWh4R1pwcUhHamhLVFZQNjZmdjdwdkhjTVhfQnlWTzNpMmUzdDJEQnlNNzJ6b0ZWWkxPUTgtay0tVXVNbDdFZ1UyelhYMDVYcGNlbXFScmg5bnFyY2NhWUVHZHd1emxjbHlJNUdhdGpUc2NIZy04VnZ6dmM?oc=5",
+      "headline": "Dollar steady as traders await key US inflation data - Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Tue, 11 Aug 2026 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTzhZVWVFX0IxZHRHRTExeHVkajFlQ3U3X3RhbjdFbW5uNnFHR0lLNmd5ZVZRT0tqd1h2X090Snd4bk5VLWhKd0UwaTlDUTNkbnpsLWRIdXFJWE1wdDlUbVd0SXJjb1JYaVlKTVVxUllYQ2lRZjNZcFA1LWVEY2xZRTVHdkNEd3cyNGRNNDhHUDRYem15Szg5dFFadXRCNnFYNHQ1Yg?oc=5",
       "matched_reasons": [
         "inflation",
-        "dollar",
-        "yen"
+        "dollar"
       ],
       "matched_keywords": [
         "dollar",
-        "inflation",
-        "yen"
+        "inflation"
       ]
     },
     {
-      "headline": "Exchange rates and interest rates - European Commission",
-      "relevant_content": "Exchange rates and interest rates&nbsp;&nbsp;European Commission",
+      "headline": "Exchange rates and interest rates - ec.europa.eu",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Thu, 01 Jan 2026 08:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNTEw2bU5GZThSbVdVMjNmTFZ4Vi1hRm9GdXdnSjhQeGlyWjBHTjVldU96ckViVnRQYXVNSW8wdklESThUY2E0TGlEUnI5SXMyVkpnclNLTkluWmluWHZILUw1cm1JZVFYRVdIOS1QUHNpR0wxMC01LWEwVFlqTU9TYTNTR0R5MTU3YXljQlBPd3Z6N21NLV81MTFBTVZDVkFNamc?oc=5",
       "matched_reasons": [
@@ -144,22 +128,38 @@
       ]
     },
     {
-      "headline": "Dollar steady as traders await key US inflation data - Reuters",
-      "relevant_content": "Dollar steady as traders await key US inflation data&nbsp;&nbsp;Reuters",
-      "published": "Tue, 11 Aug 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPTzhZVWVFX0IxZHRHRTExeHVkajFlQ3U3X3RhbjdFbW5uNnFHR0lLNmd5ZVZRT0tqd1h2X090Snd4bk5VLWhKd0UwaTlDUTNkbnpsLWRIdXFJWE1wdDlUbVd0SXJjb1JYaVlKTVVxUllYQ2lRZjNZcFA1LWVEY2xZRTVHdkNEd3cyNGRNNDhHUDRYem15Szg5dFFadXRCNnFYNHQ1Yg?oc=5",
+      "headline": "Won Leads G20 Currency Appreciation in Third Quarter - 조선일보",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Sun, 13 Sep 2026 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQMmpCUWJUaE4xYmdBenhaQ2IzdE9uYnVzOHJ0VUFXMVZ2TzhKY3pNOGlabXRnVG1Ga0VVamtXX2Q1ZjNwZFlUamJqTmc1NFJ3VktELWFaUDJ5WFl0NlBUYWdrMlJ2Z2JXNHd3aU9Cc2xSaVc3MGxsVUNmQ1A3RFk0SzBMc0tOb05UWXlab253?oc=5",
+      "matched_reasons": [
+        "won",
+        "currency"
+      ],
+      "matched_keywords": [
+        "currency",
+        "won"
+      ]
+    },
+    {
+      "headline": "Yen drops to 160 per dollar as oil spike, rising yields revive inflation fears - Honolulu Star-Advertiser",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Tue, 01 Sep 2026 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSUhVczh4NkRqdkJDcm90Y0JQLXY0ajBUMVZVWGw5T0w3aEtRYWxsY3BRWW52VjREd2xjVDNiY0lXYWtaWXVUOU9DVG9mT3pYbGVSY0g3MkxyWHRqUWh4R1pwcUhHamhLVFZQNjZmdjdwdkhjTVhfQnlWTzNpMmUzdDJEQnlNNzJ6b0ZWWkxPUTgtay0tVXVNbDdFZ1UyelhYMDVYcGNlbXFScmg5bnFyY2NhWUVHZHd1emxjbHlJNUdhdGpUc2NIZy04VnZ6dmM?oc=5",
       "matched_reasons": [
         "inflation",
-        "dollar"
+        "dollar",
+        "yen"
       ],
       "matched_keywords": [
         "dollar",
-        "inflation"
+        "inflation",
+        "yen"
       ]
     },
     {
       "headline": "Dollar edges lower against yen in week packed with data releases and central bank decisions - CNBC",
-      "relevant_content": "Dollar edges lower against yen in week packed with data releases and central bank decisions&nbsp;&nbsp;CNBC",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Sun, 14 Dec 2025 08:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQSzBFU2MxV0dzcmFhcHR5N0hzV182ZGpoZFdzcmZaMklaRTYyRWxueU1yTmRfMFc0WjhFOWRrdVJHekw3Slh2R0swNENDb2FxaGo0LTdkT2ZpM0ZySDdFbDNYUEw1TTE3SnNJS2dXd0NFeDFZeDl3eF9HYTdwYlMzbzhrTUZSajUzanBhUjBKYU44cHJMNVBuZUxQRTU0X2NKTU12Sk4wZDl5VW0yT0ZQa9IBtgFBVV95cUxPajlvcWhrMFRqY09pb0Eta2U4RnVnS3diZTY5MlJLdFB0clhUUkoxajhvOUtqWUFjMmQ4Vi1xUEhNSzBPTEN0SEF6c2hzeVMyVDZGRUJFbUd2TExGRkE2bzJuQnc0QS1KaTNJejYyanhCbVpmeVBxYnE1NzVuaFN5V01sNWYzOWxUbG85eVJUUHZvWHdzMjdKOGdYLVVKNWxzdE5IaVowNThLYXVreXhaQzJmV05JUQ?oc=5",
       "matched_reasons": [
@@ -175,22 +175,8 @@
       ]
     },
     {
-      "headline": "Japanese Yen's Sharp Rally Lifts Asian Currencies; Taiwan Dollar Posts Fourth Straight Gain to Three-Month High - finance.biggo.com",
-      "relevant_content": "Japanese Yen's Sharp Rally Lifts Asian Currencies; Taiwan Dollar Posts Fourth Straight Gain to Three-Month High&nbsp;&nbsp;finance.biggo.com",
-      "published": "Thu, 10 Sep 2026 02:05:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1PWHZDdWstTzZDM1Q0NTRIU0RoeklSUi01WFB5TV9HMnRER0p1NWo0ZFBsaUNTTXhpTkl2cGctRUxhMUlFNTZxc0VJeXNLNGZEa3ZmeXJaMFN6Z1N5c05xSFhqYXZsbHVCYURfdVlESl9sUktfQUE?oc=5",
-      "matched_reasons": [
-        "dollar",
-        "yen"
-      ],
-      "matched_keywords": [
-        "dollar",
-        "yen"
-      ]
-    },
-    {
       "headline": "Euro and yen strengthens, dollar eases as central banks hold rates - CNBC",
-      "relevant_content": "Euro and yen strengthens, dollar eases as central banks hold rates&nbsp;&nbsp;CNBC",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Wed, 18 Mar 2026 07:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcllOVEhiVjFPN29pRUMyckdtNnAxTHdhaE9kOE5VN01waHkyTUlWVkVWVlhIWTBma2c1b2E5bkJmWWdwX01wTUdpejFvSVhrLVRSUWhaSlNTTFJpeGVPclp6ZWpjUGNxTWdHX3pjVXpIRzhjMlMwYlowQmY3SzlPcUduaEZ2T1ZoUXdfNFBvRGtiU0pUUTFhV9IBngFBVV95cUxNNFZvV3UxT1ZkdWRSUUtxelk5dXRwWC1XUFlnTTlGSk1PaDJsOUx3WjBpSWZhSk5BY1RSTGxmRkZXZWdoRGRsT2Y4RGNDMXZmTjMwTGF4cGNWYlV1QmJvWVcweDhYV1JvX1gteEZ2S05JT1hPYkk1bXJ4SmJ2OUZUYmp1NGJ1aHpXcEZxNEpCN0c4bXpPZ2ltcnIzQ0VwQQ?oc=5",
       "matched_reasons": [
@@ -211,7 +197,7 @@
     },
     {
       "headline": "Sterling slips as UK inflation holds steady, dollar lower versus yen - Reuters",
-      "relevant_content": "Sterling slips as UK inflation holds steady, dollar lower versus yen&nbsp;&nbsp;Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Tue, 21 Oct 2025 07:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbjl0N1FHTE83ZThBa2tVY3RkeGJVREtmVmZyLWowcDJZMThYUFJ6R1FJOVByeXd2LWRsWktOMm9GTTRtX09mV3h0NU82NGdWMFVSSjFfbFZIdDZOWXdiWHhwQWV0QmdzTWstdm5xc3pBZjRJWFBseTIxeTRhaHVUamZlQU5zX25yWm5NR3JFWkR2LUZDZFc5aGRQUGdPM1VfM1BPSG5sSQ?oc=5",
       "matched_reasons": [
@@ -227,7 +213,7 @@
     },
     {
       "headline": "Yen strengthens after Bank of Japan signals data-driven rate hikes - Reuters",
-      "relevant_content": "Yen strengthens after Bank of Japan signals data-driven rate hikes&nbsp;&nbsp;Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Thu, 26 Feb 2026 08:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRWhGQ0hWMGp1YWYyOVJ5b2paa3NDTTNyMmtPRldrM3p1REJsNDV3UFBxM2VpaDZ2M0lWUzA2b2d4eldEQzFYT08zNFNKQVp0b21kcFp6MTVicElhT0txVDRVMzNfeDBsOHd6b25TdDdXRHh3a2xMSjAtQXI2bXptMVpobDF0WmVDbVU0MmROaF84T1BVRTdoOXVyaGR2dzFuMG96LXpoN0FCYmVVLXc?oc=5",
       "matched_reasons": [
@@ -241,40 +227,65 @@
       ]
     },
     {
-      "headline": "Dollar firms, yen under pressure ahead of Japan's elections - Reuters",
-      "relevant_content": "Dollar firms, yen under pressure ahead of Japan's elections&nbsp;&nbsp;Reuters",
-      "published": "Wed, 04 Feb 2026 08:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNX3BIMlZPWHNIbWFadEZQU0xkYmd0c3p3dWtOWFh6cml5d0xRQmh3Q1hOd3g0YkJzd3lVSmNjdG54SzlKM013ZGtSWFAweDV6Z0V0MlFOUWI3YnNlVlFDUkxrS1hPRlRDVy1PWmhVcm1IdHFNZDZJVlp5d2Vjajdvdi0wc1c0TW4zU2kxTDV0OEhreG1kZzRzeDI1Zw?oc=5",
+      "headline": "Dollar mixed after flat PPI, rate hike bets cool - Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Thu, 13 Aug 2026 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNVDIyRHVUbzNzMFctT0VkQXpIZWt2V09QNEtwc2VhYVlmZWRyM1NCd0NWSUZEUEFQb2VzWVFqOEdtZmpYNEc3dDFna1dQSktGZU1ONGQySmNlYVcyVHN5c05iT2V5REVnMFA0cnFKNVI3enRtTXpGaUsxdGlSZ2xFbFo5VEVwWkV5eXNvMVA2Rmx5YzhxeVd1TkQ2YkpISXc3OUV5cHpaR2dxNHNOVXltdjBfSVo?oc=5",
       "matched_reasons": [
-        "dollar",
-        "yen"
+        "rate",
+        "dollar"
       ],
       "matched_keywords": [
         "dollar",
-        "yen"
+        "rate"
       ]
     },
     {
-      "headline": "Dollar falls versus yen after smaller-than-expected rise in US inflation, euro eases - Reuters",
-      "relevant_content": "Dollar falls versus yen after smaller-than-expected rise in US inflation, euro eases&nbsp;&nbsp;Reuters",
-      "published": "Wed, 17 Dec 2025 08:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNOWd6MjZJS0pYVVhYYjN1eWtEWXNtaThnSGJxNmpXemtJOEJnekl3bkZ5ejZvTWdGN3l4ZGlfRXhBbHBZZ1pNU3JpVUhnb2JyNXhteDZEUWM5RllPOGRnTm5ENFpIZTVGcFU1NDlyRlFacl80di1VOWhwbVg3dmt4V1pjYUI0SGNfcEgyUy1QazJtNUtpVHNmNXk0c09IdlV1WUxINDBwNmY5emlSQXdad1RjdHNfeFJJN3d2dE9WZw?oc=5",
+      "headline": "COMMENTARY: Europe’s euro worry a mirror of US dollar dilemma? - Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Wed, 28 Jan 2026 08:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOTTRRY250b3NwZW5YZ2JfZDM1UVQ0dTZBR0lwOER2X2hEVllFcUxIQkNVdmZPa0k5cm9KNWhidGpFTG40TW5ReE4wYnRNQ3hGV0dfVzFpWi13aVJISlEwOHpUdEVZUWFENVJNdGsyM2hKclVuNTV5NTVtUHhXTzdNa19WejltV3VOc18xWXc2S24?oc=5",
       "matched_reasons": [
-        "inflation",
         "dollar",
-        "euro",
-        "yen"
+        "euro"
       ],
       "matched_keywords": [
         "dollar",
-        "euro",
+        "euro"
+      ]
+    },
+    {
+      "headline": "COMMENTARY: Oil shock sparks rate repricing in historic 'G4' central bank week - Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Mon, 16 Mar 2026 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNaFFVcE9UOE1TNlFPWG9aQkZORFdjN01VX0Y4X0ZwTkFRdEl6dFZQQ1VSdm13UWt2S2xjb2xvTFY1cHFBRjVQR1ZTaTlFbkVLbm81WmlJZjN3a1ZpUXhVY2JZVWQtSzcyX2pKemV0czYzRVotWlVDblJfa1JfdElwQUpHcFJ0SW9sTVBOWEU3VExRZG9RNEszZm5TTm9OaURvOU1xNWRpa2s?oc=5",
+      "matched_reasons": [
+        "central bank",
+        "rate"
+      ],
+      "matched_keywords": [
+        "bank",
+        "central",
+        "rate"
+      ]
+    },
+    {
+      "headline": "US dollar inches lower ahead of inflation report - Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Wed, 09 Aug 2023 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOenBWVHVZNXZOOVI2c01KR19NaVVLeFlyRU1USFFhYXhvT2Y5eThJZkNUOWZ3V0xlZFdWT2JSeFF5NTdYbTNIakNNWmhGSTVtTGgtbVRGU3YtN2JSeE5ZcW1IMjFCNmhqemtnUEFlUHJSb2llcmtLTlNBdVdpbFBUZVFxQW5zMWRtb09pWDh1S0RxSzlvZzBaOUNuQlZoLTM1LXlGWWEyaGRUWXAzSFFTaTF2dkw?oc=5",
+      "matched_reasons": [
         "inflation",
-        "yen"
+        "dollar"
+      ],
+      "matched_keywords": [
+        "dollar",
+        "inflation"
       ]
     },
     {
       "headline": "US shakes up currency markets with unusual yen-buying via selling euros - Reuters",
-      "relevant_content": "US shakes up currency markets with unusual yen-buying via selling euros&nbsp;&nbsp;Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Mon, 03 Aug 2026 07:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOYWhwczdTVFV2eTBMeUpacllrZ0VhMWhPa1FrX0p0VFN4N1pNeU9QN3BiWVNJdVR1MDZybUYxUjh2aDB2Rmw4NDdJcXFPM3M3cXU2TnJ1OEh1S2oyTF9QLURJc1NPM3g0Z09MczFneVBYWUwxWnNPRGF2U1YzM3BLeEdFRDAyN3lHNU5zY2wzdWl3TFF6Ump1RXI3V2x0aXB2M2RpM0luaHBWN1pVSXJ3VmRaS3NEWkhWUkFqSHhYWXJOemNicnBjcg?oc=5",
       "matched_reasons": [
@@ -289,8 +300,52 @@
       ]
     },
     {
+      "headline": "Resilient U.S. dollar soars to 24-year high vs yen, 37-year peak vs sterling - Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Wed, 07 Sep 2022 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNHUxdkNFTDcyRkh1a0RqaEQzT3BKc0dzdldyazF0NTRjRExLTGthanFtVWtvd1VzazZPSFlyUUVjOXpMNFVXUWhrNU5fcTFtV0VGcEtRMk16ekhORUFWUjZrSnR4NzdBVGdKMmJ2blByRzhQOW9udDdsOERqM05yeWx5NTJRZWRyRnJnRElFa0haUEtoc0FMQW1MZmhrSFdnY2NB?oc=5",
+      "matched_reasons": [
+        "dollar",
+        "yen"
+      ],
+      "matched_keywords": [
+        "dollar",
+        "yen"
+      ]
+    },
+    {
+      "headline": "US dollar modestly higher as sticky inflation persists, yen hits 34-year low - Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Thu, 11 Apr 2024 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWEdGQ0RoeW9YbV9JVXB5SGZreHVUS3ZUR1gtdUU0bTRCSnpzZHRkd2pGTV9OV3JZS0xNcnJVekJ5TnItSFRXQWlNTVZuR0p1N3FiRHdmckVHcm44N1dyVTNwRUZfRlNUMWZGd2RaUjdJalV3eTBzbThET1lHUHFOWHFNT0ZnSk0yUlNSclBLSlhORmFOMmFncEZkZTRYOGZ2dHc?oc=5",
+      "matched_reasons": [
+        "inflation",
+        "dollar",
+        "yen"
+      ],
+      "matched_keywords": [
+        "dollar",
+        "inflation",
+        "yen"
+      ]
+    },
+    {
+      "headline": "Dollar flat after retail sales data, yuan falls to 9-month low - Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Tue, 15 Aug 2023 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPUjdUTEJxVWdMVnZFR0w2bXhfT3FuTmZwMWxtTl9BbWF5WFZUQ19ZR0dldEY3dW4yY2l0QmRzYlUxNlJVNWhpSlF3cUo1dGtjU0pHU29uaDBtTU9wM1lhb1UtS3U4RVhkUE5zeDBfa21IREtDOVlORzEzV3c4RjZsOHA4cGNQX2JwWFBrbkxOcE40LVluMGNWNmRrTjVMTUEtV2EwelVBemtDX0pxMEhXX0htYWk?oc=5",
+      "matched_reasons": [
+        "dollar",
+        "yuan"
+      ],
+      "matched_keywords": [
+        "dollar",
+        "yuan"
+      ]
+    },
+    {
       "headline": "Why is the dollar winning against the euro? - EL PAÍS English",
-      "relevant_content": "Why is the dollar winning against the euro?&nbsp;&nbsp;EL PAÍS English",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Tue, 12 Sep 2023 07:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOckdxcnN3WjhGdFRzVWhhamVhT3FOUG1fMFlWRzhhM3pMdlUxS3M4cFFDNFF6cnZRVTNDaUZ3TjdabktCcjhnQnU0X2tUQXNuSnpwaFE2cHFzejFDSEhsWVpXWThzZXY4REFNclcwaVZ6T0FSdzBBRy1VblJ2UU5teUtRVThqUjNnODNzWklCWnNLcnFkYWd4clZROTg2ZzE0cGw0eWFoSVJwUdIBvgFBVV95cUxQdnhsNktTcVF0LWhRN3FpaC1nY3NfNFMwRlUtTXltUkVabUVPanc5WkczenlqSTBOM3JnbnZnZVFVWmVwdVZDbHR2Z2Z1QVFYNzRLdmtRZ2R2MnhWMGJmOGt1RG5SUGM4NTMxdGN6ZGk4RTlGUU1UX09SVXdTal8tbU81X0pNMzl2aDVJYUtPQ3ZJbnlGOGpzME9BRXFSYWMtTUcxZXkwSm8zQ2FPMU5WYVVwQktKSDFIWWlGV21n?oc=5",
       "matched_reasons": [
@@ -303,8 +358,22 @@
       ]
     },
     {
+      "headline": "Dollar index slips from 20-year high, Fed rate path in focus - Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Fri, 06 May 2022 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdFlESWNjb1FaRzUycFQ0SWtsejlFUGJPOXNCa0tCdFVLMWRrMFNybzBFQmE3dUVZYUtKZjRUSU1yRFNZQm90R1ZhdEZQSm9qTHZkYjFCeExoWm9aci15NkZMX3BoMVBsNUdXemVYbDRrSlJBN242Q3B1ZFBkOWpSOGdpeTY3SXhiNEx6bTZEbjVBcHdybGxMMENLTHJ5Vkk?oc=5",
+      "matched_reasons": [
+        "rate",
+        "dollar"
+      ],
+      "matched_keywords": [
+        "dollar",
+        "rate"
+      ]
+    },
+    {
       "headline": "Dollar gains on euro after inflation data, sterling falls - CNBC",
-      "relevant_content": "Dollar gains on euro after inflation data, sterling falls&nbsp;&nbsp;CNBC",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Thu, 29 Sep 2022 07:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOYWZ1ZkFDWENiNFZTaUlzNzBzWjMzRW9uQXVKXzhtS1RSQWprc0VPVWRMNGNzeGltUEdpLU9lMTNjV2hiRkZlMlBvb3BmX2xrS1YxY0FjdndHSmVaY04xdGxMZTZ3SXBwLUN2c1lGelB3S3FVVnBIMFZOX19xOF9uX0VVVVVVUnZGbDBLb05JaG8yQmxOeF91WDF4TXg1UktNTngwLS1JY9IBrAFBVV95cUxNYm41cWNfYVVkbXpzZE9GSGFiWU8zSEZIMTlrVldoeXBPOVJ2YWpOU2FYb2s0TmRVWHpNazR5dEcyMUw5Y0ZVQnprcnBqS0FrTC04MVJzV3ZJLWR2MHM3RnAxT3ZzblF6RUpBLVVYLW1rRWZoa1FsREptS2R1dWJEbHdHZGtsS2JZcTF4SjBEUWs4VTR4UG5vYkxYNVl3NEpPQlF4TTNjanBxaVh6?oc=5",
       "matched_reasons": [
@@ -320,7 +389,7 @@
     },
     {
       "headline": "Dollar holds losses to euro after ECB comments, economic data - nippon.com",
-      "relevant_content": "Dollar holds losses to euro after ECB comments, economic data&nbsp;&nbsp;nippon.com",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Fri, 29 Oct 2021 07:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9fcDRzdUdYRGpab25rQ0hFSDBUbHFOOVJCTTl6YUtwWHpsUEt3dkc2amJoX2xpNVNtMkhMd0YtVnEzYVNGSVBrcmkxdkdYc1dMVWQxa0kyV3NWTmdQbmdieXZ3?oc=5",
       "matched_reasons": [
@@ -334,7 +403,7 @@
     },
     {
       "headline": "Dollar softens amid bets other central banks to outpace Fed tightening - Reuters",
-      "relevant_content": "Dollar softens amid bets other central banks to outpace Fed tightening&nbsp;&nbsp;Reuters",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Mon, 18 Oct 2021 07:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPYzAwT3pTcUp2ZDRtSjVmVjlaWGlLVDFXOUduTkQtWWYwbGxPZEZhOG1pRnIzMGRRbTB3TTFUSllmUFdxdTAzRVZvRnFNNzI2Vm5QNWw4amxGYlRJYWY2NFBncDdITTNDeEtxeDMxWWFTWktFVHluWkhOS2VqQ2JzajZqaGZZT0JndlJCM3pleVNhU2Y4VnhMMVZnTlZvZ0hhdDhGdkFRMDNvaEtyZjJzcy1n?oc=5",
       "matched_reasons": [
@@ -348,9 +417,25 @@
       ]
     },
     {
-      "headline": "Why the dollar remains the world's reserve currency - RSM US LLP",
-      "relevant_content": "Why the dollar remains the world's reserve currency&nbsp;&nbsp;RSM US LLP",
-      "published": "Mon, 01 May 2023 07:00:00 GMT",
+      "headline": "Dollar slides against yen after Japan’s reported currency intervention - Honolulu Star-Advertiser",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Thu, 30 Apr 2026 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQM2tubF8wZVNnSW93Q3NZNEdrR0hSdzJhWlhtOC1velhvZjVTRUUyUXQ0RjROR1RXZTZuN1hKLWVJaXFGZ2d6a1YzSkJleDZuNWdiVHlwOUlqU1dHR2llZXotT1hST0FfWHc2dUk2dWl5MXZnbFU2a0txc2pqSTlBQU9mQUJnS1JSeUZ6RHU5TUZvUGo5NEVqX3o3LUlya3hKSFF4S293S3pOQmd2a2ZxZGM4Nmw?oc=5",
+      "matched_reasons": [
+        "dollar",
+        "yen",
+        "currency"
+      ],
+      "matched_keywords": [
+        "currency",
+        "dollar",
+        "yen"
+      ]
+    },
+    {
+      "headline": "Why the dollar remains the world's reserve currency - RSM",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Fri, 12 May 2023 03:10:13 GMT",
       "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOF8yZGpwd21pakxOaHVsUktOSnVSNEJCR0FUbThsMjBfbEs0UVNfSTBfcmt3MFRFUWVveEhNM19fT1dyWEw0c3FoSHFtY2dsM0EzZWNPWU9lR3dxc0J0aVVqSHE1TlRWTnAtMndPLTQ1YUZtUzBsQzNFVzg2Z2U3SXNjN1UyNlRDRUdSQUFtcTNMVVpPRUhB?oc=5",
       "matched_reasons": [
         "dollar",
@@ -362,36 +447,22 @@
       ]
     },
     {
-      "headline": "Is the US Dollar’s Role as the World’s Reserve Currency Under Threat? - International Banker",
-      "relevant_content": "Is the US Dollar’s Role as the World’s Reserve Currency Under Threat?&nbsp;&nbsp;International Banker",
-      "published": "Wed, 30 Sep 2020 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdnRPQWprQTVyZElMMVoyeWx1eWwtZ28xd01LQzhoYzlOY1JXREgxWWkzZ2tQdW4tQnNsaHM5YVpfTFNCcmF0dnJkcXVmbWt0Mk1ZQ3VJSVo3TG5JRy1KN3Z3b1NDTUxHb0xUanhwVjFqUGlfSDdUSWNOMkxCNzFNWUJ2ZDZaalljWFJUTlRNaEktN1lGWk5iY2cxME1WSWllNVZXczlhZVVYQ0U?oc=5",
+      "headline": "Dollar set for biggest two-day fall since 2009 as rate outlook shifts - CNBC",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Fri, 11 Nov 2022 08:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNNVJ5b3N4T0wtbUdUTlB1WUNqcXpYT180eGY0cC01NEF2YUI3bXVfcXd0NnBtU3BpQkp1czRBY2tHRW5lclI0SUlVUXN2cXJzdll6aEl6Q1JhQlFjbkRPSF9qbGdrZHFCOWtmVnIwODdSYXJrZEh4M0w1dnBmOEVJVkdkbC04TGRWaHFKM09tRFFYV2RCY3gxYjZZNHNpN0pIczJR0gGoAUFVX3lxTE1FQkwtVmMyRzJ0YzZSSm54REVHdzBVVnFmZDl1Q19hVV9YR2VoS3l3aW9xZlF5bXE3RlVuTEFTMzYyY3lYYzNnTXB1Ml91R2czcUQ4YzFBeURaNVJRc3dhSnZaZDRWQXZvMklRd3dMNHJkLVVXdHI5WnBWSTBfdW41YklqUUtrSjJqLVpQVWIzTjJYZjMyMENJVFJnVXUtSnJJQkdocUl0NQ?oc=5",
       "matched_reasons": [
-        "dollar",
-        "currency"
-      ],
-      "matched_keywords": [
-        "bank",
-        "currency",
+        "rate",
         "dollar"
-      ]
-    },
-    {
-      "headline": "COMMENTARY: Central bank independence feels the heat - for unlikely reasons - Reuters",
-      "relevant_content": "COMMENTARY: Central bank independence feels the heat - for unlikely reasons&nbsp;&nbsp;Reuters",
-      "published": "Tue, 17 May 2022 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVy1mMW1Eb0V0YW55bC1Na3l1VU9tdklJNTkxUlJ6eDIxdm5mV3lFWVBIWHV0TkE4bGEwaURxUVUxVjI1eUtJcUpYTXJ0N09YcDlSSDFQbFlIMDg0MWtSVmpFR1RHYjJsSU5MZWlMU1lfMEV3dGNGcFNEcVgwR1pqa1dJcHduQS1VanJxdHo3aWE3UWZMSXBBaHdJRFVYRE5wSEZaU2RkZmZiSF9C?oc=5",
-      "matched_reasons": [
-        "central bank"
       ],
       "matched_keywords": [
-        "bank",
-        "central"
+        "dollar",
+        "rate"
       ]
     },
     {
       "headline": "5 Factors That Influence Exchange Rates - Investopedia",
-      "relevant_content": "5 Factors That Influence Exchange Rates&nbsp;&nbsp;Investopedia",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Tue, 04 Sep 2018 15:38:58 GMT",
       "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE82V05OeWFFcDlMWk5rMGM2X2RnWk9IRUpMTFk0YUkyVHZ1U24yc0czMzBZSGthRTE0cXhLZ2NPS0pGQm9pZmN1YkNGRl9MRmtXZlh5enZTY1RKajh1amExVHVBSGxBZHhFaXFLaEg5ekgzbV9pOUxvU3Nn?oc=5",
       "matched_reasons": [
@@ -403,57 +474,8 @@
       ]
     },
     {
-      "headline": "Dollar Strengthens Amid Geopolitical Tensions, Fed Hike Bets Trimmed - Global Banking & Finance Review",
-      "relevant_content": "Dollar Strengthens Amid Geopolitical Tensions, Fed Hike Bets Trimmed&nbsp;&nbsp;Global Banking & Finance Review",
-      "published": "Thu, 26 Mar 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQOTdFOFlXOXZ4czVfU3AwZXo1RXdGc3g2VHVkbmhMYVl0RUVxTzc3WW1NVVhXQ1c3aUJhZWxZX2pnT0dqNHZ0R0NiQUtTWHlwY2RMQmduRWlUX0s0bldMNW15aDlPZk9WZ29NZnhCN1FVUTZQcnNLMmtNSzhuUGdfaW5zN1NtWlp1WFRzejRLdEpVTjdOcmFEaThWZm1PNkVMUkVz?oc=5",
-      "matched_reasons": [
-        "dollar"
-      ],
-      "matched_keywords": [
-        "bank",
-        "dollar"
-      ]
-    },
-    {
-      "headline": "Status of US Dollar as Global Reserve Currency and USD Exchange Rates: Long, Slow, Uneven Decline Continues - Wolf Street",
-      "relevant_content": "Status of US Dollar as Global Reserve Currency and USD Exchange Rates: Long, Slow, Uneven Decline Continues&nbsp;&nbsp;Wolf Street",
-      "published": "Mon, 01 Jan 2024 08:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQNGw0N0VSZ3ViTDh1YzJsSGNVczRfRXRSSmwwUUk2MFhPVmhQUTU0MDhXN3RRU25NMkt3ZjVxOTl4dmF1VzQ3QkVCNTAxTkY5SllxSWtyRDJPX3ZFdEpzUUs3R2F5WXVONFFiendLb1NxSVNUZE95QkJib0tBSm5XQlYwZGE1RVpoQVJxZkZESS1tS2hUZ1NNbFJlM0IzV2RYRDFzQkt6cExIM2Q4eklyVUhUa29YNmEwbWJKLXpFamxZb2ZaSzNiYzhWRlFOZGxxN01CLTR3?oc=5",
-      "matched_reasons": [
-        "rate",
-        "dollar",
-        "currency"
-      ],
-      "matched_keywords": [
-        "currency",
-        "dollar",
-        "exchange",
-        "rate"
-      ]
-    },
-    {
-      "headline": "Update on US Dollar as Global Reserve Currency and the Impact of USD Exchange Rates & Inflation - Wolf Street",
-      "relevant_content": "Update on US Dollar as Global Reserve Currency and the Impact of USD Exchange Rates & Inflation&nbsp;&nbsp;Wolf Street",
-      "published": "Sat, 02 Apr 2022 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNd3N4ZWVnYm52MUlfOXhaVDJ0R3NhMEZlRDJBS2dZcXgxRTkzbFozbGFRYS1sc3Bwcm15U0dHQzMzY1M2V2JNcUE0a0VoWTJ4Q1lWQ1FwQktnbUdpNVllbEs1eE1kV0p3T3UyME5GN0pjdUlaX3FTa2JjN25YZUxiVTZUdTVtYzVIUG1yUmpOT09CZlhYSlNZN3NpcVlFVmpJb0RCRl9mVHpHQURPS0pueDhlVVJRUktpTGc?oc=5",
-      "matched_reasons": [
-        "inflation",
-        "rate",
-        "dollar",
-        "currency"
-      ],
-      "matched_keywords": [
-        "currency",
-        "dollar",
-        "exchange",
-        "inflation",
-        "rate"
-      ]
-    },
-    {
-      "headline": "Most traded currencies 2025: US dollar leads as yuan climbs - capital.com",
-      "relevant_content": "Most traded currencies 2025: US dollar leads as yuan climbs&nbsp;&nbsp;capital.com",
+      "headline": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs - Capital.com",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Tue, 13 May 2025 15:11:28 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1oQ0RJbGpON1o2MV9rdWs2VXRwLVdCME5KcG9hSWdXRll2Q3ZBY01sUVlOOVJtQU5teHBOUWFxaEduNVhpTDVtM09WR3RtVlYtUWlnZXdrMzRvQm5lWmkzTWQ0SUo?oc=5",
       "matched_reasons": [
@@ -466,22 +488,8 @@
       ]
     },
     {
-      "headline": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs - capital.com",
-      "relevant_content": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs&nbsp;&nbsp;capital.com",
-      "published": "Tue, 13 May 2025 14:38:37 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE40a1U1Ymg5Q05PeXJWa21XVTlDakNYdEp2N1NfNkh0WmZqMWdIZ0MtQU1nRkV2Y2p6V29TSGlxaGZfWC1XUHJJZFpmdEN3bndLVFV6b1hGUVphaEZDVTA4ZmJ5X2tWZw?oc=5",
-      "matched_reasons": [
-        "dollar",
-        "yuan"
-      ],
-      "matched_keywords": [
-        "dollar",
-        "yuan"
-      ]
-    },
-    {
-      "headline": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs - capital.com",
-      "relevant_content": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs&nbsp;&nbsp;capital.com",
+      "headline": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs - Capital.com",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Tue, 13 May 2025 15:05:47 GMT",
       "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5xVTRnQU43emlTSFQ3MFR2UUpDbEExSXJ2OGtCTnlmODcyQ0RSTVRBZ0VyejVTWGx0YTVOTlJ1T2pzSmNNVDFrTHNEb3RYcWtIUHlSbk9IdFpJaVJ1dVpWak1nVEo?oc=5",
       "matched_reasons": [
@@ -495,7 +503,7 @@
     },
     {
       "headline": "How to Calculate an Exchange Rate - Investopedia",
-      "relevant_content": "How to Calculate an Exchange Rate&nbsp;&nbsp;Investopedia",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Sat, 25 Mar 2017 07:57:36 GMT",
       "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPM3NrM2VYcWJEWkNMa3k0UVh3dWJQaV94ZVJxQ0U1ZGMtMGQ0SkpZbFo3ZUg4SHhsSVlyZ3N5YzVvOWpEbG1rT1RzLVdQMVJTWV9BSVdyMGpmWW5ncmM1dFVqaEowZHNqUWZFb0VKdi1ZVEYycUlsTnUyT2t2bXNXYVQ5RjJQdjhlNlE?oc=5",
       "matched_reasons": [
@@ -507,22 +515,8 @@
       ]
     },
     {
-      "headline": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs - capital.com",
-      "relevant_content": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs&nbsp;&nbsp;capital.com",
-      "published": "Tue, 13 May 2025 14:41:42 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBEUkowX0JueE54RkhlRlgyR3RGQmNJQl9ueFk4cW4xR2F2T2Y0Rm96M0E3Q09obWFEUlJzZzBSekZaT2JDclYzM3o3aUJ1YjVKQjlVTVRTY1d3M3BQRTJrTTg0SEM?oc=5",
-      "matched_reasons": [
-        "dollar",
-        "yuan"
-      ],
-      "matched_keywords": [
-        "dollar",
-        "yuan"
-      ]
-    },
-    {
       "headline": "Inflation, debt and de-globalisation: How a surging US dollar could hurt the world economy - SmartCompany",
-      "relevant_content": "Inflation, debt and de-globalisation: How a surging US dollar could hurt the world economy&nbsp;&nbsp;SmartCompany",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Mon, 11 Jul 2022 07:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQRV9vUk1fOE9VMFUxbEVhWWZRSVB6S3I5aDBzdnpRVWp4THhfYk00ZVlYdkJqWkt6MVRncUhZTnlENkpPNkxkX0NTWEdsRXBQSVUtUmdiYW55amw5eGZLa29iRzhDY0REbDA4LW9aVldXdGtSTDRDVGNWYVBWUmVJYjkxSjBtUQ?oc=5",
       "matched_reasons": [
@@ -535,8 +529,22 @@
       ]
     },
     {
+      "headline": "Most Traded Currencies 2025: US Dollar Leads as Yuan Climbs - Capital.com",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Tue, 13 May 2025 14:41:42 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBEUkowX0JueE54RkhlRlgyR3RGQmNJQl9ueFk4cW4xR2F2T2Y0Rm96M0E3Q09obWFEUlJzZzBSekZaT2JDclYzM3o3aUJ1YjVKQjlVTVRTY1d3M3BQRTJrTTg0SEM?oc=5",
+      "matched_reasons": [
+        "dollar",
+        "yuan"
+      ],
+      "matched_keywords": [
+        "dollar",
+        "yuan"
+      ]
+    },
+    {
       "headline": "Chinese Yuan At Strongest Level Against US Dollar Since Mid-2018 - Exchange Rates UK",
-      "relevant_content": "Chinese Yuan At Strongest Level Against US Dollar Since Mid-2018&nbsp;&nbsp;Exchange Rates UK",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
       "published": "Tue, 05 Jan 2021 08:00:00 GMT",
       "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTFZMaHBhek5Yc2tkM0pxRHM4blU5eXdDSVM2enN6akZrbUR3WUxsZkJRYndkQUI2T1hwelMxZ2hBb1VQUmp0SmZHaDBuOWRvejV5V1R2ekVzeTNNV3M2QzN4NFlaR3dmNW5hdzhLbUQtMEN0RXF5YXktZDl1Zk40a2NvaHBTNTJmTVpCRF9aVmlPWEJ4X0xicHdaRnRUWVc5VHRubmpwdjYwRHYyTHlLWXdxcXJac05Qbmk3MjZB?oc=5",
       "matched_reasons": [
@@ -552,63 +560,36 @@
       ]
     },
     {
-      "headline": "Why Economists Think Another ECB Rate Hike Is Coming - Exchange Rates UK",
-      "relevant_content": "Why Economists Think Another ECB Rate Hike Is Coming&nbsp;&nbsp;Exchange Rates UK",
-      "published": "Mon, 27 Jul 2026 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOMFlFbGRRYmhNYmx6M0hsN25UMWJrTXlwVmtNM2JZenA1aGRBaTIzQXlvQUhvVUgxa1BELVIwazY4YXVLazh1NU1tSmhXRUpWNENreG52RkNWbGVaMHlaRFRjbWlXVHBjMHduUVFURlp6NXRaMmhFUzRJN3pHQXFNaUh5T1RCVXdyTG45U0lpRVZJczJEeno2Rld0RjJiSGMtVmpnMUxLMFdDQWVidV9qek9R?oc=5",
+      "headline": "Egypt’s central bank likely to peg pound against currency basket in early 2024: MP - Economy - Business - Ahram Online",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Tue, 10 Oct 2023 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOcm12Z1hlSXExczI1bjdwdHc5Ul92Z3podjFXbkR1bUdYUmdSWjJxMmhxMTRlNFMyenlyUmRkekJmVlZXVUZIbzg3TG5nc0xTdVBWdkdtbGZjUGg2OE1DZTRoeVhuOXNsRk5mYjRDZzg0d3FWSDFnUUM5eHNqSEpnNFA0WkdmSWNJRkppUURBaEZ1TGZqTFRvczh4OF85dl9abWNuSkV3dUx4c2VwWU1zUUFjay1HcmYxUHhoNWR0ZVNFanhNYnUydThCQTdVdw?oc=5",
       "matched_reasons": [
-        "rate"
-      ],
-      "matched_keywords": [
-        "exchange",
-        "rate"
-      ]
-    },
-    {
-      "headline": "Pound To Euro Week-Ahead Forecast: UK Jobs Data Risks GBP Setback - Exchange Rates UK",
-      "relevant_content": "Pound To Euro Week-Ahead Forecast: UK Jobs Data Risks GBP Setback&nbsp;&nbsp;Exchange Rates UK",
-      "published": "Mon, 14 Sep 2026 06:30:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxONFFIbUVfWF9qZTlqUnd0NVhjelc4MHVLTkdzUTRoaWtOdjdzQm42TFhwQ3VMUjZWQVFsX1RYODVvUjhvVVlwVzZIVVNTR204R1V4c3ZLMDZuME9sT2lSaDEwb0h5QTI1V3B3S2pveTV6LWQ4dUJ1QmJOOWpjMHcwbkV3MEhaUTh5YUFnMnVXSVY4amtmcnpwekJJazd0UHRNa2lraFpTNEJGYWZzV3FqM19nc3N2dThxSFg5T2MwRnpLQQ?oc=5",
-      "matched_reasons": [
-        "rate",
-        "euro"
-      ],
-      "matched_keywords": [
-        "euro",
-        "exchange",
-        "pound",
-        "rate"
-      ]
-    },
-    {
-      "headline": "Gold Revaluation and Big Reset: Central Banks Signal Change - Discovery Alert",
-      "relevant_content": "Gold Revaluation and Big Reset: Central Banks Signal Change&nbsp;&nbsp;Discovery Alert",
-      "published": "Wed, 17 Dec 2025 08:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBXZTJnTkdDM2lJQ2JRejlleDYwVTd4aGh2VmZxX1l3WVVwVTVZNkxwV1NUTHhYUHFsVTRtRHh0QXlLQ0dGVXR1NzFkQTZrMWRsME1HTFA3U0huWkdKNU5yOGZSa1l4azhoaGVQdVo2dThIdG8yYkwtNXMtZG8?oc=5",
-      "matched_reasons": [
-        "central bank"
+        "central bank",
+        "currency"
       ],
       "matched_keywords": [
         "bank",
-        "central"
+        "central",
+        "currency",
+        "pound"
       ]
     },
     {
-      "headline": "Why dollar is battering euro, Japanese yen and Chinese yuan - Nairametrics",
-      "relevant_content": "Why dollar is battering euro, Japanese yen and Chinese yuan&nbsp;&nbsp;Nairametrics",
-      "published": "Tue, 23 Apr 2024 07:00:00 GMT",
-      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQdjQyWVVIa3hpcmR6MlVPNVlLazdvS2xHc21lX1I0MkxRVmtIcDh6MEVYMGhZekllTnlJR1F3Mnp6d1hLM1lOaVh6QVJBUDZOalNYcW1YUzkxRGNqblYyLVJ3WERpUXdjMVZhaG5TU0IxaE9mRzNUNEkwRXhOQkY0ZlJYZlNVWDVOR21KOGpjZUpoek4wbUV3MmlXOA?oc=5",
+      "headline": "Pound To Lira Outlook: Turkish Central Bank Stance Crucial For GBP/TRY Gains - Exchange Rates UK",
+      "relevant_content": "관련 본문 없음 (뉴스 RSS가 제목만 제공)",
+      "published": "Tue, 12 Mar 2024 07:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPNmwySVd6aVRWN0ZRV3ozNlFvUWdHVm8tNk0zMHVQMGhQelV6OFdfaFlCaGUwVVdVNUZ2UzNXN0JyaUV3SkRkaERYeEU2b3BKZFVaOEhJY3BISExmTWFKdVRJZDR1TG5hZ21xWGpUZS1PTEVRX3p0eDgwWFdKLTFCZmFKRUZ1bWNLZFp4UDcwQnRGR1VjaTZVQVBiR254M0NKYk16MkZ3OGNuODJrQ1VQS2JKVHlXVWgxWmJMTkZac3Z0NzlXcUlRbzhtOXc0Szc0?oc=5",
       "matched_reasons": [
-        "dollar",
-        "euro",
-        "yen",
-        "yuan"
+        "central bank",
+        "rate"
       ],
       "matched_keywords": [
-        "dollar",
-        "euro",
-        "yen",
-        "yuan"
+        "bank",
+        "central",
+        "exchange",
+        "pound",
+        "rate"
       ]
     }
   ],
