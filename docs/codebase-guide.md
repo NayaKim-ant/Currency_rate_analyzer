@@ -1,13 +1,13 @@
 # 코드베이스 분석 가이드
 
-이 문서는 `software_architecture`의 실제 소스 코드가 어떻게 연결되어 동작하는지 파일별로 읽을 수 있도록 정리한다. 전체 구성과 데이터 계약은 각각 [아키텍처](architecture.md), [데이터 흐름](data-flow.md), [데이터 구조](data-structure.md)를 참고한다.
+이 문서는 `project/legacy/`에 보존된 프로토타입 소스 코드가 어떻게 연결되어 동작하는지 파일별로 읽을 수 있도록 정리한다. 전체 구성과 데이터 계약은 각각 [아키텍처](architecture.md), [데이터 흐름](data-flow.md), [데이터 구조](data-structure.md)를 참고한다.
 
 ## 한눈에 보는 실행 모델
 
 프로그램은 Python과 Node.js 두 프로세스로 구성된다. 각 프로세스의 스레드는 역할별 큐/이벤트 채널을 사용하며, 서로 다른 프로세스 사이에서는 localhost TCP를 사용한다.
 
 ```text
-python process_and_thread.py
+python -m software_architecture.project.legacy.process_and_thread
 │
 ├─ Python 메인 스레드
 │  ├─ IpcHandler 스레드              TCP server / Node와 JSON 송수신
@@ -20,11 +20,13 @@ python process_and_thread.py
    └─ 인사이트 Worker 스레드         파일 입력 / 이동평균 분석 / 출력 파일 저장
 ```
 
+이 명령은 `software_architecture/` 저장소 폴더의 상위 디렉터리에서 실행한다. 소스의 import는 `software_architecture.project.legacy` 패키지 경로를 사용한다.
+
 이 구조에서 `threading.Thread`는 Python 내부 동시 실행 단위이고, Node의 `worker_threads.Worker`는 Node 프로세스 내부 작업 스레드다. Node.js 자체는 Python과 분리된 OS 프로세스다.
 
 ## 소스 파일별 안내
 
-### `process_and_thread.py`: Python 실행 조립부
+### `project/legacy/process_and_thread.py`: Python 실행 조립부
 
 프로그램 실행 시작점이다.
 
@@ -41,7 +43,7 @@ python process_and_thread.py
 
 **중요:** `Queue.join()`은 스레드가 끝날 때까지 기다리는 메서드가 아니다. 큐에 넣은 항목마다 워커가 `task_done()`을 호출할 때까지 기다린다. 실제 스레드 종료는 `thread.join()`이 기다린다.
 
-### `thread_messages.py`: Python 내부 메시지 규격
+### `project/legacy/thread_messages.py`: Python 내부 메시지 규격
 
 `MessageType`은 워커 간 명령/이벤트 종류를 고정하고, `Message`는 타입·보낸 사람·payload를 담는 불변 데이터 객체다.
 
@@ -56,7 +58,7 @@ python process_and_thread.py
 
 `FETCH`와 `Message.fetch()`도 정의되어 있지만 현재 환율·뉴스 파이프라인에서는 사용하지 않는 이전 예제의 잔여 프로토콜이다.
 
-### `thread_worker.py`: Python 워커 로직
+### `project/legacy/thread_worker.py`: Python 워커 로직
 
 #### 데이터 요청 보조 함수
 
@@ -85,7 +87,7 @@ python process_and_thread.py
 
 `DATA` payload에서 기사 제목과 본문을 소문자로 합쳐 정해 둔 키워드를 검색한다. 일치한 서로 다른 키워드가 2개 이상인 기사만 남긴다. 환율 시계열은 그대로 유지하고 기사에 `matched_keywords`를 덧붙여 `market_analysis_input.json`에 저장한다. 완료 후 크롤러 큐에 `DATA_PROCESSED`를 넣는다.
 
-### `ipc_handler.py`: Python TCP IPC 어댑터
+### `project/legacy/ipc_handler.py`: Python TCP IPC 어댑터
 
 Python 메인 스레드와 소켓 처리 스레드 사이에서 두 개의 `queue.Queue`를 사용한다.
 
@@ -97,7 +99,7 @@ Python 메인 스레드와 소켓 처리 스레드 사이에서 두 개의 `queu
 
 TCP는 메시지 경계를 제공하지 않는다. 한 번의 `recv()`가 JSON 한 개 전체를 반환한다는 보장이 없으므로 버퍼와 newline 구분자가 필요하다.
 
-### `node_process.js`: Node 프로세스 및 두 Worker
+### `project/legacy/node_process.js`: Node 프로세스 및 두 Worker
 
 같은 파일을 세 실행 문맥에서 사용한다.
 
@@ -125,9 +127,9 @@ TCP는 메시지 경계를 제공하지 않는다. 한 번의 `recv()`가 JSON �
 
 | 파일 | 생성 위치 | 역할 |
 |---|---|---|
-| `market_data_raw.json` | Python 크롤러 | 환율과 RSS/본문 수집 결과 원본 |
-| `market_analysis_input.json` | Python 분석기 | 환율 + 관련 기사만 포함한 Node 입력 |
-| `market_insights.json` | Node 인사이트 Worker | 이동평균 추이와 관련 기사 정보를 담은 최종 결과 |
+| `project/legacy/market_data_raw.json` | Python 크롤러 | 환율과 RSS/본문 수집 결과 원본 |
+| `project/legacy/market_analysis_input.json` | Python 분석기 | 환율 + 관련 기사만 포함한 Node 입력 |
+| `project/legacy/market_insights.json` | Node 인사이트 Worker | 이동평균 추이와 관련 기사 정보를 담은 최종 결과 |
 
 IPC에는 위 데이터 전체가 아니라 `PROCESS_COMPLETE`와 입력/출력 경로만 전달한다.
 
@@ -157,12 +159,12 @@ Python -> Node: STOP
 
 ## 코드 읽는 순서
 
-1. `process_and_thread.py`: 무엇을 만들고 어떤 순서로 기다리는지 본다.
-2. `thread_messages.py`: Python 워커 메시지 계약을 본다.
-3. `thread_worker.py`: 수집과 관련 기사 선택을 따라간다.
-4. `ipc_handler.py`: 프로세스 경계에서 메시지가 어떻게 프레이밍되는지 본다.
-5. `node_process.js`: IPC 라우팅과 인사이트 계산·저장을 본다.
-6. `market_insights.json`: 계산 결과의 실제 필드를 확인한다.
+1. `project/legacy/process_and_thread.py`: 무엇을 만들고 어떤 순서로 기다리는지 본다.
+2. `project/legacy/thread_messages.py`: Python 워커 메시지 계약을 본다.
+3. `project/legacy/thread_worker.py`: 수집과 관련 기사 선택을 따라간다.
+4. `project/legacy/ipc_handler.py`: 프로세스 경계에서 메시지가 어떻게 프레이밍되는지 본다.
+5. `project/legacy/node_process.js`: IPC 라우팅과 인사이트 계산·저장을 본다.
+6. `project/legacy/market_insights.json`: 계산 결과의 실제 필드를 확인한다.
 
 ## 현재 구현의 한계와 주의점
 

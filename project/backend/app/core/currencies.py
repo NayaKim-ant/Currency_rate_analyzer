@@ -1,0 +1,3 @@
+HOME_CURRENCY = "KRW"
+SUPPORTED_CURRENCIES = ("USD", "AUD", "CAD", "CHF", "CNY", "EUR", "GBP", "JPY", "KRW")
+FOREIGN_CURRENCIES = tuple(currency for currency in SUPPORTED_CURRENCIES if currency != HOME_CURRENCY)

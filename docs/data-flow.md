@@ -1,5 +1,7 @@
 # 데이터 흐름
 
+> 이 문서는 `project/legacy/` 프로토타입의 실행 흐름을 설명한다. 구현을 마친 FastAPI/PostgreSQL의 수집·분석·조회 흐름은 [현재 시스템 검증 보고서](verification.md)를 참고한다.
+
 ## 한 번의 실행 흐름
 
 ```mermaid

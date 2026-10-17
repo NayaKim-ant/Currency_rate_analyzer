@@ -1,5 +1,7 @@
 # 데이터 구조와 메시지 계약
 
+> 이 문서는 `project/legacy/` 프로토타입의 Python 메시지, TCP IPC, JSON 파일 계약을 설명한다. 현재 backend는 API 스키마와 PostgreSQL 모델을 사용한다. 전환 완료 및 계약 검증 결과는 [검증 보고서](verification.md)를 참고한다.
+
 ## Python 내부 메시지
 
 `thread_messages.py`의 `Message`는 Python 워커 사이에서 사용하는 불변 데이터 객체다.

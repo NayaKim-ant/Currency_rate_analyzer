@@ -1,5 +1,9 @@
 # 시스템 아키텍처
 
+> 이 문서는 `project/legacy/`에 보존된 기존 Python·Node.js 프로토타입을 설명한다. 현재 FastAPI/PostgreSQL/Next.js 실행 구조와 검증 결과는 [현재 시스템 검증 보고서](verification.md), 구현 범위는 [구현 계획](implementation-plan.md)을 참고한다.
+
+현재 backend의 수집·분석은 [PostgreSQL 영속 job 상태 머신](job-state-machine.md)으로 실행된다. Next.js에서 작업 요청과 상태/전이 이력, 실패 및 retry를 확인할 수 있다. HTTP API는 FastAPI가 처리하고, queue의 작업은 기본 내장 worker 또는 독립 Python worker가 실행한다.
+
 ## 목적
 
 Python 프로세스가 환율 시계열과 뉴스 RSS를 수집하고 관련 기사를 선별한다. Node.js 프로세스는 선별된 데이터를 바탕으로 통화별 추이와 기사 기반 변화 이유를 분석해 최종 인사이트를 저장한다.
