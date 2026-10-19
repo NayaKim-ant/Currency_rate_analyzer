@@ -6,6 +6,7 @@ import pytest
 
 np = pytest.importorskip("numpy")
 pytest.importorskip("torch")
+pytest.importorskip("sklearn")
 
 from sqlalchemy import select
 from sqlalchemy.orm import sessionmaker
@@ -45,7 +46,7 @@ def test_news_features_never_use_future_backfills_or_superseded_versions():
     assert any(news_vector([current], "USD", cutoff-timedelta(minutes=30)))
     assert not any(news_vector([fact(None, cutoff)], "USD", cutoff))
     expectation = fact(cutoff, cutoff, claim_type="forward_looking")
-    values = np.array(news_vector([expectation], "USD", cutoff)).reshape(2, 6, 6)
+    values = np.array(news_vector([expectation], "USD", cutoff)).reshape(2, 6, forecasting.NEWS_CHANNELS)
     assert values[:, :, 0].sum() == 0 and values[:, :, 3].sum() > 0
     assert any(news_vector([fact(cutoff, cutoff, factor="risk", currencies=[])], "USD", cutoff))
 

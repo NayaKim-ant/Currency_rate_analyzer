@@ -119,3 +119,5 @@ Rate query `days` controls the visible calendar range; calculations include earl
 ## Local forecasting
 
 Optional CPU ML dependencies live in `requirements-ml.txt`. Forecast jobs extract source evidence and train all eight currencies through `QUEUED -> EXTRACTING_HINTS -> FORECASTING -> COMPLETED`. After the first saved run, rate/recent-news jobs enqueue refreshes. See [forecasting guide](../../docs/news-forecasting.md) for setup, point-in-time evidence rules, baseline gates, and real-data limitations. Latest suite: 70 tests passed.
+
+Historical imports: [archive backfill and evaluation timing](../../docs/historical-data.md). Explicit date ranges expand stored rates/news without increasing daily startup lookbacks.

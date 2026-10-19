@@ -3,6 +3,7 @@
 import hashlib
 import json
 import re
+from bisect import bisect_right
 from datetime import datetime, time, timedelta, timezone
 
 import numpy as np
@@ -15,21 +16,27 @@ from app.core.currencies import FOREIGN_CURRENCIES
 from app.models.forecasts import ForecastRun, NewsFact
 from app.models.market import ExchangeRate
 from app.services.news_facts import FACTORS, as_utc
+from app.services.simple_forecasters import SIMPLE_CONFIG, fit_simple, predict_simple
 
 SEQUENCE = 20
 MIN_OBSERVATIONS = 160
 PRICE_FEATURES = 3
-CONFIG = {"version": "local-lstm-news-v2", "sequence": SEQUENCE, "hidden_size": 12,
+HORIZONS = (1, 3, 5, 10)
+CONFIG = {"version": "local-outlook-v5", "sequence": SEQUENCE, "hidden_size": 12,
+          "available_horizons": list(HORIZONS), "long_horizon_models": ["ridge", "boosted_trees"],
+          "simple_models": SIMPLE_CONFIG,
           "epochs": 45, "seed": 42, "horizon_observations": 1, "news_window_days": 7,
           "news_channels": ["reported_count", "increase_count", "decrease_count", "expectation_count",
-                            "mentioned_percentage_mean", "explicit_change_basis_points"]}
+                            "reported_actual_percentage", "explicit_change_basis_points",
+                            "previous_percentage", "expected_percentage", "surprise_percentage_points"]}
+NEWS_CHANNELS = len(CONFIG["news_channels"])
 
 
 def news_vector(facts: list[NewsFact], currency: str, cutoff: datetime) -> list[float]:
     """Only use immutable evidence actually available at the decision cutoff."""
     cutoff = as_utc(cutoff)
     start = cutoff - timedelta(days=7)
-    vector = np.zeros((2, len(FACTORS), 6), dtype=np.float64)
+    vector = np.zeros((2, len(FACTORS), NEWS_CHANNELS), dtype=np.float64)
     percentages = {}
     seen = set()
     for fact in facts:
@@ -56,38 +63,52 @@ def news_vector(facts: list[NewsFact], currency: str, cutoff: datetime) -> list[
                     vector[group, factor, 1] += 1
                 elif fact.direction == "decrease":
                     vector[group, factor, 2] += 1
+                event = getattr(fact, "event", None) or {}
+                if event.get("attribution") == "single_currency_factor":
+                    for key, channel in (("actual", 4), ("previous", 6), ("expected", 7), ("surprise_percentage_points", 8)):
+                        if event.get(key) is not None:
+                            percentages.setdefault((group, factor, channel), []).append(event[key])
+                    if event.get("change_basis_points") is not None:
+                        vector[group, factor, 5] += event["change_basis_points"]
+                    continue
                 for figure in fact.figures:
                     if not figure.get("assigned", False):
                         continue  # Multiple economic variables: magnitude attribution is unclear.
                     unit, value = figure["unit"].lower(), float(figure["value"])
                     if unit == "%" or (unit.startswith("percent") and "point" not in unit):
-                        percentages.setdefault((group, factor), []).append(value)
+                        percentages.setdefault((group, factor, 4), []).append(value)
                     if ("basis" in unit or unit.startswith("bp") or "percentage point" in unit) and re.search(
                         r"\bby\s+" + re.escape(figure["text"]), fact.evidence, re.I,
                     ):
                         signed = value if fact.direction == "increase" else -value if fact.direction == "decrease" else 0
                         vector[group, factor, 5] += signed * (100 if "percentage point" in unit else 1)
     vector[:, :, :4] = np.log1p(vector[:, :, :4])
-    for (group, factor), values in percentages.items():
-        vector[group, factor, 4] = np.clip(np.mean(values), -100, 100) / 10
+    for (group, factor, channel), values in percentages.items():
+        vector[group, factor, channel] = np.clip(np.mean(values), -100, 100) / 10
     vector[:, :, 5] = np.clip(vector[:, :, 5] / 100, -5, 5)
     return vector.reshape(-1).tolist()
 
 
-def build_dataset(rates, facts, currency, now):
+def build_dataset(rates, facts, currency, now, horizon=1):
+    if horizon not in HORIZONS:
+        raise ValueError("Unsupported forecast horizon")
     costs = np.array([1 / float(row.rate) for row in rates], dtype=np.float64)
     returns = np.zeros(len(costs))
     returns[1:] = np.log(costs[1:] / costs[:-1]) * 100
     rows = []
+    # Large backfills are first seen now; do not scan them for every old date.
+    ordered_facts = sorted(facts, key=lambda f: as_utc(f.available_at))
+    available_times = [as_utc(f.available_at) for f in ordered_facts]
     for index, row in enumerate(rates):
         cutoff = min(as_utc(now), datetime.combine(row.rate_date, time.max, tzinfo=timezone.utc))
         gap = np.log(costs[index] / np.mean(costs[max(0, index-4):index+1])) * 100
         volatility = float(np.std(returns[max(1, index-19):index+1])) if index else 0
-        rows.append([returns[index], gap, volatility, *news_vector(facts, currency, cutoff)])
+        visible = ordered_facts[:bisect_right(available_times, cutoff)]
+        rows.append([returns[index], gap, volatility, *news_vector(visible, currency, cutoff)])
     features = np.asarray(rows, dtype=np.float64)
-    origins = list(range(SEQUENCE - 1, len(costs) - 1))
+    origins = list(range(SEQUENCE - 1, len(costs) - horizon))
     x = np.array([features[i-SEQUENCE+1:i+1] for i in origins])
-    y = np.array([returns[i+1] for i in origins])
+    y = np.array([np.log(costs[i+horizon]/costs[i])*100 for i in origins])
     return costs, features, origins, x, y
 
 
@@ -132,6 +153,14 @@ def predict_model(fitted, x):
     return np.clip(result * y_scale + y_mean, -5*y_scale, 5*y_scale).astype(np.float64)
 
 
+def fit_candidate(name, x, y, epochs):
+    return fit_simple(name, x, y) if name in {"ridge", "boosted_trees"} else fit_model(x, y, epochs)
+
+
+def predict_candidate(name, fitted, x):
+    return predict_simple(fitted, x) if name in {"ridge", "boosted_trees"} else predict_model(fitted, x)
+
+
 def metrics(predicted_returns, actual_returns, current_costs):
     predicted = current_costs * np.exp(predicted_returns / 100)
     actual = current_costs * np.exp(actual_returns / 100)
@@ -141,13 +170,15 @@ def metrics(predicted_returns, actual_returns, current_costs):
     return {"mae_krw": float(error.mean()), "direction_accuracy": accuracy, "samples": len(error)}, error
 
 
-def train_pair(rates, facts, currency, now, epochs=None):
+def train_pair(rates, facts, currency, now, epochs=None, horizon=1):
     torch.set_num_threads(1)
-    if len(rates) < MIN_OBSERVATIONS:
-        return {"status": "insufficient_data", "observations": len(rates), "minimum_observations": MIN_OBSERVATIONS}
-    costs, features, origins, x, y = build_dataset(rates, facts, currency, now)
+    minimum = MIN_OBSERVATIONS + 3*(horizon-1)
+    if len(rates) < minimum:
+        return {"status": "insufficient_data", "observations": len(rates), "minimum_observations": minimum}
+    costs, features, origins, x, y = build_dataset(rates, facts, currency, now, horizon)
     count = len(y)
-    starts = [count-60, count-40, count-20]
+    gap = horizon-1
+    starts = [count-60-2*gap, count-40-gap, count-20]
     first_cutoff = datetime.combine(rates[origins[starts[0]]].rate_date, time.max, tzinfo=timezone.utc)
     available_days = {as_utc(f.available_at).date() for f in facts if as_utc(f.available_at) < first_cutoff
                       and f.published_at is not None and (({"KRW", currency} & set(f.currencies))
@@ -156,38 +187,46 @@ def train_pair(rates, facts, currency, now, epochs=None):
     training_news_days = int(has_news[:origins[starts[0]]].sum())
     validation_news_days = int(has_news[origins[starts[0]]:origins[starts[2]]].sum())
     test_news_days = int(has_news[origins[starts[2]]:].sum())
-    news_eligible = (training_news_days >= 30 and len(available_days) >= 20
+    news_eligible = (horizon == 1 and training_news_days >= 30 and len(available_days) >= 20
                      and validation_news_days >= 15 and test_news_days >= 8)
-    candidates = ["no_change", "rates_lstm"] + (["news_lstm"] if news_eligible else [])
+    rate_candidates = ["ridge", "boosted_trees"] + (["rates_lstm"] if horizon == 1 else [])
+    candidates = ["no_change", *rate_candidates] + (["news_lstm"] if news_eligible else [])
     outputs = {name: [] for name in candidates}
     folds = []
     for start in starts:
         end = min(start+20, count)
-        folds.append({"train_samples": start-1, "first_origin": rates[origins[start]].rate_date.isoformat(),
+        stop = start-horizon
+        folds.append({"train_samples": stop, "first_origin": rates[origins[start]].rate_date.isoformat(),
+                      "last_training_target": rates[origins[stop-1]+horizon].rate_date.isoformat(),
+                      "last_evaluation_target": rates[origins[end-1]+horizon].rate_date.isoformat(),
                       "last_origin": rates[origins[end-1]].rate_date.isoformat(), "evaluation_samples": end-start})
         outputs["no_change"].append(np.zeros(end-start))
         for name in candidates[1:]:
-            width = PRICE_FEATURES if name == "rates_lstm" else x.shape[-1]
+            width = x.shape[-1] if name == "news_lstm" else PRICE_FEATURES
             # One-sample gap; scaling and fitting see only the expanding past.
-            fitted = fit_model(x[:start-1, :, :width], y[:start-1], epochs)
-            outputs[name].append(predict_model(fitted, x[start:end, :, :width]))
-    val_y = y[starts[0]:starts[2]]
-    val_costs = costs[np.array(origins[starts[0]:starts[2]])]
+            fitted = fit_candidate(name, x[:stop, :, :width], y[:stop], epochs)
+            outputs[name].append(predict_candidate(name, fitted, x[start:end, :, :width]))
+    validation_indices = np.concatenate([np.arange(start, start+20) for start in starts[:2]])
+    val_y = y[validation_indices]
+    val_costs = costs[np.asarray(origins)[validation_indices]]
     scores = {}
     for name in candidates:
         scores[name], _ = metrics(np.concatenate(outputs[name][:2]), val_y, val_costs)
     selected = "no_change"
-    if scores["rates_lstm"]["mae_krw"] < scores["no_change"]["mae_krw"] * 0.98:
-        selected = "rates_lstm"
+    rate_choice = min(rate_candidates, key=lambda name: scores[name]["mae_krw"])
+    if scores[rate_choice]["mae_krw"] < scores["no_change"]["mae_krw"] * 0.98:
+        selected = rate_choice
     if news_eligible and scores["news_lstm"]["mae_krw"] < min(
-        scores["no_change"]["mae_krw"], scores["rates_lstm"]["mae_krw"],
+        scores["no_change"]["mae_krw"], scores[rate_choice]["mae_krw"],
     ) * 0.98:
         selected = "news_lstm"
     # Selection is frozen before the final, untouched block is scored.
     tests = {}
+    candidate_error_widths = {}
     residuals = None
     for name in candidates:
         tests[name], errors = metrics(outputs[name][2], y[starts[2]:], costs[np.array(origins[starts[2]:])])
+        candidate_error_widths[name] = float(np.quantile(errors, 0.8))
         if name == selected:
             residuals = errors
     final_input = features[-SEQUENCE:].copy()
@@ -196,9 +235,9 @@ def train_pair(rates, facts, currency, now, epochs=None):
     news_sensitivity = None
     factor_sensitivities = {}
     for name in candidates[1:]:
-        width = PRICE_FEATURES if name == "rates_lstm" else x.shape[-1]
-        fitted = fit_model(x[:, :, :width], y, epochs)
-        prediction = float(predict_model(fitted, final_input[None, :, :width])[0])
+        width = x.shape[-1] if name == "news_lstm" else PRICE_FEATURES
+        fitted = fit_candidate(name, x[:, :, :width], y, epochs)
+        prediction = float(predict_candidate(name, fitted, final_input[None, :, :width])[0])
         forecasts[name] = float(costs[-1] * np.exp(prediction / 100))
         if name == "news_lstm":
             masked = final_input.copy()
@@ -208,8 +247,8 @@ def train_pair(rates, facts, currency, now, epochs=None):
             for index, factor in enumerate(FACTORS):
                 masked_factor = final_input.copy()
                 for group in range(2):
-                    offset = PRICE_FEATURES + (group*len(FACTORS)+index)*6
-                    masked_factor[:, offset:offset+6] = 0
+                    offset = PRICE_FEATURES + (group*len(FACTORS)+index)*NEWS_CHANNELS
+                    masked_factor[:, offset:offset+NEWS_CHANNELS] = 0
                 ablated = float(predict_model(fitted, masked_factor[None])[0])
                 factor_sensitivities[factor] = forecasts[name] - float(costs[-1]*np.exp(ablated/100))
     point = forecasts[selected]
@@ -217,24 +256,28 @@ def train_pair(rates, facts, currency, now, epochs=None):
     dataset_hash = hashlib.sha256(json.dumps({"rates": [(r.rate_date.isoformat(), str(r.rate)) for r in rates],
         "facts": [(f.evidence_hash, as_utc(f.available_at).isoformat(), str(f.superseded_at)) for f in facts]}, sort_keys=True).encode()).hexdigest()
     return {"status": "experimental", "generated_at": now.isoformat(), "as_of_date": rates[-1].rate_date.isoformat(),
-        "horizon": "next_available_daily_quote", "rate_currency": "KRW", "unit_currency": currency,
+        "horizon": "next_available_daily_quote" if horizon == 1 else "future_daily_quote",
+        "horizon_observations": horizon, "rate_currency": "KRW", "unit_currency": currency,
         "current_cost": float(costs[-1]), "forecast_cost": point, "change_percent": (point/costs[-1]-1)*100,
         "model": selected, "candidate_forecasts": forecasts,
+        "candidate_error_widths": candidate_error_widths,
         "error_band": {"lower": max(0, point-width), "upper": point+width,
                        "description": "80th percentile of absolute held-out errors; not a calibrated confidence interval"},
         "validation": scores, "held_out_test": tests, "folds": folds, "dataset_hash": dataset_hash,
-        "observations": len(rates), "configuration": {**CONFIG, "epochs": epochs or CONFIG["epochs"]},
+        "observations": len(rates), "configuration": {**CONFIG, "horizon_observations": horizon, "epochs": epochs or CONFIG["epochs"]},
         "selection": "First two expanding-window blocks select a model only after a 2% MAE improvement; final block is untouched until selection.",
         "news": {"eligible": news_eligible, "training_news_days": training_news_days,
                  "first_seen_dates": len(available_days), "validation_news_days": validation_news_days,
                  "test_news_days": test_news_days, "sensitivity_krw": news_sensitivity,
                  "factor_sensitivities": factor_sensitivities,
-                 "status": "validated_candidate" if news_eligible else "collecting_point_in_time_history",
+                 "status": "rate_history_only" if horizon > 1 else "validated_candidate" if news_eligible else "collecting_point_in_time_history",
                  "requirements": "30 training news days across 20 first-seen dates, 15 validation days, and 8 test days.",
                  "note": "First-seen/extraction times prevent backfilled news from leaking into earlier predictions. No fixed causal direction is assumed."}}
 
 
 def train_forecasts(session: Session) -> int:
+    from app.services.forecast_scorecard import apply_forward_selection, scorecard, settle_forecasts
+    settle_forecasts(session)
     now = datetime.now(timezone.utc)
     facts = list(session.scalars(select(NewsFact).order_by(NewsFact.id)))
     count = 0
@@ -245,8 +288,19 @@ def train_forecasts(session: Session) -> int:
         ).order_by(ExchangeRate.rate_date)))
         if not rates:
             continue
-        payload = train_pair(rates, facts, currency, now)
-        session.add(ForecastRun(target_currency=currency, as_of_date=rates[-1].rate_date, payload=payload))
+        horizons = {}
+        for horizon in HORIZONS:
+            result = train_pair(rates, facts, currency, now, horizon=horizon)
+            if result.get("status") == "experimental":
+                evidence = scorecard(session, currency, cutoff=now, configuration=result["configuration"], horizon=horizon)
+                apply_forward_selection(result, evidence)
+            horizons[str(horizon)] = result
+        payload = {**horizons["1"], "horizon_forecasts": horizons,
+                   "recent_costs": [{"date": r.rate_date.isoformat(), "cost": 1/float(r.rate)} for r in rates[-15:]]}
+        # Issue after training finishes, not at the start of a long DB transaction.
+        session.add(ForecastRun(target_currency=currency, as_of_date=rates[-1].rate_date, payload=payload,
+                                created_at=datetime.now(timezone.utc)))
+        session.commit()
         count += 1
     session.commit()
     return count

@@ -49,7 +49,7 @@ def test_pipeline_persists_every_legal_stage_and_results(factory, successful_pip
         assert job.state == "COMPLETED"
         assert job.attempts == 1
         assert job.active_key is None and job.attempt_token is None
-        assert job.result == {"rates": 8, "snapshots": 8, "events_created": 0, "alerts_created": 1}
+        assert job.result == {"rates": 8, "snapshots": 8, "events_created": 0, "alerts_created": 1, "forecasts_scored": 0}
         history = list(session.scalars(select(JobTransition).where(JobTransition.job_id == job_id).order_by(JobTransition.id)))
         assert [row.to_state for row in history] == ["QUEUED", "COLLECTING", "ANALYZING", "EVALUATING_ALERTS", "COMPLETED"]
         with pytest.raises(JobConflict, match="Cannot move"):

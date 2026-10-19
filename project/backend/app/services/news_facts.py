@@ -3,7 +3,7 @@
 import hashlib
 import json
 import re
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 
 from sqlalchemy import select
@@ -12,8 +12,9 @@ from sqlalchemy.orm import Session
 from app.db.locks import lock_market_writes
 from app.models.forecasts import NewsFact
 from app.models.market import Article
+from app.services.economic_events import economic_event
 
-VERSION = "local-extractive-v2"
+VERSION = "local-events-v3"
 FACTORS = {
     "interest_rates": r"\b(?:interest rates?|rate cuts?|rate hikes?|monetary policy|policy rates?|(?:hikes?|cuts?|raises?|lowers?)\s+(?:its\s+)?rates?)\b|기준금리|금리",
     "inflation": r"\b(?:inflation|consumer prices?|CPI|PCE)\b|물가|인플레이션",
@@ -48,6 +49,7 @@ class Candidate:
     claim_type: str
     figures: list[dict]
     evidence: str
+    event: dict = field(default_factory=dict)
 
 
 def extract_candidates(title: str, content: str) -> list[Candidate]:
@@ -60,7 +62,8 @@ def extract_candidates(title: str, content: str) -> list[Candidate]:
         if not snippet or len(snippet) > 1500:
             continue
         currencies = sorted(currency for currency, pattern in ENTITIES.items() if re.search(pattern, snippet, re.I))
-        up, down = bool(re.search(UP, snippet, re.I)), bool(re.search(DOWN, snippet, re.I))
+        direction_text = re.sub(r"\b(?:higher|lower)\s+than\s+(?:expected|(?:market\s+)?expectations?)\b", "", snippet, flags=re.I)
+        up, down = bool(re.search(UP, direction_text, re.I)), bool(re.search(DOWN, direction_text, re.I))
         negated = bool(re.search(r"\b(?:not|never|no longer)\b|않", snippet, re.I))
         direction = "unspecified" if up == down or negated else "increase" if up else "decrease"
         if re.search(r"\b(?:unchanged|held steady|kept steady)\b|동결", snippet, re.I):
@@ -69,7 +72,10 @@ def extract_candidates(title: str, content: str) -> list[Candidate]:
         for match in FIGURE.finditer(snippet):
             figures.append({"text": match.group(0), "value": float(match.group(1) or match.group(3)),
                             "unit": match.group(2) or match.group(4)})
-        claim = "forward_looking" if re.search(FORWARD, snippet, re.I) else (
+        classification_text = snippet
+        if re.search(r"\b(?:fell|rose|raised|reported|released|held|kept|came|recorded)\b|발표|기록", snippet, re.I):
+            classification_text = re.sub(r"\b(?:expected|forecast)\s+(?:at\s+)?-?\d+(?:\.\d+)?\s*%|-?\d+(?:\.\d+)?\s*%\s+(?:was\s+)?(?:expected|forecast)\b|예상치", "", snippet, flags=re.I)
+        claim = "forward_looking" if re.search(FORWARD, classification_text, re.I) else (
             "reported" if figures or up or down or re.search(OBSERVED, snippet, re.I) else "commentary"
         )
         for factor, pattern in FACTORS.items():
@@ -77,8 +83,11 @@ def extract_candidates(title: str, content: str) -> list[Candidate]:
                 seen.add((factor, snippet.casefold()))
                 # Several economic variables in one sentence cannot safely share a direction.
                 matched_factors = sum(bool(re.search(p, snippet, re.I)) for p in FACTORS.values())
-                results.append(Candidate(factor, currencies, direction if matched_factors == 1 else "unspecified",
-                                         claim, [dict(figure, assigned=matched_factors == 1) for figure in figures], snippet))
+                assigned = matched_factors == 1 and len(currencies) == 1
+                event_direction = direction if assigned else "unspecified"
+                event = economic_event(snippet, factor, currencies, claim, event_direction, matched_factors != 1)
+                results.append(Candidate(factor, currencies, event_direction,
+                    claim, [dict(figure, assigned=assigned and event["attribution"] != "ambiguous") for figure in figures], snippet, event))
     return results
 
 
@@ -97,7 +106,7 @@ def extract_news_facts(session: Session, now: datetime | None = None) -> int:
         active = {}
         for row in rows:
             if row.article_id == article.id and row.superseded_at is None:
-                value = Candidate(row.factor, row.currencies, row.direction, row.claim_type, row.figures, row.evidence)
+                value = Candidate(row.factor, row.currencies, row.direction, row.claim_type, row.figures, row.evidence, row.event or {})
                 active[hashlib.sha256(json.dumps(asdict(value), sort_keys=True).encode()).hexdigest()] = row
         current = set()
         for candidate in candidates:

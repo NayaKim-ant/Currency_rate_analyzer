@@ -123,10 +123,11 @@ def fetch_news_articles(
     start_date: date | None = None,
     end_date: date | None = None,
     include_body: bool = True,
+    query: str | None = None,
 ) -> list[tuple[NewsArticleData, str]]:
     if (start_date is None) != (end_date is None):
         raise ValueError("start_date and end_date must be provided together")
-    query = NEWS_QUERY
+    query = query or NEWS_QUERY
     if start_date is not None and end_date is not None:
         if end_date < start_date:
             raise ValueError("end_date must not be earlier than start_date")

@@ -34,6 +34,7 @@ const resultLabels: Record<string, string> = {
   rates: "Rates processed", articles: "Articles processed", snapshots: "Trend points",
   events_created: "New market events", alerts_created: "New alerts",
   news_facts: "New source excerpts", forecasts: "Currency forecasts",
+  forecasts_scored: "Forecast outcomes recorded",
 };
 const filters = { all: "All runs", running: "In progress", failed: "Failed", completed: "Completed" };
 type Filter = keyof typeof filters;

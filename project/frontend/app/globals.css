@@ -869,6 +869,59 @@ h2 {
   margin-top: 20px;
 }
 
+.forecast-outlook { margin-top: 22px; }
+.outlook-verdict { padding: 22px; background: #f1f4f2; border: 1px solid #dfe7e1; border-left: 4px solid #84958a; border-radius: 8px; }
+.outlook-verdict.is-buy_sooner { background: #edf7f0; border-left-color: #137a62; }
+.outlook-verdict.is-wait { background: #eef3fb; border-left-color: #4469a3; }
+.outlook-verdict.is-outdated { background: #faf5e9; border-left-color: #bb9555; }
+.outlook-verdict h3 { margin: 8px 0; font-size: 23px; font-weight: 600; line-height: 1.3; }
+.outlook-verdict p { max-width: 85ch; font-size: 13px; line-height: 1.7; color: #526157; }
+.outlook-period-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 24px; font-size: 13px; font-weight: 600; }
+.outlook-periods { display: flex; gap: 5px; padding: 4px; border: 1px solid var(--line); border-radius: 7px; background: #f4f7f4; }
+.outlook-periods button { padding: 8px 13px; background: transparent; border: 0; border-radius: 4px; font-size: 12px; cursor: pointer; white-space: nowrap; }
+.outlook-periods button[aria-pressed="true"] { color: white; background: var(--forest); }
+.outlook-periods button:disabled { opacity: .4; cursor: not-allowed; }
+.outlook-date { margin-top: 10px; color: #66746c; font-size: 11px; line-height: 1.7; }
+.outlook-price-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+.outlook-price-cards > div { padding: 17px; border: 1px solid var(--line); border-radius: 7px; min-width: 0; }
+.outlook-price-cards .is-estimate { background: #eef4fb; border-color: #d8e4f2; }
+.outlook-price-cards span, .outlook-price-cards small, .outlook-total span { display: block; font-size: 11px; color: #66746c; line-height: 1.6; }
+.outlook-price-cards strong { display: block; margin: 10px 0 8px; font-size: clamp(19px, 2vw, 27px); font-weight: 600; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.outlook-chart-heading { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+.outlook-chart-heading h3, .outlook-calculator h3 { margin: 0; font-size: 15px; font-weight: 600; }
+.outlook-chart-heading > span { font-size: 11px; color: #66746c; }
+.outlook-chart { width: 100%; height: 285px; margin-top: 14px; }
+.outlook-legend { display: flex; flex-wrap: wrap; gap: 18px; font-size: 11px; color: #66746c; }
+.outlook-legend span { display: flex; align-items: center; gap: 6px; }
+.outlook-legend i { display: inline-block; width: 17px; height: 3px; background: #137a62; }
+.outlook-legend span:nth-child(2) i { height: 0; border-top: 2px dashed #4469a3; background: transparent; }
+.outlook-legend span:nth-child(3) i { height: 10px; background: #4469a326; }
+.outlook-calculator { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 16px; align-items: end; margin-top: 24px; padding: 18px; background: #f5f7f5; border-radius: 7px; }
+.outlook-calculator p { margin-top: 5px; color: #66746c; font-size: 11px; line-height: 1.6; }
+.outlook-calculator label { display: grid; gap: 7px; font-size: 11px; color: #526157; min-width: 0; }
+.outlook-calculator input { width: 100%; height: 38px; padding: 8px 10px; border: 1px solid #dbe3dd; border-radius: 4px; background: white; font: inherit; font-size: 13px; color: var(--ink); }
+.outlook-total { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 14px; padding: 0 18px; }
+.outlook-total strong { display: block; margin-top: 5px; font-size: 22px; font-weight: 600; overflow-wrap: anywhere; }
+.outlook-total p { grid-column: 1 / -1; font-size: 12px; color: #526157; line-height: 1.7; }
+.forecast-technical, .forecast-news, details.forecast-scorecard { margin-top: 20px; padding: 16px 0; border-top: 1px solid var(--line); }
+.forecast-technical > summary, .forecast-news > summary, details.forecast-scorecard > summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--forest); }
+.outlook-price-cards + .outlook-chart-heading { margin-top: 26px; }
+@media (max-width: 800px) {
+  .outlook-price-cards { grid-template-columns: 1fr; }
+  .outlook-calculator { grid-template-columns: 1fr 1fr; }
+  .outlook-calculator > div { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .outlook-period-row { align-items: flex-start; flex-direction: column; gap: 10px; }
+  .outlook-verdict { padding: 16px; }
+  .outlook-verdict h3 { font-size: 21px; }
+  .outlook-periods { width: 100%; }
+  .outlook-periods button { flex: 1; padding: 8px; }
+  .outlook-total, .outlook-calculator { grid-template-columns: 1fr; }
+  .outlook-calculator, .outlook-total { padding: 14px; }
+  .outlook-chart { height: 250px; }
+}
+
 .forecast-summary > div {
   min-width: 0;
   padding: 16px;
@@ -930,6 +983,11 @@ h2 {
   border-collapse: collapse;
   text-align: left;
 }
+
+.forecast-scorecard { margin-top: 24px; padding-top: 1px; border-top: 1px solid var(--line); }
+.forecast-scorecard table { width: 100%; border-collapse: collapse; text-align: left; font-size: 12px; }
+.forecast-scorecard caption { text-align: left; margin-bottom: 12px; color: #66746c; font-size: 12px; }
+.forecast-scorecard th, .forecast-scorecard td { padding: 11px; border-bottom: 1px solid var(--line); white-space: nowrap; }
 
 .forecast-validation th,
 .forecast-validation td {
@@ -1013,6 +1071,10 @@ h2 {
   color: var(--muted);
   font-size: 10px;
 }
+
+.forecast-event-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 14px 0; padding: 12px; background: #edf3ef; border-radius: 4px; }
+.forecast-event-fields dt { color: #66746c; font-size: 10px; line-height: 1.5; }
+.forecast-event-fields dd { margin: 3px 0 0; font-size: 12px; overflow-wrap: anywhere; }
 
 @media (max-width: 800px) {
   .top-nav {

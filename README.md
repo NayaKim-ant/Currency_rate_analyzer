@@ -50,3 +50,5 @@ python -m software_architecture.project.legacy.process_and_thread
 ## Experimental local forecasting
 
 The Forecast section compares a local LSTM and news-aware candidate with a no-change baseline, in KRW per foreign unit. See [setup, evaluation, and current limitations](docs/news-forecasting.md). No paid API or LLM key is needed.
+
+Historical imports: [archive backfill and evaluation timing](docs/historical-data.md). Explicit date ranges expand stored rates/news without increasing daily startup lookbacks.

@@ -104,6 +104,10 @@ def execute_job(job: AnalysisJob, factory: SessionFactory) -> None:
         if job_type != "analysis":
             result.update(collect_inputs(job_type, factory))
             advance(factory, job_id, token, JobState.ANALYZING, result.copy())
+        if job_type in ("rates", "analysis"):
+            from app.services.forecast_scorecard import settle_forecasts
+            with factory() as session:
+                result["forecasts_scored"] = settle_forecasts(session)
         with factory() as session:
             if job_type.startswith("news"):
                 from app.services.news_facts import extract_news_facts
