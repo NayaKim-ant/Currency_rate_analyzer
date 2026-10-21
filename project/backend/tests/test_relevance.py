@@ -2,7 +2,7 @@ from decimal import Decimal
 
 import pytest
 
-from app.services.relevance import score_article
+from app.services.news.relevance import score_article
 
 
 def test_relevance_scores_currency_and_policy_matches_separately() -> None:

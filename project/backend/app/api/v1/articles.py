@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 
 from app.core.currencies import HOME_CURRENCY
 from app.db.session import get_db
-from app.models.market import Article, ArticleKeyword, ArticleRelevance
+from app.models.news import Article, ArticleKeyword, ArticleRelevance
 from app.schemas.articles import ArticleSearchResult
 
 router = APIRouter(prefix="/articles", tags=["articles"])

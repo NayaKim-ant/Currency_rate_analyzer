@@ -10,8 +10,8 @@ from sqlalchemy.orm import Session
 
 from app.db.locks import lock_market_writes
 from app.models.forecasts import ForecastOutcome, ForecastRun
-from app.models.market import ExchangeRate
-from app.services.news_facts import as_utc
+from app.models.rates import ExchangeRate
+from app.services.news.facts import as_utc
 
 MIN_OUTCOMES = 30
 WINDOW = 90
@@ -51,9 +51,6 @@ def settle_forecasts(session: Session, now=None) -> int:
             if as_utc(target.created_at) > now:
                 continue
             actual = 1 / float(target.rate)
-            # Every horizon is issued before even the first target observation.
-            # This prevents old source quotes from producing apparently forward
-            # long-horizon calls after part of their return was already known.
             eligible = as_utc(run.created_at) < datetime.combine(targets[0].rate_date, time.min, timezone.utc)
             errors = {}
             for name, predicted in payload.get("candidate_forecasts", {}).items():
@@ -84,7 +81,6 @@ def scorecard(session: Session, currency: str, cutoff=None, configuration=None, 
         payload = forecast_at_horizon(run.payload, horizon)
         if not payload or (configuration is not None and configuration_key(payload.get("configuration", {})) != configuration_key(configuration)):
             continue
-        # A view avoids mutating the original ORM payload when selecting a horizon.
         view = SimpleNamespace(id=run.id, created_at=run.created_at, payload=payload)
         by_date.setdefault(outcome.target_date, (view, outcome))
     chosen = list(by_date.values())[:WINDOW]
@@ -128,7 +124,6 @@ def apply_forward_selection(payload, evidence):
         for name, score in scores.items():
             if name == "no_change" or name not in payload["candidate_forecasts"] or score["samples"] < MIN_OUTCOMES:
                 continue
-            # Preserve the historical validation gate too.
             validation = payload["validation"]
             if validation[name]["mae_krw"] >= validation["no_change"]["mae_krw"] * .98:
                 continue
@@ -138,7 +133,6 @@ def apply_forward_selection(payload, evidence):
                 continue
             if score["mae_krw"] < score["baseline_mae_krw"] * .98:
                 allowed.append(name)
-        # Compare news and rates only on matched target dates, below.
         rates_allowed = [name for name in allowed if name != "news_lstm"]
         if rates_allowed:
             selected = min(rates_allowed, key=lambda name: scores[name]["mae_krw"])

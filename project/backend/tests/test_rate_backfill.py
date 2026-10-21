@@ -4,8 +4,8 @@ from decimal import Decimal
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models.market import ExchangeRate
-from app.services import collection
+from app.models.rates import ExchangeRate
+from app.services.rates import collector as collection
 
 
 def test_rate_sync_backfills_gaps_and_updates_existing_rows(test_database, monkeypatch) -> None:

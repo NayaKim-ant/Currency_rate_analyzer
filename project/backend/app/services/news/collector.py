@@ -1,6 +1,7 @@
 import html
 import logging
 import re
+import sys
 import xml.etree.ElementTree as ElementTree
 from collections.abc import Iterator, Sequence
 from concurrent.futures import ThreadPoolExecutor
@@ -15,8 +16,8 @@ from sqlalchemy.orm import Session
 
 from app.core.currencies import HOME_CURRENCY, SUPPORTED_CURRENCIES
 from app.db.locks import lock_market_writes
-from app.models.market import Article, ArticleKeyword, ArticleRelevance
-from app.services.relevance import score_article
+from app.models.news import Article, ArticleKeyword, ArticleRelevance
+from app.services.news.relevance import score_article
 
 logger = logging.getLogger(__name__)
 NEWS_URL = "https://news.google.com/rss/search"
@@ -259,13 +260,13 @@ def store_news_articles(
                 )
             )
             if keyword_row is None:
-                    session.add(
-                        ArticleKeyword(
-                            article_id=article.id,
-                            keyword=keyword,
-                            category=category,
-                        )
+                session.add(
+                    ArticleKeyword(
+                        article_id=article.id,
+                        keyword=keyword,
+                        category=category,
                     )
+                )
 
     session.commit()
     return len(articles)

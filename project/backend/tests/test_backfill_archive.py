@@ -2,8 +2,8 @@ from datetime import date, datetime, timezone
 
 import pytest
 
-from app.services.news import NewsArticleData
-from app.workers.backfill_archive import filter_news, windows
+from app.cli.backfill_archive import filter_news, windows
+from app.services.news.collector import NewsArticleData
 
 
 def test_archive_windows_cover_leap_day_once_and_validate():

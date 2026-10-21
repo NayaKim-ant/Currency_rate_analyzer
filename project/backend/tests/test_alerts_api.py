@@ -30,7 +30,8 @@ import pytest
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models.market import AlertEvent, ExchangeRate
+from app.models.alerts import AlertEvent
+from app.models.rates import ExchangeRate
 
 
 

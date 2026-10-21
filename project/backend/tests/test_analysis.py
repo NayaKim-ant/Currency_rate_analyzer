@@ -4,8 +4,9 @@ from decimal import Decimal
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models.market import Article, ArticleKeyword, ArticleRelevance, ExchangeRate, MarketEvent, TrendSnapshot
-from app.services.analysis import analyze_market
+from app.models.news import Article, ArticleKeyword, ArticleRelevance
+from app.models.rates import ExchangeRate, MarketEvent, TrendSnapshot
+from app.services.rates.analyzer import analyze_market
 
 
 def test_analysis_persists_snapshots_signals_and_policy_links_once(test_database):

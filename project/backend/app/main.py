@@ -13,7 +13,7 @@ from app.api.v1.trends import router as trends_router
 from app.api.v1.jobs import router as jobs_router
 from app.api.v1.forecasts import router as forecasts_router
 from app.core.config import settings
-from app.services.scheduler import create_scheduler, sync_startup_history
+from app.services.pipeline.scheduler import create_scheduler, sync_startup_history
 
 logger = logging.getLogger(__name__)
 

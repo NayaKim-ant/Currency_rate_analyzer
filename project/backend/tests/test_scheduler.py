@@ -1,5 +1,5 @@
 from app.core.config import settings
-from app.services.scheduler import create_scheduler
+from app.services.pipeline.scheduler import create_scheduler
 
 
 def test_scheduler_runs_rate_and_news_jobs_daily_in_configured_timezone() -> None:

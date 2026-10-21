@@ -2,8 +2,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 from app.core.config import settings
 from app.db.session import SessionLocal
-from app.services.job_runner import drain_jobs
-from app.services.jobs import enqueue_job
+from app.services.pipeline.runner import drain_jobs
+from app.services.pipeline.state_machine import enqueue_job
 
 
 def submit_scheduled(job_type: str) -> int:

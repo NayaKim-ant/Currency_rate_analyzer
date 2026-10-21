@@ -3,8 +3,8 @@ from datetime import date, datetime, timedelta, timezone
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models.market import Article, ArticleKeyword, ArticleRelevance
-from app.services.news import NewsArticleData, fetch_news_history, parse_news_rss, store_news_articles
+from app.models.news import Article, ArticleKeyword, ArticleRelevance
+from app.services.news.collector import NewsArticleData, fetch_news_history, parse_news_rss, store_news_articles
 
 
 def test_parse_news_rss_reads_title_summary_url_and_publication_date() -> None:
@@ -57,7 +57,7 @@ def test_news_history_searches_non_overlapping_windows_and_deduplicates(monkeypa
         body_flags.append(include_body)
         return [(first_article, "body"), (final_article, "body")]
 
-    monkeypatch.setattr("app.services.news.fetch_news_articles", fetch_window)
+    monkeypatch.setattr("app.services.news.collector.fetch_news_articles", fetch_window)
 
     result = fetch_news_history(days=15, batch_days=7, include_body=False)
 

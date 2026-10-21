@@ -1,15 +1,15 @@
 from datetime import date, timedelta
-from decimal import Decimal
 from typing import Literal
+
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.core.currencies import HOME_CURRENCY
 from app.db.session import get_db
-from app.models.market import ExchangeRate
-from app.schemas.rates import RatePoint, RateSeriesResponse
-from app.services.trends import classify_trend, moving_average
+from app.models.rates import ExchangeRate
+from app.schemas.rates import RateSeriesResponse
+from app.services.rates.trends import build_rate_points
 
 router = APIRouter(prefix="/rates", tags=["rates"])
 
@@ -32,9 +32,14 @@ def get_rates(
     )
     # Include the previous 59 observations so changing the visible window does
     # not change an average for the same date. Weekends need no synthetic rates.
-    warmup = list(db.scalars(select(ExchangeRate).where(
-        *pair_filter, ExchangeRate.rate_date < start_date,
-    ).order_by(ExchangeRate.rate_date.desc()).limit(59)))[::-1]
+    warmup = list(
+        db.scalars(
+            select(ExchangeRate)
+            .where(*pair_filter, ExchangeRate.rate_date < start_date)
+            .order_by(ExchangeRate.rate_date.desc())
+            .limit(59)
+        )
+    )[::-1]
     statement = (
         select(ExchangeRate)
         .where(
@@ -45,25 +50,7 @@ def get_rates(
         .order_by(ExchangeRate.rate_date)
     )
     rows = list(db.scalars(statement))
-    values = [row.rate for row in warmup + rows]
-    if quote_direction == "base_per_target":
-        # Invert each observation before averaging: 1 / MA(rate) is not MA(1 / rate).
-        values = [Decimal("1") / value for value in values]
-    averages = {window: moving_average(values, window) for window in (5, 20, 60)}
-    points = [
-        RatePoint(
-            rate_date=row.rate_date,
-            rate=values[index + len(warmup)],
-            ma_5=averages[5][index + len(warmup)],
-            ma_20=averages[20][index + len(warmup)],
-            ma_60=averages[60][index + len(warmup)],
-        )
-        for index, row in enumerate(rows)
-    ]
-    trend_state = "insufficient_data"
-    if points:
-        latest = points[-1]
-        trend_state = classify_trend(latest.ma_5, latest.ma_20, latest.ma_60)
+    points, trend_state = build_rate_points(rows, warmup, quote_direction)
 
     return RateSeriesResponse(
         base_currency=normalized_base,

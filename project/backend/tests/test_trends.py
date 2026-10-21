@@ -2,7 +2,7 @@ from decimal import Decimal
 
 import pytest
 
-from app.services.trends import classify_trend, moving_average
+from app.services.rates.trends import classify_trend, moving_average
 
 
 def test_moving_average_uses_observations_and_leaves_short_windows_empty() -> None:

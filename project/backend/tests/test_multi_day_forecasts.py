@@ -6,8 +6,8 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.forecasts import ForecastOutcome
-from app.services.forecast_scorecard import settle_forecasts, scorecard
-from app.services.purchase_outlook import estimated_quote_date, timing_signal
+from app.services.forecasting.scorecard import settle_forecasts, scorecard
+from app.services.forecasting.outlook import estimated_quote_date, timing_signal
 from tests.test_forecast_scorecard import run, quote, payload
 
 UTC = timezone.utc

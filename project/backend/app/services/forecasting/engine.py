@@ -14,9 +14,9 @@ from torch import nn
 
 from app.core.currencies import FOREIGN_CURRENCIES
 from app.models.forecasts import ForecastRun, NewsFact
-from app.models.market import ExchangeRate
-from app.services.news_facts import FACTORS, as_utc
-from app.services.simple_forecasters import SIMPLE_CONFIG, fit_simple, predict_simple
+from app.models.rates import ExchangeRate
+from app.services.forecasting.simple_models import SIMPLE_CONFIG, fit_simple, predict_simple
+from app.services.news.facts import FACTORS, as_utc
 
 SEQUENCE = 20
 MIN_OBSERVATIONS = 160
@@ -276,7 +276,7 @@ def train_pair(rates, facts, currency, now, epochs=None, horizon=1):
 
 
 def train_forecasts(session: Session) -> int:
-    from app.services.forecast_scorecard import apply_forward_selection, scorecard, settle_forecasts
+    from app.services.forecasting.scorecard import apply_forward_selection, scorecard, settle_forecasts
     settle_forecasts(session)
     now = datetime.now(timezone.utc)
     facts = list(session.scalars(select(NewsFact).order_by(NewsFact.id)))
@@ -297,7 +297,6 @@ def train_forecasts(session: Session) -> int:
             horizons[str(horizon)] = result
         payload = {**horizons["1"], "horizon_forecasts": horizons,
                    "recent_costs": [{"date": r.rate_date.isoformat(), "cost": 1/float(r.rate)} for r in rates[-15:]]}
-        # Issue after training finishes, not at the start of a long DB transaction.
         session.add(ForecastRun(target_currency=currency, as_of_date=rates[-1].rate_date, payload=payload,
                                 created_at=datetime.now(timezone.utc)))
         session.commit()

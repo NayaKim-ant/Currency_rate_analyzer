@@ -5,9 +5,9 @@ from sqlalchemy.orm import Session
 from app.core.currencies import HOME_CURRENCY
 from app.db.locks import lock_market_writes
 from app.db.session import get_db
-from app.models.market import AlertEvent, AlertRule
+from app.models.alerts import AlertEvent, AlertRule
 from app.schemas.alerts import AlertRuleCreate, AlertRuleRead, AlertRuleUpdate
-from app.services.alert_engine import evaluate_alert_rules
+from app.services.alerts.engine import evaluate_alert_rules
 
 router = APIRouter(prefix="/alerts", tags=["alerts"])
 

@@ -5,8 +5,10 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.db.locks import lock_market_writes
-from app.models.market import AlertEvent, AlertRule, Article, ArticleKeyword, ArticleRelevance, ExchangeRate
-from app.services.signals import MarketSignal, detect_price_signals, detect_trend_reversals, link_policy_articles_to_changes
+from app.models.alerts import AlertEvent, AlertRule
+from app.models.news import Article, ArticleKeyword, ArticleRelevance
+from app.models.rates import ExchangeRate
+from app.services.rates.signals import MarketSignal, detect_price_signals, detect_trend_reversals, link_policy_articles_to_changes
 
 
 def _rule_signals(session: Session, rule: AlertRule) -> list[MarketSignal]:

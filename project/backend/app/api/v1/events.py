@@ -6,12 +6,13 @@ from sqlalchemy.orm import Session
 
 from app.core.currencies import HOME_CURRENCY
 from app.db.session import get_db
-from app.models.market import MarketEvent
+from app.models.rates import MarketEvent
+from app.schemas.events import MarketEventResponse
 
 router = APIRouter(prefix="/events", tags=["events"])
 
 
-@router.get("")
+@router.get("", response_model=list[MarketEventResponse])
 def list_events(
     target_currency: str | None = Query(default=None, min_length=3, max_length=3),
     base_currency: str = Query(default=HOME_CURRENCY, min_length=3, max_length=3),

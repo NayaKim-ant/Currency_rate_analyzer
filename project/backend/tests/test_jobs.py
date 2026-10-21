@@ -5,9 +5,9 @@ from sqlalchemy import select
 from sqlalchemy.orm import sessionmaker
 
 from app.models.jobs import AnalysisJob, JobTransition
-from app.services import job_runner
-from app.services.job_runner import advance, drain_jobs, worker_guard
-from app.services.jobs import JobConflict, JobState, claim_job, enqueue_job, transition, utcnow
+from app.services.pipeline import runner as job_runner
+from app.services.pipeline.runner import advance, drain_jobs, worker_guard
+from app.services.pipeline.state_machine import JobConflict, JobState, claim_job, enqueue_job, transition, utcnow
 
 
 @pytest.fixture
@@ -161,7 +161,7 @@ def test_exhausted_job_can_be_retried_manually_without_losing_history(client, fa
 
 def test_separate_worker_mode_queues_startup_work_without_executing_it(factory, monkeypatch):
     from app.core.config import settings
-    from app.services import scheduler
+    from app.services.pipeline import scheduler
 
     monkeypatch.setattr(settings, "job_worker_enabled", False)
     monkeypatch.setattr(scheduler, "SessionLocal", factory)

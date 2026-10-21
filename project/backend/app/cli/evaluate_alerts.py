@@ -1,5 +1,7 @@
+"""Evaluate alert rules against the latest market events and exchange rates."""
+
 from app.db.session import SessionLocal
-from app.services.alert_engine import evaluate_alert_rules
+from app.services.alerts.engine import evaluate_alert_rules
 
 
 def main() -> None:

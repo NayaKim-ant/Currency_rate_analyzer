@@ -4,12 +4,13 @@ from sqlalchemy.orm import Session
 
 from app.core.currencies import HOME_CURRENCY
 from app.db.session import get_db
-from app.models.market import TrendSnapshot
+from app.models.rates import TrendSnapshot
+from app.schemas.trends import TrendSnapshotResponse
 
 router = APIRouter(prefix="/trends", tags=["trends"])
 
 
-@router.get("")
+@router.get("", response_model=list[TrendSnapshotResponse])
 def list_trends(
     base_currency: str = Query(default=HOME_CURRENCY, min_length=3, max_length=3),
     target_currency: str | None = Query(default=None, min_length=3, max_length=3),

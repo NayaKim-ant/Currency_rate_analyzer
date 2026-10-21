@@ -36,3 +36,32 @@ def timing_signal(payload, origin, horizon=1, now=None, stale=False):
         return {**result, "signal": "wait", "title": "Model leans toward waiting",
                 "reason": "The estimated future won cost is lower, even after allowing for historical model errors. Waiting still carries exchange-rate risk."}
     return result
+
+
+def filter_news_hints(candidates, target_currency: str, max_hints: int = 8) -> tuple[list[dict], int]:
+    hints = []
+    seen = set()
+    for fact in candidates:
+        if fact.currencies and not ({"KRW", target_currency} & set(fact.currencies)):
+            continue
+        key = (fact.factor, fact.evidence.casefold())
+        if key in seen:
+            continue
+        seen.add(key)
+        if len(hints) < max_hints:
+            hints.append({
+                "id": fact.id,
+                "factor": fact.factor,
+                "currencies": fact.currencies,
+                "direction": fact.direction,
+                "claim_type": fact.claim_type,
+                "figures": fact.figures,
+                "event": fact.event,
+                "evidence": fact.evidence,
+                "source_title": fact.source_title,
+                "source_url": fact.source_url,
+                "published_at": fact.published_at,
+                "available_at": fact.available_at,
+            })
+    return hints, len(seen)
+

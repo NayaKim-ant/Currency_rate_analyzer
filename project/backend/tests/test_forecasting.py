@@ -12,10 +12,10 @@ from sqlalchemy import select
 from sqlalchemy.orm import sessionmaker
 
 from app.models.jobs import AnalysisJob, JobTransition
-from app.services import forecasting
-from app.services.forecasting import build_dataset, news_vector, train_pair
-from app.services.job_runner import drain_jobs
-from app.services.jobs import enqueue_job
+from app.services.forecasting import engine as forecasting
+from app.services.forecasting.engine import build_dataset, news_vector, train_pair
+from app.services.pipeline.runner import drain_jobs
+from app.services.pipeline.state_machine import enqueue_job
 
 
 def fact(published, available, **changes):

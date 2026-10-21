@@ -3,7 +3,7 @@ from decimal import Decimal
 
 import pytest
 
-from app.services.signals import detect_price_signals, detect_trend_reversals, link_policy_articles_to_changes
+from app.services.rates.signals import detect_price_signals, detect_trend_reversals, link_policy_articles_to_changes
 
 
 def test_detect_price_signals_flags_rise_and_fall_with_percentage_evidence() -> None:

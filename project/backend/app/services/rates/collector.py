@@ -1,3 +1,4 @@
+import sys
 from collections.abc import Mapping, Sequence
 from datetime import date, timedelta
 from decimal import Decimal, InvalidOperation
@@ -8,7 +9,7 @@ from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import Session
 
 from app.core.currencies import FOREIGN_CURRENCIES, HOME_CURRENCY, SUPPORTED_CURRENCIES
-from app.models.market import ExchangeRate
+from app.models.rates import ExchangeRate
 
 FRANKFURTER_URL = "https://api.frankfurter.dev/v1"
 MAJOR_CURRENCIES = FOREIGN_CURRENCIES
@@ -63,13 +64,12 @@ def fetch_rate_history(
     if target_currencies is None:
         target_currencies = tuple(currency for currency in SUPPORTED_CURRENCIES if currency != base_currency.upper())
     normalized_base = base_currency.upper()
-    # KRW-base provider quotes are rounded to too few decimal places for small
-    # values such as USD per won. Derive them from the more precise USD quotes.
     source_base = "USD" if normalized_base == HOME_CURRENCY else normalized_base
     source_targets = tuple(dict.fromkeys(
         currency for currency in (*target_currencies, HOME_CURRENCY)
         if currency != source_base
     )) if normalized_base == HOME_CURRENCY else target_currencies
+
     response = httpx.get(
         f"{FRANKFURTER_URL}/{start_date.isoformat()}..{end_date.isoformat()}",
         params={"from": source_base, "to": ",".join(source_targets)},

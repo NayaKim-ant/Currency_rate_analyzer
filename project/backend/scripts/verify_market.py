@@ -19,8 +19,9 @@ from sqlalchemy import select
 
 from app.db.session import SessionLocal
 from app.main import app
-from app.models.market import Article, ArticleRelevance, ExchangeRate, MarketEvent, TrendSnapshot
-from app.services.relevance import score_article
+from app.models.news import Article, ArticleRelevance
+from app.models.rates import ExchangeRate, MarketEvent, TrendSnapshot
+from app.services.news.relevance import score_article
 
 
 def main() -> None:
