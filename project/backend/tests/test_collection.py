@@ -3,7 +3,7 @@ from decimal import Decimal
 
 import pytest
 
-from app.services.collection import parse_rate_history
+from app.services.rates.collector import parse_rate_history
 
 
 def test_parse_rate_history_normalizes_and_sorts_records() -> None:

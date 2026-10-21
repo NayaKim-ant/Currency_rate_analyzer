@@ -2,8 +2,8 @@ import argparse
 import time
 
 from app.db.session import SessionLocal
-from app.services.job_runner import drain_jobs
-from app.services.jobs import JOB_TYPES, enqueue_job
+from app.services.pipeline.runner import drain_jobs
+from app.services.pipeline.state_machine import JOB_TYPES, enqueue_job
 
 
 def run_requested(job_type: str) -> int:

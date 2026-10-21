@@ -83,7 +83,15 @@ python -m app.workers.collect_news
 Alert 규칙 평가:
 
 ```powershell
-python -m app.workers.evaluate_alerts
+python -m app.cli.evaluate_alerts
+# 또는 하위 호환 워커 경로: python -m app.workers.evaluate_alerts
+```
+
+과거 아카이브 수동 백필 및 KRW 리베이스 CLI:
+
+```powershell
+python -m app.cli.backfill_archive --rates-start 2024-01-01 --end 2024-12-31
+python -m app.cli.rebase_krw
 ```
 
 Celery, Redis, RabbitMQ와 관측성 시스템은 사용하지 않는다. scheduler는 API 프로세스 안에서 동작하므로 Uvicorn worker를 여러 개로 띄우지 않는다.

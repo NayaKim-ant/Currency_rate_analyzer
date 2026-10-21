@@ -1,6 +1,6 @@
 import pytest
 
-from app.services.news_facts import extract_candidates
+from app.services.news.facts import extract_candidates
 
 
 @pytest.mark.parametrize("text,actual,previous,expected,surprise", [

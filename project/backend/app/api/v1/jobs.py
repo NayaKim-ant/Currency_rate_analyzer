@@ -5,7 +5,7 @@ from sqlalchemy.orm import Session
 from app.db.session import get_db
 from app.models.jobs import AnalysisJob, JobTransition
 from app.schemas.jobs import JobCreate, JobDetail, JobRead
-from app.services.jobs import JobConflict, enqueue_job, retry_job
+from app.services.pipeline.state_machine import JobConflict, enqueue_job, retry_job
 
 router = APIRouter(prefix="/jobs", tags=["jobs"])
 

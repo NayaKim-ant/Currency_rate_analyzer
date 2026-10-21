@@ -7,8 +7,8 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.forecasts import ForecastOutcome, ForecastRun
-from app.models.market import ExchangeRate
-from app.services.forecast_scorecard import apply_forward_selection, scorecard, settle_forecasts
+from app.models.rates import ExchangeRate
+from app.services.forecasting.scorecard import apply_forward_selection, scorecard, settle_forecasts
 
 UTC = timezone.utc
 

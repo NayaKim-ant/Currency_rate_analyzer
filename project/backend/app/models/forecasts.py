@@ -1,32 +1,10 @@
 from datetime import date, datetime
 
-from sqlalchemy import JSON, Date, DateTime, ForeignKey, Index, String, Text, UniqueConstraint, Float, func
+from sqlalchemy import Date, DateTime, Float, ForeignKey, Index, JSON, String, UniqueConstraint, func
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base
-
-
-class NewsFact(Base):
-    __tablename__ = "news_facts"
-    __table_args__ = (UniqueConstraint("article_id", "evidence_hash", name="uq_news_facts_evidence"),
-                      Index("ix_news_facts_available", "available_at"))
-
-    id: Mapped[int] = mapped_column(primary_key=True)
-    article_id: Mapped[int] = mapped_column(ForeignKey("articles.id", ondelete="CASCADE"), nullable=False)
-    evidence_hash: Mapped[str] = mapped_column(String(64), nullable=False)
-    factor: Mapped[str] = mapped_column(String(32), nullable=False)
-    currencies: Mapped[list] = mapped_column(JSON, nullable=False)
-    direction: Mapped[str] = mapped_column(String(16), nullable=False)
-    claim_type: Mapped[str] = mapped_column(String(24), nullable=False)
-    figures: Mapped[list] = mapped_column(JSON, nullable=False)
-    event: Mapped[dict | None] = mapped_column(JSON)
-    evidence: Mapped[str] = mapped_column(Text, nullable=False)
-    source_title: Mapped[str] = mapped_column(Text, nullable=False)
-    source_url: Mapped[str] = mapped_column(Text, nullable=False)
-    published_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
-    available_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
-    superseded_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
-    extractor_version: Mapped[str] = mapped_column(String(32), nullable=False)
+from app.models.news import NewsFact  # Re-export NewsFact for backward compatibility
 
 
 class ForecastRun(Base):
@@ -53,3 +31,6 @@ class ForecastOutcome(Base):
     reason: Mapped[str] = mapped_column(String(120), nullable=False)
     candidate_errors: Mapped[dict] = mapped_column(JSON, nullable=False)
     scored_at: Mapped[datetime] = mapped_column(DateTime(timezone=True), nullable=False)
+
+
+__all__ = ["ForecastRun", "ForecastOutcome", "NewsFact"]

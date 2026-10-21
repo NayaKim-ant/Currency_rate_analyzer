@@ -1,4 +1,4 @@
-"""Persisted job states and legal transitions. Network work lives in job_runner."""
+"""Persisted job states and legal transitions. Network work lives in runner."""
 
 from datetime import datetime, timedelta, timezone
 from enum import StrEnum

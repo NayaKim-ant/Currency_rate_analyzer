@@ -10,9 +10,8 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.db.locks import lock_market_writes
-from app.models.forecasts import NewsFact
-from app.models.market import Article
-from app.services.economic_events import economic_event
+from app.models.news import Article, NewsFact
+from app.services.news.events import economic_event
 
 VERSION = "local-events-v3"
 FACTORS = {
@@ -53,7 +52,6 @@ class Candidate:
 
 
 def extract_candidates(title: str, content: str) -> list[Candidate]:
-    # Preserve exact source excerpts. A decimal point is not a sentence boundary.
     snippets = [title] + re.split(r"(?<=[.!?])\s+|[;\n]+", content)
     results = []
     seen = set()
@@ -81,7 +79,6 @@ def extract_candidates(title: str, content: str) -> list[Candidate]:
         for factor, pattern in FACTORS.items():
             if re.search(pattern, snippet, re.I) and (factor, snippet.casefold()) not in seen:
                 seen.add((factor, snippet.casefold()))
-                # Several economic variables in one sentence cannot safely share a direction.
                 matched_factors = sum(bool(re.search(p, snippet, re.I)) for p in FACTORS.values())
                 assigned = matched_factors == 1 and len(currencies) == 1
                 event_direction = direction if assigned else "unspecified"
@@ -116,7 +113,6 @@ def extract_news_facts(session: Session, now: datetime | None = None) -> int:
                 continue
             key = (article.id, digest)
             if key in existing:
-                # An older excerpt reappeared after a revision: keep both vintages.
                 digest = hashlib.sha256((digest + as_utc(now).isoformat()).encode()).hexdigest()
                 key = (article.id, digest)
             existing.add(key)

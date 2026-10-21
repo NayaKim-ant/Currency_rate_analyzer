@@ -11,11 +11,19 @@ from sqlalchemy.orm import Session
 from app.core.config import settings
 from app.db.session import SessionLocal
 from app.models.jobs import AnalysisJob
-from app.services.alert_engine import evaluate_alert_rules
-from app.services.analysis import analyze_market
-from app.services.collection import collect_recent_rates
-from app.services.jobs import JobConflict, JobState, claim_job, mark_failed, recover_and_requeue, transition, utcnow
-from app.services.news import fetch_news_history, iter_news_history_batches, store_news_articles
+from app.services.alerts.engine import evaluate_alert_rules
+from app.services.news.collector import fetch_news_history, iter_news_history_batches, store_news_articles
+from app.services.pipeline.state_machine import (
+    JobConflict,
+    JobState,
+    claim_job,
+    mark_failed,
+    recover_and_requeue,
+    transition,
+    utcnow,
+)
+from app.services.rates.analyzer import analyze_market
+from app.services.rates.collector import collect_recent_rates
 
 logger = logging.getLogger(__name__)
 WORKER_LOCK = 7314126503
@@ -35,8 +43,6 @@ def worker_guard(factory: SessionFactory) -> Iterator[bool]:
             if acquired:
                 _local_worker_lock.release()
         return
-    # A dedicated connection keeps a session advisory lock across stage commits.
-    # PostgreSQL releases it when a crashed process loses its connection.
     with engine.connect() as connection:
         acquired = connection.scalar(text(f"SELECT pg_try_advisory_lock({WORKER_LOCK})"))
         connection.commit()
@@ -89,12 +95,12 @@ def execute_job(job: AnalysisJob, factory: SessionFactory) -> None:
     result = {}
     try:
         if job_type == "forecast":
-            from app.services.news_facts import extract_news_facts
+            from app.services.news.facts import extract_news_facts
             with factory() as session:
                 result["news_facts"] = extract_news_facts(session)
             advance(factory, job_id, token, JobState.FORECASTING, result.copy())
             try:
-                from app.services.forecasting import train_forecasts
+                from app.services.forecasting.engine import train_forecasts
             except ImportError as error:
                 raise RuntimeError("Install requirements-ml.txt in the backend virtual environment to run local forecasts") from error
             with factory() as session:
@@ -105,12 +111,12 @@ def execute_job(job: AnalysisJob, factory: SessionFactory) -> None:
             result.update(collect_inputs(job_type, factory))
             advance(factory, job_id, token, JobState.ANALYZING, result.copy())
         if job_type in ("rates", "analysis"):
-            from app.services.forecast_scorecard import settle_forecasts
+            from app.services.forecasting.scorecard import settle_forecasts
             with factory() as session:
                 result["forecasts_scored"] = settle_forecasts(session)
         with factory() as session:
             if job_type.startswith("news"):
-                from app.services.news_facts import extract_news_facts
+                from app.services.news.facts import extract_news_facts
                 result["news_facts"] = extract_news_facts(session)
             result.update(analyze_market(session, include_alerts=False))
         advance(factory, job_id, token, JobState.EVALUATING_ALERTS, result.copy())
@@ -119,7 +125,7 @@ def execute_job(job: AnalysisJob, factory: SessionFactory) -> None:
         advance(factory, job_id, token, JobState.COMPLETED, result.copy())
         if job_type in ("rates", "news_recent"):
             from app.models.forecasts import ForecastRun
-            from app.services.jobs import enqueue_job
+            from app.services.pipeline.state_machine import enqueue_job
             with factory() as session:
                 if session.scalar(select(ForecastRun.id).limit(1)) is not None:
                     enqueue_job(session, "forecast", source="schedule")
@@ -146,7 +152,6 @@ def drain_jobs(max_jobs: int = 20, factory: SessionFactory = SessionLocal) -> in
                 job = claim_job(session)
                 if job is None:
                     break
-                # Copy attributes before closing even if expire_on_commit is on.
                 session.expunge(job)
             execute_job(job, factory)
             processed += 1

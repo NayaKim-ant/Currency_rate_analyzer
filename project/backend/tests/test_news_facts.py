@@ -3,9 +3,8 @@ from datetime import datetime, timedelta, timezone
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models.forecasts import NewsFact
-from app.models.market import Article
-from app.services.news_facts import extract_candidates, extract_news_facts
+from app.models.news import Article, NewsFact
+from app.services.news.facts import extract_candidates, extract_news_facts
 
 
 def test_extracts_exact_evidence_figures_and_distinguishes_expectations():

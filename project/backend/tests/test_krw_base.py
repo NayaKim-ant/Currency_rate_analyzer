@@ -4,11 +4,13 @@ from decimal import Decimal
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models.market import AlertEvent, ArticleRelevance, ExchangeRate, MarketEvent
-from app.services import collection
-from app.services.analysis import analyze_market
-from app.services.news import NewsArticleData, store_news_articles
-from app.workers.rebase_krw import backfill_krw_rates
+from app.models.alerts import AlertEvent
+from app.models.news import ArticleRelevance
+from app.models.rates import ExchangeRate, MarketEvent
+from app.services.rates import collector as collection
+from app.services.news.collector import NewsArticleData, store_news_articles
+from app.services.rates.analyzer import analyze_market
+from app.cli.rebase_krw import backfill_krw_rates
 
 
 def test_existing_usd_history_rebases_to_foreign_units_per_won_without_overwriting(test_database):

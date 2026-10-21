@@ -5,7 +5,8 @@ from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
 from app.main import app
-from app.models.market import Article, ArticleKeyword, ArticleRelevance, MarketEvent
+from app.models.news import Article, ArticleKeyword, ArticleRelevance
+from app.models.rates import MarketEvent
 
 client = TestClient(app)
 

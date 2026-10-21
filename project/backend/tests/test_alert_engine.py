@@ -4,8 +4,10 @@ from decimal import Decimal
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models.market import AlertEvent, AlertRule, Article, ArticleKeyword, ArticleRelevance, ExchangeRate
-from app.services.alert_engine import evaluate_alert_rules
+from app.models.alerts import AlertEvent, AlertRule
+from app.models.news import Article, ArticleKeyword, ArticleRelevance
+from app.models.rates import ExchangeRate
+from app.services.alerts.engine import evaluate_alert_rules
 
 
 def test_alert_evaluator_records_a_rise_once(test_database) -> None:

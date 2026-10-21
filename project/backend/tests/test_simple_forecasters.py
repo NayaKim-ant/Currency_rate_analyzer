@@ -4,9 +4,9 @@ np = pytest.importorskip("numpy")
 pytest.importorskip("sklearn")
 pytest.importorskip("torch")
 
-from app.services.simple_forecasters import fit_simple, predict_simple
-from app.services import forecasting
-from app.services.forecast_scorecard import apply_forward_selection
+from app.services.forecasting.simple_models import fit_simple, predict_simple
+from app.services.forecasting import engine as forecasting
+from app.services.forecasting.scorecard import apply_forward_selection
 from tests.test_forecast_scorecard import payload, evidence
 from tests.test_forecasting import history, fact
 from datetime import datetime, timedelta, timezone

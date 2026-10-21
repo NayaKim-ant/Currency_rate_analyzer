@@ -6,13 +6,16 @@ import time
 from datetime import date, timedelta
 
 from app.db.session import SessionLocal
-from app.services.collection import fetch_rate_history, store_rate_history
-from app.services.job_runner import worker_guard
-from app.services.jobs import enqueue_job
-from app.services.news import fetch_news_articles, store_news_articles
-from app.services.news_facts import extract_news_facts
+from app.services.news.collector import fetch_news_articles, store_news_articles
+from app.services.news.facts import extract_news_facts
+from app.services.pipeline.runner import worker_guard
+from app.services.pipeline.state_machine import enqueue_job
+from app.services.rates.collector import fetch_rate_history, store_rate_history
 
-ARCHIVE_QUERY = '("Korean won" OR "Bank of Korea" OR "Federal Reserve") ("exchange rate" OR inflation OR "interest rates")'
+ARCHIVE_QUERY = (
+    '("Korean won" OR "Bank of Korea" OR "Federal Reserve") '
+    '("exchange rate" OR inflation OR "interest rates")'
+)
 
 
 def windows(start: date, end: date, days: int):
@@ -69,8 +72,14 @@ def main():
                 accepted = filter_news(items, start, end, seen)
                 with SessionLocal() as session:
                     count = store_news_articles(session, accepted)
-                print(json.dumps({"type": "news", "start": str(start), "end": str(end), "returned": len(items),
-                                  "processed": count, "possibly_truncated": len(items) >= 100}), flush=True)
+                print(json.dumps({
+                    "type": "news",
+                    "start": str(start),
+                    "end": str(end),
+                    "returned": len(items),
+                    "processed": count,
+                    "possibly_truncated": len(items) >= 100,
+                }), flush=True)
                 time.sleep(1)
             with SessionLocal() as session:
                 print(json.dumps({"new_evidence": extract_news_facts(session)}), flush=True)

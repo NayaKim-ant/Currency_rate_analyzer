@@ -7,10 +7,10 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.db.locks import lock_market_writes
-from app.models.market import Article, ArticleKeyword, ArticleRelevance, ExchangeRate, MarketEvent, TrendSnapshot
-from app.services.alert_engine import evaluate_alert_rules
-from app.services.signals import detect_price_signals, detect_trend_reversals
-from app.services.trends import classify_trend, moving_average
+from app.models.news import Article, ArticleKeyword, ArticleRelevance
+from app.models.rates import ExchangeRate, MarketEvent, TrendSnapshot
+from app.services.rates.signals import detect_price_signals, detect_trend_reversals
+from app.services.rates.trends import classify_trend, moving_average
 
 
 def analyze_market(session: Session, include_alerts: bool = True) -> dict[str, int]:
@@ -97,5 +97,8 @@ def analyze_market(session: Session, include_alerts: bool = True) -> dict[str, i
                 session.delete(event)
 
     session.commit()
-    alerts = evaluate_alert_rules(session) if include_alerts else 0
+    alerts = 0
+    if include_alerts:
+        from app.services.alerts.engine import evaluate_alert_rules
+        alerts = evaluate_alert_rules(session)
     return {"snapshots": snapshots, "events_created": created_events, "alerts_created": alerts}

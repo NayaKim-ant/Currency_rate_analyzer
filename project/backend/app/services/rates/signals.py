@@ -3,7 +3,7 @@ from dataclasses import dataclass
 from datetime import date
 from decimal import Decimal
 
-from app.services.trends import moving_average
+from app.services.rates.trends import moving_average
 
 
 @dataclass(frozen=True)
