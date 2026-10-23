@@ -1,5 +1,7 @@
 # 환율·뉴스 분석 서비스
 
+**Worker and state-transition guide:** [Start with the current project map](docs/system/README.md), then explore [job states and recovery](docs/system/job-states.md), [individual worker flows](docs/system/worker-flows.md), and [forecast lifecycle](docs/system/forecast-lifecycle.md). Includes Mermaid diagrams and a separate legacy-worker guide.
+
 저장소는 문서와 실행 프로젝트를 분리한다. 문서는 `docs/`에, 서비스 코드는 `project/`에 둔다. `project/` 안에는 FastAPI/PostgreSQL backend와 Next.js frontend의 자리, 그리고 비교용 기존 프로토타입이 있다.
 
 ## 시작하기

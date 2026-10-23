@@ -30,6 +30,8 @@ CONFIG = {"version": "local-outlook-v5", "sequence": SEQUENCE, "hidden_size": 12
                             "reported_actual_percentage", "explicit_change_basis_points",
                             "previous_percentage", "expected_percentage", "surprise_percentage_points"]}
 NEWS_CHANNELS = len(CONFIG["news_channels"])
+# One-day training is unchanged: retain its exact configuration/history.
+LONG_LSTM_CONFIG = {"version": "local-outlook-lstm-v6", "long_horizon_models": ["ridge", "boosted_trees", "rates_lstm"]}
 
 
 def news_vector(facts: list[NewsFact], currency: str, cutoff: datetime) -> list[float]:
@@ -189,7 +191,7 @@ def train_pair(rates, facts, currency, now, epochs=None, horizon=1):
     test_news_days = int(has_news[origins[starts[2]]:].sum())
     news_eligible = (horizon == 1 and training_news_days >= 30 and len(available_days) >= 20
                      and validation_news_days >= 15 and test_news_days >= 8)
-    rate_candidates = ["ridge", "boosted_trees"] + (["rates_lstm"] if horizon == 1 else [])
+    rate_candidates = ["ridge", "boosted_trees", "rates_lstm"]
     candidates = ["no_change", *rate_candidates] + (["news_lstm"] if news_eligible else [])
     outputs = {name: [] for name in candidates}
     folds = []
@@ -264,7 +266,8 @@ def train_pair(rates, facts, currency, now, epochs=None, horizon=1):
         "error_band": {"lower": max(0, point-width), "upper": point+width,
                        "description": "80th percentile of absolute held-out errors; not a calibrated confidence interval"},
         "validation": scores, "held_out_test": tests, "folds": folds, "dataset_hash": dataset_hash,
-        "observations": len(rates), "configuration": {**CONFIG, "horizon_observations": horizon, "epochs": epochs or CONFIG["epochs"]},
+        "observations": len(rates), "configuration": {**CONFIG, **(LONG_LSTM_CONFIG if horizon > 1 else {}),
+            "horizon_observations": horizon, "epochs": epochs or CONFIG["epochs"]},
         "selection": "First two expanding-window blocks select a model only after a 2% MAE improvement; final block is untouched until selection.",
         "news": {"eligible": news_eligible, "training_news_days": training_news_days,
                  "first_seen_dates": len(available_days), "validation_news_days": validation_news_days,

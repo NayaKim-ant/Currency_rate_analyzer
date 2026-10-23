@@ -76,6 +76,7 @@ def test_numeric_news_figures_are_model_inputs_not_just_keywords():
 def test_lstm_runs_with_honest_news_gate_and_untouched_final_test():
     rates, now = history()
     result = train_pair(rates, [], "USD", now, epochs=2)
+    assert result["configuration"] == {**forecasting.CONFIG, "horizon_observations": 1, "epochs": 2}
     assert result["status"] == "experimental"
     assert result["news"]["eligible"] is False
     assert "news_lstm" not in result["validation"]

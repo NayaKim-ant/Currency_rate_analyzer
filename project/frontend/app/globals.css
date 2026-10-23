@@ -1,4 +1,7 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+/* Only scan UI sources; generated build files must not trigger rebuilds. */
+@source "./";
+@source "../components";
 
 :root {
   color-scheme: light;

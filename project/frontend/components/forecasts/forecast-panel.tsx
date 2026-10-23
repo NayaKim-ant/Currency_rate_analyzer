@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { FlaskConical, ExternalLink } from "lucide-react";
 import { ForecastOutlook, type TimingSignal } from "./forecast-outlook";
+import { ForecastLeaderboard, type Leaderboard } from "./forecast-leaderboard";
 
 type Score = { mae_krw: number; direction_accuracy: number | null; samples: number };
 type Forecast = {
@@ -21,6 +22,7 @@ type Hint = { id: number; factor: string; currencies: string[]; direction: strin
     change_basis_points: number | null; surprise: string | null; attribution: string } | null };
 type Data = { status: string; created_at: string | null; stale: boolean; forecast: Forecast | null;
   hints: Hint[]; recent_factor_count: number; selected_horizon: number; outlook?: Record<string, TimingSignal>;
+  leaderboard?: Leaderboard;
   scorecard?: { distinct_outcomes: number; minimum_outcomes: number; window: number;
     candidates: Record<string, { samples: number; mae_krw: number; baseline_mae_krw: number }>;
     recent: { forecast_run_id: number; issued_at: string; target_date: string; model: string;
@@ -97,10 +99,11 @@ export function ForecastPanel({ currency }: { currency: string }) {
     {ready && forecast ? <>
       <ForecastOutlook currency={currency} horizon={horizon} onHorizon={setHorizon}
         estimates={estimates} selected={forecast} signals={signals} history={root?.recent_costs ?? []} />
+      {data?.leaderboard && data.selected_horizon === horizon && <ForecastLeaderboard data={data.leaderboard} currency={currency} />}
       <details className="forecast-technical"><summary>Model & data details · {horizon}-day horizon</summary>
       {forecast.model === "no_change" && <p className="forecast-note">The models have not shown enough improvement over keeping the latest price. This estimate stays unchanged; it is not a signal that the market will stay flat.</p>}
       {!forecast.news.eligible && <div className="forecast-coverage"><strong>{horizon > 1 ? "This horizon uses rate history" : "News is not influencing this prediction yet"}</strong>
-        <p>{horizon > 1 ? "Multi-day estimates currently compare ridge regression, boosted trees, and no-change. The news-enhanced LSTM is evaluated for the next quote only." : "We need more news history to test whether it improves predictions. Recent news is shown below for context."}</p>
+        <p>{horizon > 1 ? "Multi-day estimates compare a directly trained rates LSTM, ridge regression, boosted trees, and no-change. The news-enhanced LSTM is evaluated for the next quote only." : "We need more news history to test whether it improves predictions. Recent news is shown below for context."}</p>
         <details><summary>See news-history requirements</summary>
           <div className="forecast-history-grid">{[
             { label: "Training days with news", count: forecast.news.training_news_days, total: 30 },

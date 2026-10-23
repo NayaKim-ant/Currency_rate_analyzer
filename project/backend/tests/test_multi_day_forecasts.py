@@ -82,7 +82,8 @@ def test_direct_horizon_labels_purged_folds_and_heldout_isolation(horizon):
     costs, features, origins, x, y = forecasting.build_dataset(rates, [], "USD", now, horizon)
     assert y[0] == pytest.approx(np.log(costs[origins[0]+horizon]/costs[origins[0]])*100)
     result = forecasting.train_pair(rates, [], "USD", now, epochs=1, horizon=horizon)
-    assert set(result["candidate_forecasts"]) == {"no_change", "ridge", "boosted_trees"}
+    assert set(result["candidate_forecasts"]) == {"no_change", "ridge", "boosted_trees", "rates_lstm"}
+    assert result["configuration"]["version"] == "local-outlook-lstm-v6"
     assert all(f["last_training_target"] < f["first_origin"] for f in result["folds"])
     assert result["folds"][0]["last_evaluation_target"] <= result["folds"][1]["first_origin"]
     assert result["folds"][1]["last_evaluation_target"] <= result["folds"][2]["first_origin"]

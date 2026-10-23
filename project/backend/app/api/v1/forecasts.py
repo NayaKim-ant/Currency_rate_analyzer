@@ -11,6 +11,7 @@ from app.models.rates import ExchangeRate
 from app.schemas.forecasts import ForecastResponse
 from app.services.forecasting.outlook import filter_news_hints, timing_signal
 from app.services.forecasting.scorecard import forecast_at_horizon, scorecard
+from app.services.forecasting.leaderboard import build_leaderboard
 from app.services.news.facts import VERSION, as_utc
 
 router = APIRouter(prefix="/forecasts", tags=["forecasts"])
@@ -63,6 +64,9 @@ def latest_forecast(
         if run
         else {}
     )
+    evidence = scorecard(db, target_currency,
+        configuration=selected.get("configuration", {}) if selected else {}, horizon=horizon,
+        comparison_models=list(selected.get("candidate_forecasts", {})) if selected else None)
     return {
         "status": selected.get("status") if selected else "not_trained",
         "target_currency": target_currency,
@@ -75,10 +79,6 @@ def latest_forecast(
         "hints": hints,
         "recent_factor_count": seen_count,
         "extractor": VERSION,
-        "scorecard": scorecard(
-            db,
-            target_currency,
-            configuration=selected.get("configuration", {}) if selected else {},
-            horizon=horizon,
-        ),
+        "scorecard": evidence,
+        "leaderboard": build_leaderboard(selected, evidence, horizon),
     }

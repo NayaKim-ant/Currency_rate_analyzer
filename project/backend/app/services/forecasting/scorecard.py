@@ -69,7 +69,7 @@ def settle_forecasts(session: Session, now=None) -> int:
     return count
 
 
-def scorecard(session: Session, currency: str, cutoff=None, configuration=None, horizon=1):
+def scorecard(session: Session, currency: str, cutoff=None, configuration=None, horizon=1, comparison_models=None):
     cutoff = as_utc(cutoff or datetime.now(timezone.utc))
     rows = session.execute(select(ForecastRun, ForecastOutcome).join(
         ForecastOutcome, ForecastOutcome.forecast_run_id == ForecastRun.id).where(
@@ -91,6 +91,19 @@ def scorecard(session: Session, currency: str, cutoff=None, configuration=None, 
         candidates[name] = {"samples": len(paired),
             "mae_krw": mean(o.candidate_errors[name]["absolute_error"] for o in paired),
             "baseline_mae_krw": mean(o.candidate_errors["no_change"]["absolute_error"] for o in paired)}
+    pool = sorted(set(comparison_models or names) | {"no_change"})
+    matched = [(r, o) for r, o in chosen if all(name in o.candidate_errors for name in pool)]
+    common_scores = {}
+    history = []
+    running = {name: 0. for name in pool}
+    for index, (_, outcome) in enumerate(reversed(matched), start=1):
+        for name in pool:
+            running[name] += outcome.candidate_errors[name]["absolute_error"]
+        history.append({"date": outcome.target_date, "samples": index,
+                        "mae": {name: running[name]/index for name in pool}})
+    if matched:
+        common_scores = {name: {"samples": len(matched), "mae_krw": running[name]/len(matched),
+            "baseline_mae_krw": running["no_change"]/len(matched)} for name in pool}
     recent = [{"forecast_run_id": r.id, "issued_at": r.created_at, "target_date": o.target_date,
                "actual_cost": o.actual_cost, "model": r.payload["model"],
                "prediction": o.candidate_errors.get(r.payload["model"], {}).get("prediction"),
@@ -108,6 +121,7 @@ def scorecard(session: Session, currency: str, cutoff=None, configuration=None, 
                 "news_mae": mean(o.candidate_errors["news_lstm"]["absolute_error"] for o in paired),
                 "rates_mae": mean(o.candidate_errors[name]["absolute_error"] for o in paired)}
     return {"distinct_outcomes": len(chosen), "minimum_outcomes": MIN_OUTCOMES, "news_vs_rates": comparison,
+            "comparison": {"models": pool, "samples": len(matched), "candidates": common_scores, "history": history},
             "horizon": horizon, "window": WINDOW, "candidates": candidates, "recent": recent, "news_comparisons": news_comparisons,
             "rule": "Latest eligible issuance per quote date; issue must precede target UTC day; outcomes frozen on first scoring."}
 

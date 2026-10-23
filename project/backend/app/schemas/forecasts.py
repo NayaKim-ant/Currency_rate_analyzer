@@ -45,3 +45,4 @@ class ForecastResponse(BaseModel):
     recent_factor_count: int = 0
     extractor: str
     scorecard: dict[str, Any] = {}
+    leaderboard: dict[str, Any] = {}

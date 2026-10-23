@@ -1,5 +1,7 @@
 # Persistent background job state machine
 
+For the current illustrated reference, start with the [project map](system/README.md), [complete state and recovery diagrams](system/job-states.md), and [individual worker flows](system/worker-flows.md). The notes below also retain earlier implementation milestones.
+
 Collection and analysis now run through a PostgreSQL-backed state machine. FastAPI remains responsible for HTTP requests, and Next.js shows progress in **Background logs**. No Redis, Celery, or external message broker is required.
 
 ## States
